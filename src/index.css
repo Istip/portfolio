@@ -1,13 +1,35 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-size: 1.1em;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* FONTS Delcarations */
+@font-face {
+  font-family: "Regular";
+  src: local("Uncut-Sans-Regular"),
+    url("./fonts/Uncut-Sans-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Uncut-Sans-Medium"),
+    url("./fonts/Uncut-Sans-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Semibold";
+  src: local("Uncut-Sans-Semibold"),
+    url("./fonts/Uncut-Sans-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: local("Uncut-Sans-Bold"),
+    url("./fonts/Uncut-Sans-Bold.otf") format("opentype");
 }
