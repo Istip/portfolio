@@ -16,3 +16,13 @@ export const NavbarContent = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const NavbarAnchor = styled.a`
+  all: unset;
+  cursor: pointer;
+  margin: 0 10px;
+
+  &:last-child {
+    margin: 0 30px 0 10px;
+  }
+`;
