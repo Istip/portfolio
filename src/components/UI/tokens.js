@@ -51,7 +51,7 @@ export const fonts = {
   button: {
     fontWeight: tokens.fontSize[700],
     fontSize: '20px',
-    letterSpacing: 0,
+    letterSpacing: '-1px',
   },
 
   bigTitle: {

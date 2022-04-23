@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { tokens, fonts } from './';
 
@@ -13,12 +12,14 @@ const Text = ({
 }) => {
   const Tag = tag;
   return (
-    <Tag
-      style={{ ...fonts[variant], color, lineHeight, fontFamily }}
-      {...props}
-    >
-      {children}
-    </Tag>
+    <>
+      <Tag
+        style={{ ...fonts[variant], color, lineHeight, fontFamily }}
+        {...props}
+      >
+        {children}
+      </Tag>
+    </>
   );
 };
 
