@@ -20,9 +20,5 @@ export const NavbarContent = styled.div`
 export const NavbarAnchor = styled.a`
   all: unset;
   cursor: pointer;
-  margin: 0 10px;
-
-  &:last-child {
-    margin: 0 30px 0 10px;
-  }
+  margin-right: 10px;
 `;
