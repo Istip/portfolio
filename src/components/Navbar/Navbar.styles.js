@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const NavbarWrapper = styled.div`
   width: 100%;
   height: 100px;
-  transition: 500ms ease;
+  transition: 1s ease;
   background: ${({ background }) => background};
   position: fixed;
   z-index: 1;

@@ -43,6 +43,6 @@ export const HeroText = styled.div`
 export const VerticalLine = styled.div`
   width: 1px;
   height: 50px;
-  background: ${tokens.colors.primary500};
+  background: ${tokens.colors.primary700};
   margin-bottom: 10px;
 `;

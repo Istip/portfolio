@@ -24,7 +24,7 @@ const HeroContent = () => {
             istvan
           </Text>
 
-          <Text tag="h3" variant="black32" color={tokens.colors.primary600}>
+          <Text tag="h3" variant="black32" color={tokens.colors.primary100}>
             valami short description hogy mit is csinalok kb
           </Text>
         </HeroText>
@@ -33,7 +33,7 @@ const HeroContent = () => {
       <ScrollContainer>
         <Center direction="column">
           <VerticalLine />
-          <Text color={tokens.colors.primary500}>scroll for more</Text>
+          <Text color={tokens.colors.primary700}>scroll for more</Text>
         </Center>
       </ScrollContainer>
     </Wrapper>

@@ -62,7 +62,7 @@ export const fonts = {
 
   title: {
     fontWeight: tokens.fontSize[900],
-    fontSize: '128px',
+    fontSize: '64px',
     letterSpacing: '2px',
   },
 
