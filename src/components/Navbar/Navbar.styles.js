@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { tokens } from '../UI';
 
 export const NavbarWrapper = styled.div`
   width: 100%;
   height: 100px;
-  background: ${tokens.colors.primary400};
+  transition: 500ms ease;
+  background: ${({ background }) => background};
 `;
 
 export const NavbarContent = styled.div`

@@ -1,3 +1,4 @@
-import Navbar from './Navbar';
+import Hero from './Hero';
+import HeroDescription from './HeroDescription';
 
-export { Navbar };
+export { Hero, HeroDescription };

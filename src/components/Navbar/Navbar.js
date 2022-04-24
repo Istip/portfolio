@@ -1,7 +1,14 @@
+import { useState } from 'react';
 import { Button, Center, Icon, Text, tokens } from '../UI';
-import { NavbarAnchor, NavbarContent, NavbarWrapper } from './Navbar.styles';
+import {
+  NavbarAnchor as Anchor,
+  NavbarContent as Content,
+  NavbarWrapper as Wrapper,
+} from './Navbar.styles';
 
 const Navbar = () => {
+  const [background, setBackground] = useState(tokens.colors.primary400);
+
   // Array of icons to render
   const icons = [
     { name: 'facebook', route: 'https://www.google.com/' },
@@ -29,17 +36,26 @@ const Navbar = () => {
   ];
 
   return (
-    <NavbarWrapper>
-      <NavbarContent>
+    <Wrapper
+      background={background}
+      onClick={() =>
+        setBackground(
+          background === tokens.colors.primary400
+            ? tokens.colors.white
+            : tokens.colors.primary400
+        )
+      }
+    >
+      <Content>
         <Text tag="div" variant="black32">
           ISTI
         </Text>
         <Center>
           <Center>
             {icons.map((icon) => (
-              <NavbarAnchor key={icon.name} target="_blank" href={icon.route}>
+              <Anchor key={icon.name} target="_blank" href={icon.route}>
                 <Icon icon={icon.name} color={tokens.colors.primary700} />
-              </NavbarAnchor>
+              </Anchor>
             ))}
           </Center>
 
@@ -56,8 +72,8 @@ const Navbar = () => {
             ))}
           </Center>
         </Center>
-      </NavbarContent>
-    </NavbarWrapper>
+      </Content>
+    </Wrapper>
   );
 };
 

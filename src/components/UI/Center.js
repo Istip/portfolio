@@ -8,7 +8,7 @@ const Center = (props) => {
 const Centered = styled.div`
   display: flex;
   align-items: center;
-  justify-content: ${({ between }) => between};
+  justify-content: ${({ justify }) => justify};
   gap: ${({ gap }) => `${gap}px`};
   flex-direction: ${({ direction }) => direction};
   height: ${({ height }) => height};
@@ -18,20 +18,20 @@ const Centered = styled.div`
 export default Center;
 
 Center.propTypes = {
-  between: PropTypes.oneOf([
+  justify: PropTypes.oneOf([
     'space-between',
     'space-around',
     'space-evenly',
     'center',
   ]),
   gap: PropTypes.number,
-  direction: PropTypes.string,
+  direction: PropTypes.oneOf(['row', 'column']),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 Center.defaultProps = {
-  between: 'center',
+  justify: 'center',
   gap: 0,
   direction: 'row',
   height: 'auto',
