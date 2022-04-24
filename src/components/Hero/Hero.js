@@ -1,26 +1,13 @@
-import { Text } from '../UI';
-import {
-  HeroWrapper as Wrapper,
-  HeroContent as Content,
-  HeroTop,
-} from './Hero.styles';
-import { HeroDescription } from './';
+import { HeroWrapper as Wrapper, HeroMain as Main } from './Hero.styles';
+import { HeroDescription, HeroContent } from './';
 
 const Hero = () => {
   return (
     <Wrapper>
-      <Content>
+      <Main>
         <HeroDescription />
-
-        <HeroTop>
-          <Text tag="h1" variant="bigTitle" fontFamily="Syncopate">
-            pasztor
-          </Text>
-          <Text tag="h1" variant="bigTitle" fontFamily="Syncopate">
-            istvan
-          </Text>
-        </HeroTop>
-      </Content>
+        <HeroContent />
+      </Main>
     </Wrapper>
   );
 };

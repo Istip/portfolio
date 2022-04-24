@@ -5,6 +5,8 @@ export const NavbarWrapper = styled.div`
   height: 100px;
   transition: 500ms ease;
   background: ${({ background }) => background};
+  position: fixed;
+  z-index: 1;
 `;
 
 export const NavbarContent = styled.div`
