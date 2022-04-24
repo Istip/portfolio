@@ -1,4 +1,3 @@
-import React from 'react';
 import { Center, Text, tokens } from '../UI';
 import { HeroHeader } from './HeroDescription.styles';
 
