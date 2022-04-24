@@ -7,12 +7,6 @@ function App() {
     <ParallaxProvider>
       <Navbar />
       <Hero />
-      <div>
-        <div style={{ fontSize: '300px' }}>Hello</div>
-        <div style={{ fontSize: '300px' }}>Hello</div>
-        <div style={{ fontSize: '300px' }}>Hello</div>
-        <div style={{ fontSize: '300px' }}>Hello</div>
-      </div>
     </ParallaxProvider>
   );
 }

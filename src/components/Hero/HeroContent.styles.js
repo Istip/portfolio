@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import image from '../../assets/me.png';
+import { tokens } from '../UI';
 
 const background = `url(${image})`;
 
@@ -25,9 +26,23 @@ export const HeroTitle = styled.div`
   mix-blend-mode: multiply;
 `;
 
+export const ScrollContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 32px 0;
+`;
+
 export const HeroText = styled.div`
   position: absolute;
   top: -60px;
   text-align: right;
   padding-left: 160px;
+`;
+
+export const VerticalLine = styled.div`
+  width: 1px;
+  height: 50px;
+  background: ${tokens.colors.primary500};
+  margin-bottom: 10px;
 `;
