@@ -17,8 +17,10 @@ const HeroContent = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 300 }}
           initial={{ opacity: 0, x: -300 }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 100 }}
         >
-          <HeroImage className="hero-image" />
+          <HeroImage />
         </motion.div>
       </Parallax>
 
@@ -49,12 +51,12 @@ const HeroContent = () => {
             animate={{
               opacity: 1,
               x: 0,
-              transition: {  delay: 0.4 },
+              transition: { delay: 0.4 },
             }}
             exit={{
               opacity: 0,
               x: 200,
-              transition: {  delay: 0.4 },
+              transition: { delay: 0.4 },
             }}
             initial={{ opacity: 0, x: -200 }}
           >

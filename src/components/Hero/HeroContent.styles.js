@@ -16,11 +16,13 @@ export const HeroImage = styled.div`
   background-position: center;
   position: absolute;
   top: 220px;
+  cursor: grab;
 `;
 
 export const HeroTitle = styled.div`
   position: relative;
   height: calc(100vh - 220px);
+  overflow-x: hidden;
 
   /* Demo for testing, probably should be removed */
   mix-blend-mode: multiply;
