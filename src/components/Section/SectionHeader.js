@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Center, Text, tokens } from '../UI';
-import { SectionHeaderWrapper } from './SectionHeader.styles';
+import { SectionHeaderWrapper as Wrapper } from './SectionHeader.styles';
 
 const SectionHeader = ({
   number,
@@ -11,7 +11,7 @@ const SectionHeader = ({
   ...props
 }) => {
   return (
-    <SectionHeaderWrapper>
+    <Wrapper>
       <Center {...props} justify="space-between">
         <Text tag="div" variant="black48" color={numberColor}>
           {number}
@@ -26,7 +26,7 @@ const SectionHeader = ({
           {title}
         </Text>
       </Center>
-    </SectionHeaderWrapper>
+    </Wrapper>
   );
 };
 
