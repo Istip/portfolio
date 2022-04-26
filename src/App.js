@@ -17,6 +17,10 @@ function App() {
             <SectionHeader number="01 /" title="about me" />
             <About />
           </Section>
+
+          <Section>
+            <SectionHeader number="02 /" title="work" />
+          </Section>
         </Sections>
       </ParallaxProvider>
     </>
