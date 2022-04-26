@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import { Center, Text, tokens } from '../UI';
 import { SectionHeaderWrapper as Wrapper } from './SectionHeader.styles';
 

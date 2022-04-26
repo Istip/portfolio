@@ -1,4 +1,3 @@
-import React from 'react';
 import { SectionWrapper as Wrapper } from './Section.styles';
 
 const Section = (props) => {
