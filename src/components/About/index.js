@@ -1,4 +1,5 @@
 import Sentence from './Sentence';
 import About from './About';
+import Description from './Description';
 
-export { Sentence, About };
+export { Sentence, About, Description };
