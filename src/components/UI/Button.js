@@ -18,6 +18,7 @@ const ButtonBody = styled.button`
   transition: 200ms ease;
   user-select: none;
   margin: ${({ margin }) => margin};
+  text-align: center;
 
   &.primary {
     border: 1px solid ${tokens.colors.primary500};
