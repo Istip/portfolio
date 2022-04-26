@@ -11,7 +11,10 @@ const SectionHeader = ({
   ...props
 }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      initial={{ opacity: 0, x: '-500px' }}
+      whileInView={{ opacity: 1, x: 0 }}
+    >
       <Center {...props} justify="space-between">
         <Text tag="div" variant="black48" color={numberColor}>
           {number}
