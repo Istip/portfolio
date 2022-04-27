@@ -6,6 +6,21 @@ import {
 import { Text, Button, tokens } from '../UI/';
 
 const Footer = () => {
+  const buttons = [
+    {
+      text: 'about me section',
+      onClick: () => {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+      },
+    },
+    {
+      text: 'check out my work',
+      onClick: () => {
+        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+      },
+    },
+  ];
+
   return (
     <Wrapper>
       <Title>
@@ -15,8 +30,11 @@ const Footer = () => {
       </Title>
 
       <ButtonGroup>
-        <Button>about me section</Button>
-        <Button>check out my work</Button>
+        {buttons.map(({ text, onClick }) => (
+          <Button key={text} onClick={onClick}>
+            {text}
+          </Button>
+        ))}
       </ButtonGroup>
 
       <Text tag="h3" variant="bold24" color={tokens.colors.primary200}>

@@ -18,17 +18,25 @@ const Navbar = ({ background, ...props }) => {
     {
       text: 'about',
       margin: '0 10px',
-      onClick: () => {},
+      onClick: () => {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+      },
     },
     {
       text: 'work',
       margin: '0 10px 0 0',
-      onClick: () => {},
+      onClick: () => {
+        document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+      },
     },
     {
       text: 'contact',
       variant: 'secondary',
-      onClick: () => {},
+      onClick: () => {
+        document
+          .getElementById('contact')
+          .scrollIntoView({ behavior: 'smooth' });
+      },
     },
   ];
 
@@ -37,11 +45,20 @@ const Navbar = ({ background, ...props }) => {
       ? tokens.colors.white
       : tokens.colors.primary700;
 
+  const handleLogoClick = () => {
+    document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Wrapper background={background} {...props}>
       <Content>
-        <Text tag="div" variant="black32" color={headerColor}>
-          ISTI
+        <Text
+          tag="div"
+          variant="black32"
+          color={headerColor}
+          onClick={handleLogoClick}
+        >
+          <span style={{ cursor: 'pointer' }}>ISTI</span>
         </Text>
         <Center>
           <Center>

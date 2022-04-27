@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Container, Sections } from './App.styles';
+
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Hero } from './components/Hero';
@@ -10,6 +11,7 @@ import { Work } from './components/Work';
 
 function App() {
   const [background, setBackground] = useState(tokens.colors.primary400);
+  const aboutRef = useRef();
 
   const handleScroll = () => {
     if (window.scrollY <= 1400) {
@@ -28,13 +30,17 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [background]);
 
+  useEffect(() => {
+    console.log(aboutRef.current.offsetHeight);
+  }, []);
+
   return (
-    <Container>
+    <Container id="top">
       <Navbar background={background} />
       <Hero />
 
-      <Sections>
-        <Section>
+      <Sections onClick={() => console.log(aboutRef)}>
+        <Section id="about" innerRef={aboutRef}>
           <SectionHeader
             number="01 /"
             title="about me"
@@ -43,12 +49,12 @@ function App() {
           <About />
         </Section>
 
-        <Section>
+        <Section id="work">
           <SectionHeader number="02 /" title="work" />
           <Work />
         </Section>
 
-        <Section>
+        <Section id="contact">
           <SectionHeader
             number="03 /"
             title="contact"
