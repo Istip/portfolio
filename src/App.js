@@ -1,5 +1,5 @@
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { Sections } from './App.styles';
+import { useEffect, useState } from 'react';
+import { Container, Sections } from './App.styles';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Hero } from './components/Hero';
@@ -9,8 +9,29 @@ import { tokens } from './components/UI';
 import { Work } from './components/Work';
 
 function App() {
+  const [background, setBackground] = useState(tokens.colors.white);
+
+  // const handleScroll = () => {
+  //   console.log(window.pageYOffset);
+
+  //   if (window.pageYOffset < 1400) {
+  //     setBackground(tokens.colors.white);
+  //   }
+
+  //   if (window.pageYOffset > 1400) {
+  //     setBackground(tokens.colors.primary400);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   document.body.style.background = background;
+
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [background]);
+
   return (
-    <ParallaxProvider>
+    <Container background={background}>
       <Navbar />
       <Hero />
 
@@ -35,7 +56,7 @@ function App() {
           <Contact />
         </Section>
       </Sections>
-    </ParallaxProvider>
+    </Container>
   );
 }
 

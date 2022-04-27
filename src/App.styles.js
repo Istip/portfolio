@@ -5,3 +5,7 @@ export const Sections = styled.div`
   top: 100vh;
   width: 100%;
 `;
+
+export const Container = styled.div`
+  /* background: ${({ background }) => background}; */
+`;

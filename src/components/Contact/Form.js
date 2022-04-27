@@ -1,15 +1,16 @@
-import { FormWrapper } from './Form.styles';
+import { Button, Input, Textarea } from '../UI';
+import { FormField, FormWrapper as Wrapper } from './Form.styles';
 
 const Form = () => {
   return (
-    <FormWrapper>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum
-        id deleniti consequuntur reprehenderit corporis cupiditate est dicta ea,
-        non magnam ipsa cumque dolore commodi? Commodi recusandae doloremque hic
-        velit.
-      </h1>
-    </FormWrapper>
+    <Wrapper>
+      <FormField>
+        <Input placeholder="Type your beautiful name..." required />
+        <Input placeholder="Type your beautiful email address..." required />
+        <Textarea rows={10} placeholder="Type your message..." required />
+        <Button type="submit">SEND THAT MESSAGE</Button>
+      </FormField>
+    </Wrapper>
   );
 };
 
