@@ -38,11 +38,7 @@ function App() {
         <Hero />
 
         <Sections>
-          <Section
-            id="about"
-            innerRef={aboutRef}
-            style={{ border: '1px solid red' }}
-          >
+          <Section id="about" innerRef={aboutRef}>
             <SectionHeader
               number="01 /"
               title="about me"

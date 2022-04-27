@@ -12,30 +12,40 @@ import {
 const HeroContent = () => {
   return (
     <Wrapper>
-      <motion.div
-        animate={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -300 }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 100 }}
-      >
-        <Parallax speed={20}>
+      <Parallax speed={20}>
+        <motion.div
+          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 300 }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 100 }}
+        >
           <HeroImage />
-        </Parallax>
-      </motion.div>
+        </motion.div>
+      </Parallax>
 
       <Parallax speed={-10}>
         <HeroText>
           <motion.div
             animate={{
               opacity: 1,
-              x: 0,
+              y: 0,
               transition: { delay: 0.2 },
             }}
-            initial={{ opacity: 0, x: -400 }}
+            initial={{ opacity: 0, y: 400 }}
           >
             <Text tag="h1" variant="bigTitle" fontFamily="Syncopate">
               pasztor
             </Text>
+          </motion.div>
+
+          <motion.div
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.3 },
+            }}
+            initial={{ opacity: 0, y: 400 }}
+          >
             <Text tag="h1" variant="bigTitle" fontFamily="Syncopate">
               istvan
             </Text>
@@ -44,10 +54,10 @@ const HeroContent = () => {
           <motion.div
             animate={{
               opacity: 1,
-              x: 0,
-              transition: { delay: 0.4 },
+              y: 0,
+              transition: { delay: 0.5 },
             }}
-            initial={{ opacity: 0, x: -200 }}
+            initial={{ opacity: 0, y: 200 }}
           >
             <Text tag="h3" variant="black32" color={tokens.colors.primary100}>
               valami short description hogy mit is csinalok kb

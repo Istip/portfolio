@@ -15,8 +15,8 @@ const HeroDescription = () => {
         {descriptions.map((description) => (
           <motion.div
             key={description}
-            animate={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
-            initial={{ opacity: 0, x: -300 }}
+            animate={{ opacity: 1, y: 0, transition: { delay: 0.1 } }}
+            initial={{ opacity: 0, y: 100 }}
           >
             <Text
               tag="h3"
