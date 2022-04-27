@@ -16,7 +16,6 @@ const HeroDescription = () => {
           <motion.div
             key={description}
             animate={{ opacity: 1, x: 0, transition: { delay: 0.1 } }}
-            exit={{ opacity: 0, x: 300 }}
             initial={{ opacity: 0, x: -300 }}
           >
             <Text

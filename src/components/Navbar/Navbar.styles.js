@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const NavbarWrapper = styled.div`
-  transition: 500ms ease;
+export const NavbarWrapper = styled(motion.div)`
+  transition: background-color 400ms ease;
   width: 100%;
   height: 100px;
   position: fixed;

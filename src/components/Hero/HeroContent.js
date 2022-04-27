@@ -14,7 +14,6 @@ const HeroContent = () => {
     <Wrapper>
       <motion.div
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 300 }}
         initial={{ opacity: 0, x: -300 }}
         drag="x"
         dragConstraints={{ left: 0, right: 100 }}
@@ -32,11 +31,6 @@ const HeroContent = () => {
               x: 0,
               transition: { delay: 0.2 },
             }}
-            exit={{
-              opacity: 0,
-              x: 400,
-              transition: { delay: 0.2 },
-            }}
             initial={{ opacity: 0, x: -400 }}
           >
             <Text tag="h1" variant="bigTitle" fontFamily="Syncopate">
@@ -51,11 +45,6 @@ const HeroContent = () => {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { delay: 0.4 },
-            }}
-            exit={{
-              opacity: 0,
-              x: 200,
               transition: { delay: 0.4 },
             }}
             initial={{ opacity: 0, x: -200 }}

@@ -50,7 +50,12 @@ const Navbar = ({ background, ...props }) => {
   };
 
   return (
-    <Wrapper background={background} {...props}>
+    <Wrapper
+      {...props}
+      background={background}
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+    >
       <Content>
         <Text
           tag="div"

@@ -15,9 +15,9 @@ function App() {
   const aboutRef = useRef();
 
   const handleScroll = () => {
-    if (window.scrollY <= 1400) {
+    if (window.scrollY <= 600) {
       setBackground(tokens.colors.primary400);
-    } else if (window.scrollY > 1400 && window.scrollY <= 2500) {
+    } else if (window.scrollY > 600 && window.scrollY <= 2500) {
       setBackground(tokens.colors.white);
     } else {
       setBackground(tokens.colors.primary700);
@@ -31,10 +31,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [background]);
 
-  useEffect(() => {
-    console.log(aboutRef.current.offsetHeight);
-  }, []);
-
   return (
     <ParallaxProvider>
       <Container id="top">
@@ -42,7 +38,11 @@ function App() {
         <Hero />
 
         <Sections>
-          <Section id="about" innerRef={aboutRef}>
+          <Section
+            id="about"
+            innerRef={aboutRef}
+            style={{ border: '1px solid red' }}
+          >
             <SectionHeader
               number="01 /"
               title="about me"

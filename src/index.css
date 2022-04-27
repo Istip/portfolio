@@ -3,7 +3,8 @@
 
 body {
   margin: 0;
-  transition: background-color 500ms ease;
+  transition: background-color 400ms ease;
+  overflow-x: hidden;
 }
 
 * {
