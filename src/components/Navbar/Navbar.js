@@ -5,7 +5,7 @@ import {
   NavbarWrapper as Wrapper,
 } from './Navbar.styles';
 
-const Navbar = () => {
+const Navbar = ({ background, ...props }) => {
   // Array of icons to render
   const icons = [
     { name: 'facebook', route: 'https://www.google.com/' },
@@ -32,17 +32,22 @@ const Navbar = () => {
     },
   ];
 
+  const headerColor =
+    background === tokens.colors.primary700
+      ? tokens.colors.white
+      : tokens.colors.primary700;
+
   return (
-    <Wrapper>
+    <Wrapper background={background} {...props}>
       <Content>
-        <Text tag="div" variant="black32">
+        <Text tag="div" variant="black32" color={headerColor}>
           ISTI
         </Text>
         <Center>
           <Center>
             {icons.map((icon) => (
               <Anchor key={icon.name} target="_blank" href={icon.route}>
-                <Icon icon={icon.name} color={tokens.colors.primary700} />
+                <Icon icon={icon.name} color={headerColor} />
               </Anchor>
             ))}
           </Center>

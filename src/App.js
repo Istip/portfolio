@@ -12,15 +12,11 @@ function App() {
   const [background, setBackground] = useState(tokens.colors.primary400);
 
   const handleScroll = () => {
-    if (window.pageYOffset <= 1400) {
+    if (window.scrollY <= 1400) {
       setBackground(tokens.colors.primary400);
-    }
-
-    if (window.pageYOffset > 1400 && window.pageYOffset <= 2500) {
+    } else if (window.scrollY > 1400 && window.scrollY <= 2500) {
       setBackground(tokens.colors.white);
-    }
-
-    if (window.pageYOffset > 2500) {
+    } else {
       setBackground(tokens.colors.primary700);
     }
   };
@@ -34,7 +30,7 @@ function App() {
 
   return (
     <Container>
-      <Navbar />
+      <Navbar background={background} />
       <Hero />
 
       <Sections>
