@@ -9,35 +9,41 @@ import { tokens } from './components/UI';
 import { Work } from './components/Work';
 
 function App() {
-  const [background, setBackground] = useState(tokens.colors.white);
+  const [background, setBackground] = useState(tokens.colors.primary400);
 
-  // const handleScroll = () => {
-  //   console.log(window.pageYOffset);
+  const handleScroll = () => {
+    if (window.pageYOffset <= 1400) {
+      setBackground(tokens.colors.primary400);
+    }
 
-  //   if (window.pageYOffset < 1400) {
-  //     setBackground(tokens.colors.white);
-  //   }
+    if (window.pageYOffset > 1400 && window.pageYOffset <= 2500) {
+      setBackground(tokens.colors.white);
+    }
 
-  //   if (window.pageYOffset > 1400) {
-  //     setBackground(tokens.colors.primary400);
-  //   }
-  // };
+    if (window.pageYOffset > 2500) {
+      setBackground(tokens.colors.primary700);
+    }
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-  //   document.body.style.background = background;
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    document.body.style.backgroundColor = background;
 
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [background]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [background]);
 
   return (
-    <Container background={background}>
+    <Container>
       <Navbar />
       <Hero />
 
       <Sections>
         <Section>
-          <SectionHeader number="01 /" title="about me" />
+          <SectionHeader
+            number="01 /"
+            title="about me"
+            numberColor={tokens.colors.primary600}
+          />
           <About />
         </Section>
 

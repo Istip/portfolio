@@ -6,6 +6,4 @@ export const Sections = styled.div`
   width: 100%;
 `;
 
-export const Container = styled.div`
-  /* background: ${({ background }) => background}; */
-`;
+export const Container = styled.div``;
