@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { Container, Sections } from './App.styles';
 
 import { About } from './components/About';
@@ -35,36 +36,38 @@ function App() {
   }, []);
 
   return (
-    <Container id="top">
-      <Navbar background={background} />
-      <Hero />
+    <ParallaxProvider>
+      <Container id="top">
+        <Navbar background={background} />
+        <Hero />
 
-      <Sections onClick={() => console.log(aboutRef)}>
-        <Section id="about" innerRef={aboutRef}>
-          <SectionHeader
-            number="01 /"
-            title="about me"
-            numberColor={tokens.colors.primary600}
-          />
-          <About />
-        </Section>
+        <Sections>
+          <Section id="about" innerRef={aboutRef}>
+            <SectionHeader
+              number="01 /"
+              title="about me"
+              numberColor={tokens.colors.primary600}
+            />
+            <About />
+          </Section>
 
-        <Section id="work">
-          <SectionHeader number="02 /" title="work" />
-          <Work />
-        </Section>
+          <Section id="work">
+            <SectionHeader number="02 /" title="work" />
+            <Work />
+          </Section>
 
-        <Section id="contact">
-          <SectionHeader
-            number="03 /"
-            title="contact"
-            numberColor={tokens.colors.mediumGrey}
-            titleColor={tokens.colors.primary400}
-          />
-          <Contact />
-        </Section>
-      </Sections>
-    </Container>
+          <Section id="contact">
+            <SectionHeader
+              number="03 /"
+              title="contact"
+              numberColor={tokens.colors.mediumGrey}
+              titleColor={tokens.colors.primary400}
+            />
+            <Contact />
+          </Section>
+        </Sections>
+      </Container>
+    </ParallaxProvider>
   );
 }
 
