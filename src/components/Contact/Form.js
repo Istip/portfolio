@@ -8,7 +8,9 @@ const Form = () => {
         <Input placeholder="Type your beautiful name..." required />
         <Input placeholder="Type your beautiful email address..." required />
         <Textarea rows={10} placeholder="Type your message..." required />
-        <Button type="submit">SEND THAT MESSAGE</Button>
+        <Button type="submit" variant="secondary">
+          SEND THAT MESSAGE
+        </Button>
       </FormField>
     </Wrapper>
   );

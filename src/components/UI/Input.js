@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { tokens } from './tokens';
 
-// TODO: merge input field and textarea into one single component
 const Input = ({ ...props }) => {
   return <InputField {...props} />;
 };
@@ -11,6 +10,7 @@ const InputField = styled.input`
   padding: 20px;
   border: 1px solid ${tokens.colors.lightGrey};
   margin-bottom: 20px;
+  color: ${tokens.colors.white};
 
   font-weight: 400;
   font-size: 18px;
