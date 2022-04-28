@@ -1,45 +1,52 @@
+import { tokens } from '../UI';
 import styled from 'styled-components';
 import image from '../../assets/me.png';
-import { tokens } from '../UI';
 
 const background = `url(${image})`;
 
-export const HeroImage = styled.div`
+export const HeroContentWrapper = styled.div`
+  overflow: hidden;
+  /* Demo for testing, probably should be removed - BLEND MODE */
+  mix-blend-mode: multiply;
+
+  border: 1px solid lime;
+  min-height: 100%;
+
   display: flex;
-  align-items: center;
+  align-items: space-between;
   justify-content: center;
-  width: 1000px;
-  height: 500px;
+  flex-direction: column;
+
   background: ${background};
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  position: absolute;
-  top: 220px;
-  cursor: grab;
-`;
-
-export const HeroTitle = styled.div`
-  position: relative;
-  height: calc(100vh - 220px);
-  overflow-x: hidden;
-
-  /* Demo for testing, probably should be removed */
-  mix-blend-mode: multiply;
 `;
 
 export const ScrollContainer = styled.div`
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 32px 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const ScrollContent = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 40px;
 `;
 
 export const HeroText = styled.div`
-  position: absolute;
-  top: -60px;
   text-align: right;
   padding-left: 160px;
+  height: auto;
+  margin-top: -200px;
 `;
 
 export const VerticalLine = styled.div`

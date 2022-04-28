@@ -9,22 +9,19 @@ const SectionHeader = ({
   titleColor,
   ...props
 }) => {
+  const textOptions = { tag: 'div', variant: 'title', fontFamily: 'Syncopate' };
+
   return (
     <Wrapper
       initial={{ opacity: 0, x: '-500px' }}
       whileInView={{ opacity: 1, x: 0 }}
     >
       <Center {...props} justify="space-between">
-        <Text tag="div" variant="black48" color={numberColor}>
+        <Text color={numberColor} {...textOptions}>
           {number}
         </Text>
 
-        <Text
-          tag="div"
-          variant="title"
-          fontFamily="Syncopate"
-          color={titleColor}
-        >
+        <Text color={titleColor} {...textOptions}>
           {title}
         </Text>
       </Center>

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import { Container, Sections } from './App.styles';
+import { Container, Sections, SubContainer } from './App.styles';
 
 import { About } from './components/About';
 import { Contact } from './components/Contact';
@@ -13,11 +12,15 @@ import { Work } from './components/Work';
 function App() {
   const [background, setBackground] = useState(tokens.colors.primary400);
   const aboutRef = useRef();
+  const contactRef = useRef();
 
   const handleScroll = () => {
-    if (window.scrollY <= 600) {
+    if (window.scrollY <= aboutRef.current.offsetTop) {
       setBackground(tokens.colors.primary400);
-    } else if (window.scrollY > 600 && window.scrollY <= 2500) {
+    } else if (
+      window.scrollY > aboutRef.current.offsetTop &&
+      window.scrollY <= contactRef.current.offsetTop - 300
+    ) {
       setBackground(tokens.colors.white);
     } else {
       setBackground(tokens.colors.primary700);
@@ -32,9 +35,10 @@ function App() {
   }, [background]);
 
   return (
-    <ParallaxProvider>
-      <Container id="top">
-        <Navbar background={background} />
+    <Container id="top">
+      <Navbar background={background} />
+
+      <SubContainer>
         <Hero />
 
         <Sections>
@@ -52,7 +56,7 @@ function App() {
             <Work />
           </Section>
 
-          <Section id="contact">
+          <Section id="contact" innerRef={contactRef}>
             <SectionHeader
               number="03 /"
               title="contact"
@@ -62,8 +66,8 @@ function App() {
             <Contact />
           </Section>
         </Sections>
-      </Container>
-    </ParallaxProvider>
+      </SubContainer>
+    </Container>
   );
 }
 
