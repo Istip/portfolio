@@ -9,7 +9,6 @@ export const HeroContentWrapper = styled.div`
   /* Demo for testing, probably should be removed - BLEND MODE */
   mix-blend-mode: multiply;
 
-  border: 1px solid lime;
   min-height: 100%;
 
   display: flex;
