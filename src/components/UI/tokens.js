@@ -3,7 +3,7 @@ export const tokens = {
     primary100: '#f7fefa',
     primary200: '#baf7d6',
     primary300: '#7cf1b1',
-    primary400: '#3eea8d', // primary color
+    primary400: '#3eea8d', // main primary color
     primary500: '#32BF73',
     primary600: '#278C55',
     primary700: '#151D12',
