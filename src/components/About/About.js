@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types';
 import { AboutWrapper as Wrapper } from './About.styles';
 import { Sentence, Description } from './';
 import { Text, tokens } from '../UI/';
 
-const About = () => {
+const About = ({ background }) => {
   const descriptions = [
     {
       title: 'AS DEVELOPER',
@@ -22,7 +23,15 @@ const About = () => {
         <Text variant="bold48" tag="span">
           Passionate about web technologies.
         </Text>
-        <Text variant="bold48" tag="span" color={tokens.colors.mediumGrey}>
+        <Text
+          variant="bold48"
+          tag="span"
+          color={
+            background === tokens.colors.primary400
+              ? tokens.colors.primary600
+              : tokens.colors.lightGrey
+          }
+        >
           I love working at the intersection of creativity and user friendly
           interfaces.
         </Text>
@@ -35,7 +44,15 @@ const About = () => {
         <Text variant="bold48" tag="span">
           When I'm not building or exploring new web experiences,
         </Text>
-        <Text variant="bold48" tag="span" color={tokens.colors.mediumGrey}>
+        <Text
+          variant="bold48"
+          tag="span"
+          color={
+            background === tokens.colors.primary400
+              ? tokens.colors.primary600
+              : tokens.colors.lightGrey
+          }
+        >
           I'm probably playing games or watching football.
         </Text>
       </Sentence>
@@ -47,6 +64,10 @@ const About = () => {
       ))}
     </Wrapper>
   );
+};
+
+About.propTypes = {
+  background: PropTypes.string.isRequired,
 };
 
 export default About;

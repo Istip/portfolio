@@ -48,7 +48,7 @@ function App() {
               title="about me"
               numberColor={tokens.colors.primary600}
             />
-            <About />
+            <About background={background} />
           </Section>
 
           <Section id="work">

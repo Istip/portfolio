@@ -14,7 +14,13 @@ const Text = ({
   return (
     <>
       <Tag
-        style={{ ...fonts[variant], color, lineHeight, fontFamily }}
+        style={{
+          ...fonts[variant],
+          color,
+          lineHeight,
+          fontFamily,
+          transition: '250ms ease',
+        }}
         {...props}
       >
         {children}
