@@ -1,12 +1,12 @@
 export const tokens = {
   colors: {
-    primary100: '#f7fefa',
-    primary200: '#baf7d6',
-    primary300: '#7cf1b1',
-    primary400: '#3eea8d', // main primary color
-    primary500: '#32BF73',
-    primary600: '#278C55',
-    primary700: '#151D12',
+    primary100: '#eafce7',
+    primary200: '#c3f8bc',
+    primary300: '#a4f49b',
+    primary400: '#86f079', // main primary color
+    primary500: '#64b45b',
+    primary600: '#43783c',
+    primary700: '#0c1e09',
 
     white: '#fff',
     lightGrey: '#CECECE',

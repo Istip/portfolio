@@ -42,7 +42,7 @@ export const ScrollContent = styled.div`
 `;
 
 export const HeroText = styled.div`
-  text-align: right;
+  /* text-align: right; */
   padding-left: 160px;
   height: auto;
   margin-top: -200px;

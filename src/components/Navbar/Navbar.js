@@ -8,9 +8,9 @@ import {
 const Navbar = ({ background, ...props }) => {
   // Array of icons to render
   const icons = [
-    { name: 'facebook', route: 'https://www.google.com/' },
-    { name: 'instagram', route: 'https://www.google.com/' },
-    { name: 'github', route: 'https://www.google.com/' },
+    { name: 'facebook', route: 'https://facebook.com/pasztor.isti/' },
+    { name: 'instagram', route: 'https://instagram.com/pasztor.isti/' },
+    { name: 'github', route: 'https://github.com/Istip/' },
   ];
 
   // Array of buttons to render

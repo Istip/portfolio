@@ -15,15 +15,15 @@ export const buttons = [
 
 export const links = [
   {
-    text: 'instagram',
-    route: 'https://www.google.com/',
+    text: 'facebook',
+    route: 'https://facebook.com/pasztor.isti/',
   },
   {
-    text: 'facebook',
-    route: 'https://www.google.com/',
+    text: 'instagram',
+    route: 'https://instagram.com/pasztor.isti/',
   },
   {
     text: 'github',
-    route: 'https://www.google.com/',
+    route: 'https://github.com/Istip/',
   },
 ];
