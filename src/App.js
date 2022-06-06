@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { Container, Sections, SubContainer } from './App.styles';
-
-import { About } from './components/About';
-import { Contact } from './components/Contact';
-import { Hero } from './components/Hero';
-import { Navbar } from './components/Navbar';
-import { Section, SectionHeader } from './components/Section';
+import {
+  About,
+  Contact,
+  Hero,
+  Navbar,
+  Section,
+  SectionHeader,
+  Work,
+} from './components';
 import { tokens } from './components/UI';
-import { Work } from './components/Work';
 
 function App() {
   const [background, setBackground] = useState(tokens.colors.primary400);
