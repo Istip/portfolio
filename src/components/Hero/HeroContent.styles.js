@@ -6,12 +6,12 @@ const background = `url(${image})`;
 
 export const HeroContentWrapper = styled.div`
   overflow: hidden;
-  /* Demo for testing, probably should be removed - BLEND MODE */
   mix-blend-mode: multiply;
 
   min-height: 100%;
 
   display: flex;
+  flex-direction: column;
   align-items: space-between;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +27,7 @@ export const ScrollContainer = styled.div`
   padding: 32px 0;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
@@ -42,8 +42,8 @@ export const ScrollContent = styled.div`
 `;
 
 export const HeroText = styled.div`
-  /* text-align: right; */
-  padding-left: 160px;
+  text-align: right;
+  padding-right: 160px;
   height: auto;
   margin-top: -200px;
 `;
@@ -51,6 +51,6 @@ export const HeroText = styled.div`
 export const VerticalLine = styled.div`
   width: 1px;
   height: 50px;
-  background: ${tokens.colors.primary700};
+  background: ${tokens.colors.white};
   margin-bottom: 10px;
 `;

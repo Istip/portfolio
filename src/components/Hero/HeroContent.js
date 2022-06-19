@@ -56,7 +56,7 @@ const HeroContent = () => {
         <ScrollContent>
           <Center direction="column">
             <VerticalLine />
-            <Text color={tokens.colors.primary700} tag="div">
+            <Text color={tokens.colors.white} tag="div">
               scroll for more
             </Text>
           </Center>
