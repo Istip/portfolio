@@ -1,7 +1,7 @@
 import { cloneElement } from "react";
 import icons from "./icons/_icons";
 
-type IconName = keyof typeof icons;
+export type IconName = keyof typeof icons;
 
 type Props = {
   name: IconName;
