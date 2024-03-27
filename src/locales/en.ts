@@ -5,4 +5,6 @@ export default {
     partiallyAvailable: "partially available",
     veryBusy: "very busy",
   },
+  about: "Get to know me",
+  contact: "Contact Now",
 } as const;
