@@ -1,5 +1,8 @@
 export default {
   hello: "Hello",
-  "hello.world": "Hello world!",
-  welcome: "Hello {name}!",
+  status: {
+    available: "available",
+    partiallyAvailable: "partially available",
+    veryBusy: "very busy",
+  },
 } as const;

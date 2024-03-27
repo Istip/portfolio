@@ -1,5 +1,8 @@
 export default {
   hello: "Szia",
-  "hello.world": "Helló világ!",
-  welcome: "Helló {name}!",
+  status: {
+    available: "elérhető",
+    partiallyAvailable: "részben elérhető",
+    veryBusy: "nagyon elfoglalt",
+  },
 } as const;
