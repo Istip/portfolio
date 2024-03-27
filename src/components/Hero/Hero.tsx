@@ -1,12 +1,16 @@
 "use client";
 
+import { useI18n } from "@/locales/client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Text from "../Text/Text";
-import { motion } from "framer-motion";
+import DoubleButton from "../Button/DoubleButton";
 
-const Hero = () => {
+export default function Hero() {
+  const t = useI18n();
+
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 pb-6">
       <Text as="h1" type="expanded" className="text-8xl">
         istvan <br /> pasztor
       </Text>
@@ -27,8 +31,19 @@ const Hero = () => {
       <Text as="h1" type="expanded" className="text-8xl text-right">
         creative <br /> developer
       </Text>
+
+      <div className="center gap-2">
+        <DoubleButton className="bg-light border border-dark text-dark">
+          <Text type="expandedBold" className="uppercase">
+            {t("about")}
+          </Text>
+        </DoubleButton>
+        <DoubleButton left className="bg-primary text-dark">
+          <Text type="expandedBold" className="uppercase">
+            {t("contact")}
+          </Text>
+        </DoubleButton>
+      </div>
     </section>
   );
-};
-
-export default Hero;
+}
