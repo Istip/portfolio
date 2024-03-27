@@ -1,5 +1,6 @@
 "use client";
 
+import Text from "@/components/Text/Text";
 import { useI18n } from "@/locales/client";
 
 export default function Home() {
@@ -8,7 +9,9 @@ export default function Home() {
   return (
     <div>
       <h1>{t("hello")}</h1>
-      <h1>Istvan Pasztor</h1>
+      <Text as="h1" type="mona" className="text-red-500 text-7xl">
+        Istvan Pasztor
+      </Text>
     </div>
   );
 }
