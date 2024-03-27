@@ -11,11 +11,11 @@ const LanguageSelector = () => {
   const swapLocale = locale === "en" ? "hu" : "en";
 
   return (
-    <li>
-      <button onClick={toggleLocale} className="uppercase bg-white center">
+    <li className="text-dark">
+      <button onClick={toggleLocale} className="uppercase">
         <Text
           as="div"
-          className="text-xs bg-white p-2 rounded-full border border-dark transition-all hover:bg-primaryLight"
+          className="text-xs bg-white p-2 rounded-full border border-primaryDark transition-all hover:bg-primaryDark"
         >
           {swapLocale}
         </Text>
