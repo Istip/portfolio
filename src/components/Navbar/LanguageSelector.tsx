@@ -11,14 +11,16 @@ const LanguageSelector = () => {
   const swapLocale = locale === "en" ? "hu" : "en";
 
   return (
-    <Text
-      as="div"
-      className="text-xs bg-white p-2 rounded-full border border-stone-900"
-    >
+    <li>
       <button onClick={toggleLocale} className="uppercase bg-white center">
-        {swapLocale}
+        <Text
+          as="div"
+          className="text-xs bg-white p-2 rounded-full border border-dark transition-all hover:bg-primaryLight"
+        >
+          {swapLocale}
+        </Text>
       </button>
-    </Text>
+    </li>
   );
 };
 

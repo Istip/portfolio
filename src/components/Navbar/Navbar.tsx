@@ -1,21 +1,20 @@
-import React from "react";
 import LanguageSelector from "./LanguageSelector";
 import Icon from "../Icon/Icon";
+import Logo from "./Logo";
+import Text from "../Text/Text";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-stone-100 p-5">
+    <div className="w-full p-5">
       <ul className="flex items-center justify-between mx-auto">
-        <li>LOGO</li>
+        <Logo />
         <ul className="center gap-4">
+          <LanguageSelector />
           <li>
-            <LanguageSelector />
-          </li>
-          <li className="center gap-2">
-            <div>MENU</div>
-            <div>
+            <button className="center gap-2">
+              <Text>MENU</Text>
               <Icon name="menu" />
-            </div>
+            </button>
           </li>
         </ul>
       </ul>
