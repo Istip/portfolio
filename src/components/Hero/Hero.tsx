@@ -3,7 +3,7 @@ import Text from "../Text/Text";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10">
       <Text as="h1" type="expanded" className="text-8xl">
         istvan <br /> pasztor
       </Text>
@@ -20,7 +20,7 @@ const Hero = () => {
       <Text as="h1" type="expanded" className="text-8xl text-right">
         creative <br /> developer
       </Text>
-    </div>
+    </section>
   );
 };
 
