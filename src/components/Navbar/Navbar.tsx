@@ -5,7 +5,7 @@ import Text from "../Text/Text";
 
 const Navbar = () => {
   return (
-    <div className="w-full p-5">
+    <nav className="w-full p-5">
       <ul className="flex items-center justify-between mx-auto">
         <Logo />
         <ul className="center gap-4">
@@ -18,7 +18,7 @@ const Navbar = () => {
           </li>
         </ul>
       </ul>
-    </div>
+    </nav>
   );
 };
 
