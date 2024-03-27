@@ -19,6 +19,7 @@ const Icon: React.FC<Props> = ({ name, size, color }) => {
   return (
     <div className="flex items-center">
       {cloneElement(selectedIcon, { size, color })}
+      <span className="sr-only">{name.toUpperCase()}</span>
     </div>
   );
 };
