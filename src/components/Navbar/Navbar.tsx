@@ -5,7 +5,7 @@ import Text from "../Text/Text";
 
 const Navbar = () => {
   return (
-    <nav className="w-full p-5">
+    <nav className="w-full fixed z-10 p-5 text-light">
       <ul className="flex items-center justify-between mx-auto">
         <Logo />
         <ul className="center gap-4">
