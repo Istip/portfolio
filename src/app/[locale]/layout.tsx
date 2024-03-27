@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale} suppressHydrationWarning={true}>
-      <body className="antialiased scroll-smooth">
+      <body className="antialiased scroll-smooth bg-light text-dark">
         <I18nProviderClient locale={locale}>
           <Navbar />
           {children}
