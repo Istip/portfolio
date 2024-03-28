@@ -7,7 +7,7 @@ const statuses = [
   { name: "veryBusy", color: "bg-red-500" },
 ];
 
-export default async function Logo() {
+export default async function Status() {
   const t = await getScopedI18n("status");
 
   let { name, color } = statuses[0];
