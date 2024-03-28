@@ -70,6 +70,7 @@ const Tooltip: React.FC<TooltipProps> = ({
   const springY = useSpring(cursorY, { stiffness: 500, damping: 90 });
 
   const tooltipX = useTransform(springX, (x) => x + 8);
+
   const tooltipY = useTransform(springY, (y) => y + 16);
 
   return (
@@ -85,7 +86,7 @@ const Tooltip: React.FC<TooltipProps> = ({
             animate="visible"
             exit="hidden"
             variants={tooltipVariants}
-            className={`${selectedVariant?.style} px-3 py-2 text-xs font-normal rounded-full rounded-tl-none`}
+            className={`${selectedVariant?.style} px-3 py-2 text-xs font-normal rounded-full rounded-tl-none pointer-events-none`}
             style={{
               position: "fixed",
               top: tooltipY,
