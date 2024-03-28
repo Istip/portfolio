@@ -7,4 +7,8 @@ export default {
   },
   about: "Bővebben rólam",
   contact: "Kapcsolatfelvétel",
+  creative: "Kreatív",
+  developer: "Fejlesztő",
+  firstName: "Pásztor",
+  lastName: "István",
 } as const;

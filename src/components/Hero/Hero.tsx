@@ -11,8 +11,8 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col gap-10 pb-6">
-      <Text as="h1" type="expanded" className="text-8xl">
-        istvan <br /> pasztor
+      <Text as="h1" type="expanded" className="text-8xl lowercase">
+        {t("firstName")} <br /> {t("lastName")}
       </Text>
 
       <motion.div
@@ -28,8 +28,8 @@ export default function Hero() {
         />
       </motion.div>
 
-      <Text as="h1" type="expanded" className="text-8xl text-right">
-        creative <br /> developer
+      <Text as="h1" type="expanded" className="text-8xl text-right lowercase">
+        {t("creative")} <br /> {t("developer")}
       </Text>
 
       <div className="center gap-2">
