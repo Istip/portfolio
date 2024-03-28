@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import "../globals.css";
 import Showcase from "@/components/Showcase/Showcase";
 import Lenis from "@/utils/lenis";
+import Noise from "@/utils/noise";
 
 export const metadata: Metadata = {
   title: "Istvan Pasztor",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <div className="pt-20">{children}</div>
             <Showcase />
           </div>
+          <Noise />
         </I18nProviderClient>
       </body>
     </html>
