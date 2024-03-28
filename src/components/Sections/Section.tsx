@@ -3,13 +3,15 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Text from "../Text/Text";
+import { useScopedI18n } from "@/locales/client";
 
 interface Props {
   children: React.ReactNode;
-  number: string;
-  title: string;
+  number: number;
+  title: "about" | "services" | "contact";
   colors?: [string, string];
-  bg?: string;
+  from?: string;
+  to?: string;
 }
 
 export default function Section({
@@ -17,32 +19,31 @@ export default function Section({
   title,
   number,
   colors = ["text-dark", "text-dark"],
-  bg = "bg-primary",
+  from = "#F9F9F9",
+  to = "#3EEA8D",
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+
+  const t = useScopedI18n("sections");
 
   const { scrollYProgress } = useScroll({
     target: ref,
   });
 
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["#F9F9F9", "#3EEA8D"]
-  );
+  const backgroundColor = useTransform(scrollYProgress, [0, 0.5], [from, to]);
 
   return (
     <motion.section
       ref={ref}
-      className={`${bg} md:px-[50px] px-5 py-9`}
+      className="md:px-[50px] px-5 py-9"
       style={{ backgroundColor }}
     >
       <div className="flex items-center justify-between text-5xl mb-9">
         <Text type="expanded" className={`${colors[0]}`}>
-          {number}
+          {`0${number}`}
         </Text>
         <Text type="expanded" className={`${colors[1]}`}>
-          {title}
+          {t(title)}
         </Text>
       </div>
 
