@@ -1,7 +1,6 @@
 import LanguageSelector from "./LanguageSelector";
-import Icon from "../Icon/Icon";
 import Status from "./Status";
-import Text from "../Text/Text";
+import Menu from "./Menu";
 
 const Navbar = () => {
   return (
@@ -10,12 +9,7 @@ const Navbar = () => {
         <Status />
         <ul className="center gap-4">
           <LanguageSelector />
-          <li>
-            <button className="center gap-2">
-              <Text>MENU</Text>
-              <Icon name="menu" />
-            </button>
-          </li>
+          <Menu />
         </ul>
       </ul>
     </nav>
