@@ -31,7 +31,7 @@ const DoubleButton: React.FC<Props> = ({
         </div>
       )}
       <div
-        className={`rounded-2xl px-4 mx-[1px] py-3 flex items-center transition-all duration-500 w-full ${
+        className={`rounded-2xl px-4 mx-[1px] py-3 center transition-all duration-500 w-full ${
           className ?? ""
         }`}
       >
