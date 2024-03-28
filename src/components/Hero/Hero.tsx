@@ -6,6 +6,7 @@ import Image from "next/image";
 import Text from "../Text/Text";
 import DoubleButton from "../Button/DoubleButton";
 import Tooltip from "../Tooltip/Tooltip";
+import Link from "next/link";
 
 export default function Hero() {
   const t = useI18n();
@@ -23,7 +24,7 @@ export default function Hero() {
           className="border border-dark"
           initial={{ height: 0 }}
           animate={{ height: "30vh" }}
-          transition={{ duration: 0.75 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <Image
             src="/images/cover.webp"
@@ -40,12 +41,16 @@ export default function Hero() {
       </div>
 
       <div className="center gap-2 py-5">
-        <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
-          {t("about")}
-        </DoubleButton>
-        <DoubleButton withIcon className="bg-primary text-dark">
-          {t("contact")}
-        </DoubleButton>
+        <Link href="about" className="w-full">
+          <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
+            {t("about")}
+          </DoubleButton>
+        </Link>
+        <Link href="contact" className="w-full">
+          <DoubleButton withIcon className="bg-primary text-dark">
+            {t("contact")}
+          </DoubleButton>
+        </Link>
       </div>
     </section>
   );
