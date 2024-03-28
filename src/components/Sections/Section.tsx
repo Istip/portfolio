@@ -42,7 +42,7 @@ export default function Section({
         <Text type="expanded" className={`${colors[0]}`}>
           {`0${number}`}
         </Text>
-        <Text type="expanded" className={`${colors[1]}`}>
+        <Text as="h2" type="expanded" className={`${colors[1]}`}>
           {t(title)}
         </Text>
       </div>
