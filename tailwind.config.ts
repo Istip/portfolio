@@ -16,6 +16,9 @@ const config: Config = {
         primaryLight: "#CCF4DE",
         light: "#F9F9F9",
       },
+      height: {
+        hero: "calc(100vh - 80px)",
+      },
     },
   },
   plugins: [],
