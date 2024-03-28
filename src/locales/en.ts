@@ -11,4 +11,5 @@ export default {
   developer: "Developer",
   firstName: "Istvan",
   lastName: "Pasztor",
+  myName: "You can call me Isti.",
 } as const;

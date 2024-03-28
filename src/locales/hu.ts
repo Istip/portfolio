@@ -11,4 +11,5 @@ export default {
   developer: "Fejlesztő",
   firstName: "Pásztor",
   lastName: "István",
+  myName: "Szólits csak Istinek.",
 } as const;
