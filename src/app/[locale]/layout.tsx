@@ -3,6 +3,7 @@ import { I18nProviderClient } from "@/locales/client";
 import Navbar from "@/components/Navbar/Navbar";
 import "../globals.css";
 import Showcase from "@/components/Showcase/Showcase";
+import Lenis from "@/utils/lenis";
 
 export const metadata: Metadata = {
   title: "Istvan Pasztor",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning={true}>
       <body className="antialiased scroll-smooth bg-light text-dark">
+        <Lenis />
         <I18nProviderClient locale={locale}>
           <Navbar />
           <div className="grid grid-cols-2">
