@@ -18,7 +18,7 @@ export default async function Logo() {
     | "veryBusy";
 
   return (
-    <div className="center gap-2 text-dark bg-light px-2 py-1 rounded-full">
+    <li className="center gap-2 text-dark bg-light px-2 py-1 rounded-full">
       <div className="relative">
         <div
           className={`${color} w-4 aspect-square rounded-full animate-ping`}
@@ -28,6 +28,6 @@ export default async function Logo() {
         </div>
       </div>
       <Text type="expanded">{t(key)}</Text>
-    </div>
+    </li>
   );
 }
