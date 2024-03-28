@@ -41,14 +41,10 @@ export default function Hero() {
 
       <div className="center gap-2 py-5">
         <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
-          <Text type="expandedBold" className="uppercase">
-            {t("about")}
-          </Text>
+          {t("about")}
         </DoubleButton>
-        <DoubleButton left className="bg-primary text-dark">
-          <Text type="expandedBold" className="uppercase">
-            {t("contact")}
-          </Text>
+        <DoubleButton withIcon className="bg-primary text-dark">
+          {t("contact")}
         </DoubleButton>
       </div>
     </section>
