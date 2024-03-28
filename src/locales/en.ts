@@ -13,4 +13,9 @@ export default {
   lastName: "Pasztor",
   myName: "You can call me Isti.",
   menu: "Menu",
+  sections: {
+    about: "About me",
+    services: "Services",
+    contact: "Contact",
+  },
 } as const;

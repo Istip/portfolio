@@ -13,4 +13,9 @@ export default {
   lastName: "István",
   myName: "Szólits csak Istinek.",
   menu: "Menü",
+  sections: {
+    about: "Rólam",
+    services: "Szolgáltatások",
+    contact: "Kapcsolat",
+  },
 } as const;
