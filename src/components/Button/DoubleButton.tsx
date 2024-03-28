@@ -15,14 +15,10 @@ const DoubleButton: React.FC<Props> = ({
   ...props
 }) => {
   return (
-    <button
-      className={`flex items-center justify-center group rounded-2xl w-full
-        `}
-      {...props}
-    >
+    <button className="center w-full group" {...props}>
       {left && (
         <div
-          className={`rounded-2xl px-4 py-3 transition-all opacity-100 flex
+          className={`rounded-2xl px-4 py-3 transition-all opacity-100 w-12 aspect-square group-hover:w-0
           group-hover:p-0 group-hover:opacity-0 duration-500 ${
             className ?? ""
           }`}
@@ -39,8 +35,10 @@ const DoubleButton: React.FC<Props> = ({
       </div>
       {left && (
         <div
-          className={`rounded-2xl group-hover:px-4 group-hover:py-3 transition-all group-hover:opacity-100 flex
-          p-0 opacity-0 duration-500 text-[2px] ${className ?? ""}`}
+          className={`rounded-2xl group-hover:px-4 group-hover:py-3 transition-all group-hover:opacity-100
+          w-0 aspect-square group-hover:w-12 p-0 opacity-0 duration-500 text-[2px] ${
+            className ?? ""
+          }`}
         >
           <Icon name={icon} />
         </div>
