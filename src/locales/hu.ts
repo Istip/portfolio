@@ -12,4 +12,5 @@ export default {
   firstName: "Pásztor",
   lastName: "István",
   myName: "Szólits csak Istinek.",
+  menu: "Menü",
 } as const;
