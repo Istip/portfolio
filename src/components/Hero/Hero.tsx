@@ -20,34 +20,29 @@ export default function Hero() {
             </Text>
           </Tooltip>
         </div>
+
         <motion.div
           className="border border-dark"
           initial={{ height: 0 }}
-          animate={{ height: "100%" }}
+          animate={{ height: "30vh" }}
           transition={{ duration: 0.75 }}
-          whileHover={{ scale: 1.05 }}
         >
           <Image
-            src="/images/cover.png"
+            src="/images/cover.webp"
             width={1600}
             height={800}
-            alt="Cover image"
+            alt="It's me, Isti."
             className="w-full h-full object-cover"
           />
         </motion.div>
-        <div>
-          <Text
-            as="h1"
-            type="expanded"
-            className="text-8xl text-right lowercase"
-          >
-            {t("creative")} <br /> {t("developer")}
-          </Text>
-        </div>
+
+        <Text as="h1" type="expanded" className="text-8xl text-right lowercase">
+          {t("creative")} <br /> {t("developer")}
+        </Text>
       </section>
 
       <div className="center gap-2 py-5">
-        <DoubleButton className="bg-light border border-dark text-dark">
+        <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
           <Text type="expandedBold" className="uppercase">
             {t("about")}
           </Text>
