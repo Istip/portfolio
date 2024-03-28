@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Text from "../Text/Text";
 import DoubleButton from "../Button/DoubleButton";
+import Tooltip from "../Tooltip/Tooltip";
 
 export default function Hero() {
   const t = useI18n();
@@ -13,9 +14,11 @@ export default function Hero() {
     <>
       <section className="flex flex-col justify-center gap-10 pb-6 h-hero">
         <div>
-          <Text as="h1" type="expanded" className="text-8xl lowercase">
-            {t("firstName")} <br /> {t("lastName")}
-          </Text>
+          <Tooltip variant="dark" content={t("myName")}>
+            <Text as="h1" type="expanded" className="text-8xl lowercase">
+              {t("firstName")} <br /> {t("lastName")}
+            </Text>
+          </Tooltip>
         </div>
         <motion.div
           className="border border-dark"
