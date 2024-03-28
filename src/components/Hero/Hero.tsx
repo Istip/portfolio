@@ -11,8 +11,8 @@ export default function Hero() {
   const t = useI18n();
 
   return (
-    <>
-      <section className="flex flex-col justify-center gap-10 pb-6 h-hero">
+    <section>
+      <div className="flex flex-col justify-center gap-10 pb-6 h-hero">
         <Tooltip variant="dark" content={t("myName")}>
           <Text as="h1" type="expanded" className="text-8xl lowercase">
             {t("firstName")} <br /> {t("lastName")}
@@ -37,7 +37,7 @@ export default function Hero() {
         <Text as="h1" type="expanded" className="text-8xl text-right lowercase">
           {t("creative")} <br /> {t("developer")}
         </Text>
-      </section>
+      </div>
 
       <div className="center gap-2 py-5">
         <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
@@ -51,6 +51,6 @@ export default function Hero() {
           </Text>
         </DoubleButton>
       </div>
-    </>
+    </section>
   );
 }
