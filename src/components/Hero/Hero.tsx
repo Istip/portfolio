@@ -10,29 +10,40 @@ export default function Hero() {
   const t = useI18n();
 
   return (
-    <section className="flex flex-col gap-10 pb-6">
-      <Text as="h1" type="expanded" className="text-8xl lowercase">
-        {t("firstName")} <br /> {t("lastName")}
-      </Text>
+    <>
+      <section className="flex flex-col justify-center gap-10 pb-6 h-hero">
+        <div>
+          <Text as="h1" type="expanded" className="text-8xl lowercase">
+            {t("firstName")} <br /> {t("lastName")}
+          </Text>
+        </div>
+        <motion.div
+          className="border border-dark"
+          initial={{ height: 0 }}
+          animate={{ height: "100%" }}
+          transition={{ duration: 0.75 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <Image
+            src="/images/cover.png"
+            width={1600}
+            height={800}
+            alt="Cover image"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+        <div>
+          <Text
+            as="h1"
+            type="expanded"
+            className="text-8xl text-right lowercase"
+          >
+            {t("creative")} <br /> {t("developer")}
+          </Text>
+        </div>
+      </section>
 
-      <motion.div
-        className="w-full relative overflow-hidden"
-        initial={{ height: 0 }}
-        animate={{ height: "100%" }}
-      >
-        <Image
-          src="/images/cover.png"
-          width={1600}
-          height={800}
-          alt="Cover image"
-        />
-      </motion.div>
-
-      <Text as="h1" type="expanded" className="text-8xl text-right lowercase">
-        {t("creative")} <br /> {t("developer")}
-      </Text>
-
-      <div className="center gap-2">
+      <div className="center gap-2 py-5">
         <DoubleButton className="bg-light border border-dark text-dark">
           <Text type="expandedBold" className="uppercase">
             {t("about")}
@@ -44,6 +55,6 @@ export default function Hero() {
           </Text>
         </DoubleButton>
       </div>
-    </section>
+    </>
   );
 }
