@@ -7,6 +7,7 @@ import Text from "../Text/Text";
 import DoubleButton from "../Button/DoubleButton";
 import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
+import MaskText from "../Text/MaskText";
 
 export default function Hero() {
   const t = useI18n();
@@ -15,9 +16,8 @@ export default function Hero() {
     <section>
       <div className="flex flex-col justify-center gap-10 pb-6 h-hero">
         <Tooltip variant="dark" content={t("myName")}>
-          <Text as="h1" type="expanded" className="text-8xl lowercase">
-            {t("firstName")} <br /> {t("lastName")}
-          </Text>
+          <MaskText>{t("firstName")}</MaskText>
+          <MaskText>{t("lastName")}</MaskText>
         </Tooltip>
 
         <motion.div
@@ -35,9 +35,10 @@ export default function Hero() {
           />
         </motion.div>
 
-        <Text as="h1" type="expanded" className="text-8xl text-right lowercase">
-          {t("creative")} <br /> {t("developer")}
-        </Text>
+        <div className="text-right">
+          <MaskText>{t("creative")}</MaskText>
+          <MaskText>{t("developer")}</MaskText>
+        </div>
       </div>
 
       <div className="center gap-2 py-5">
