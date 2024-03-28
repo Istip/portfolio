@@ -22,8 +22,8 @@ const DoubleButton: React.FC<Props> = ({
     >
       {left && (
         <div
-          className={`font-medium rounded-2xl px-4 py-3 transition-all opacity-100 flex
-          group-hover:p-0 group-hover:opacity-0 group-hover:text-[2px] duration-500 ${
+          className={`rounded-2xl px-4 py-3 transition-all opacity-100 flex
+          group-hover:p-0 group-hover:opacity-0 duration-500 ${
             className ?? ""
           }`}
         >
@@ -39,10 +39,8 @@ const DoubleButton: React.FC<Props> = ({
       </div>
       {left && (
         <div
-          className={`font-medium rounded-2xl group-hover:px-4 group-hover:py-3 transition-all group-hover:opacity-100 flex
-          p-0 opacity-0 duration-500 text-[2px] group-hover:text-base ${
-            className ?? ""
-          }`}
+          className={`rounded-2xl group-hover:px-4 group-hover:py-3 transition-all group-hover:opacity-100 flex
+          p-0 opacity-0 duration-500 text-[2px] ${className ?? ""}`}
         >
           <Icon name={icon} />
         </div>
