@@ -8,6 +8,7 @@
   align-items: center;
 }
 
+/* GLOBAL PAGE NOISIFICATION */
 .noise {
   position: fixed;
   inset: -200%;
@@ -24,4 +25,29 @@
   100% {
     transform: translateX(-10%) translateY(-10%);
   }
+}
+
+/* SCROLLBAR REPLACEMENT */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a8a8a;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #242424;
 }
