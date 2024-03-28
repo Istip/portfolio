@@ -13,13 +13,11 @@ export default function Hero() {
   return (
     <>
       <section className="flex flex-col justify-center gap-10 pb-6 h-hero">
-        <div>
-          <Tooltip variant="dark" content={t("myName")}>
-            <Text as="h1" type="expanded" className="text-8xl lowercase">
-              {t("firstName")} <br /> {t("lastName")}
-            </Text>
-          </Tooltip>
-        </div>
+        <Tooltip variant="dark" content={t("myName")}>
+          <Text as="h1" type="expanded" className="text-8xl lowercase">
+            {t("firstName")} <br /> {t("lastName")}
+          </Text>
+        </Tooltip>
 
         <motion.div
           className="border border-dark"
