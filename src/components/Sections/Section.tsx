@@ -12,6 +12,7 @@ interface Props {
   colors?: [string, string];
   from?: string;
   to?: string;
+  padding?: boolean;
 }
 
 export default function Section({
@@ -21,6 +22,7 @@ export default function Section({
   colors = ["text-dark", "text-dark"],
   from = "#F9F9F9",
   to = "#3EEA8D",
+  padding = true,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -33,12 +35,8 @@ export default function Section({
   const backgroundColor = useTransform(scrollYProgress, [0, 0.5], [from, to]);
 
   return (
-    <motion.section
-      ref={ref}
-      className="md:px-[50px] px-5 py-9"
-      style={{ backgroundColor }}
-    >
-      <div className="flex items-center justify-between text-5xl mb-9">
+    <motion.section ref={ref} className="" style={{ backgroundColor }}>
+      <div className="flex items-center justify-between text-5xl mb-9 md:px-[50px] px-5 py-9">
         <Text type="expanded" className={`${colors[0]}`}>
           {`0${number}`}
         </Text>
@@ -47,7 +45,9 @@ export default function Section({
         </Text>
       </div>
 
-      <div>{children}</div>
+      <div className={`py-9 ${padding ? "md:px-[50px] px-5" : ""}`}>
+        {children}
+      </div>
     </motion.section>
   );
 }
