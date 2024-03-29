@@ -1,7 +1,7 @@
-import { Fragment } from "react";
 import Hero from "@/components/Hero/Hero";
 import Section from "@/components/Sections/Section";
 import About from "@/components/Sections/About";
+import Services from "@/components/Sections/Services";
 
 export default function Home() {
   return (
@@ -14,8 +14,14 @@ export default function Home() {
         <About />
       </Section>
 
-      <Section number={2} title="services" from="#3EEA8D" to="#111111">
-        <About />
+      <Section
+        number={2}
+        colors={["text-white", "text-white"]}
+        title="services"
+        from="#3EEA8D"
+        to="#111111"
+      >
+        <Services />
       </Section>
     </>
   );
