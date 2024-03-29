@@ -1,0 +1,60 @@
+import Text from "../Text/Text";
+import { AnimatePresence, motion } from "framer-motion";
+
+interface Props {
+  text: React.ReactNode | string;
+  content?: React.ReactNode | string;
+  className?: string;
+  children: React.ReactNode;
+  selected: number | boolean;
+  setSelected: React.Dispatch<React.SetStateAction<number | boolean>>;
+  id: number;
+}
+export default function Accordion({
+  text,
+  className,
+  content,
+  children,
+  selected,
+  setSelected,
+  id,
+}: Props) {
+  console.log("✅  selected:", selected);
+
+  return (
+    <div onClick={() => setSelected(selected === id ? false : id)}>
+      <div
+        className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col text-primary hover:text-dark 
+       relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
+         className ?? ""
+       }`}
+      >
+        <div className="flex items-center justify-between gap-10 lowercase">
+          <div className="relative z-[1] text-4xl tracking-tighter font-black">
+            <Text type="expandedExtraLight">{text}</Text>
+          </div>
+          <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
+            <Text type="expandedExtraLight">{content}</Text>
+          </div>
+        </div>
+        <div className="absolute right-0 transition-all ease-in-out duration-500 top-1/2    h-0 group-hover:h-full bg-primary w-full" />
+        <div className="absolute right-0 transition-all ease-in-out duration-500 bottom-1/2 h-0 group-hover:h-full bg-primary w-full" />
+      </div>
+      <AnimatePresence mode="wait">
+        {selected === id && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "100%", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="overflow-hidden"
+          >
+            <div className="md:px-[50px] px-5 py-10 bg-primary h-full overflow-hidden">
+              <Text className="text-dark">{children}</Text>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
