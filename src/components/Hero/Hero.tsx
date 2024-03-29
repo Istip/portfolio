@@ -3,7 +3,6 @@
 import { useI18n } from "@/locales/client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Text from "../Text/Text";
 import DoubleButton from "../Button/DoubleButton";
 import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
