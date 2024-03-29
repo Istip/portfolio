@@ -20,6 +20,7 @@ export default function Home() {
         title="services"
         from="#3EEA8D"
         to="#111111"
+        padding={false}
       >
         <Services />
       </Section>
