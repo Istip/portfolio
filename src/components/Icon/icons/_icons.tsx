@@ -11,6 +11,7 @@ import MenuIcon from "./MenuIcon";
 import UserIcon from "./UserIcon";
 import ArrowDownIcon from "./ArrowDownIcon";
 import TrashIcon from "./TrashIcon";
+import ClipboardIcon from "./ClipboardIcon";
 
 const icons = {
   user: <UserIcon />,
@@ -26,6 +27,7 @@ const icons = {
   circleCheck: <CircleCheck />,
   arrowDown: <ArrowDownIcon />,
   trash: <TrashIcon />,
+  clipboard: <ClipboardIcon />,
 };
 
 export default icons;
