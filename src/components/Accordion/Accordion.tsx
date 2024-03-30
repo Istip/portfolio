@@ -1,4 +1,4 @@
-import Icon from "../Icon/Icon";
+import Icon, { IconName } from "../Icon/Icon";
 import Text from "../Text/Text";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -10,7 +10,7 @@ interface Props {
   selected: number | boolean;
   setSelected: React.Dispatch<React.SetStateAction<number | boolean>>;
   id: number;
-  icon: React.ReactNode;
+  icon: IconName;
 }
 export default function Accordion({
   text,
@@ -34,7 +34,7 @@ export default function Accordion({
       >
         <div className="flex items-center justify-between gap-10 lowercase">
           <div className="relative z-[1] text-4xl tracking-tighter font-black center gap-2">
-            <Icon name="design" />
+            <Icon name={icon} />
             <Text as="div" type="expandedExtraLight">
               {text}
             </Text>
