@@ -20,4 +20,5 @@ export default {
   },
   coverAlt: "Én vagyok, Isti.",
   copy: "Cím másolása a vágólapra",
+  copied: "Másolva a vágólapra",
 } as const;

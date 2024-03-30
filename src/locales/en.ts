@@ -20,4 +20,5 @@ export default {
   },
   coverAlt: "It's me, Isti.",
   copy: "Copy address to clipboard",
+  copied: "Copied to clipboard",
 } as const;
