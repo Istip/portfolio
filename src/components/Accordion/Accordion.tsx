@@ -1,3 +1,4 @@
+import Icon from "../Icon/Icon";
 import Text from "../Text/Text";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,6 +10,7 @@ interface Props {
   selected: number | boolean;
   setSelected: React.Dispatch<React.SetStateAction<number | boolean>>;
   id: number;
+  icon: React.ReactNode;
 }
 export default function Accordion({
   text,
@@ -18,6 +20,7 @@ export default function Accordion({
   selected,
   setSelected,
   id,
+  icon,
 }: Props) {
   const isSelected = selected === id;
 
@@ -30,8 +33,11 @@ export default function Accordion({
        } ${isSelected ? "bg-primary text-dark" : "text-primary"}`}
       >
         <div className="flex items-center justify-between gap-10 lowercase">
-          <div className="relative z-[1] text-4xl tracking-tighter font-black">
-            <Text type="expandedExtraLight">{text}</Text>
+          <div className="relative z-[1] text-4xl tracking-tighter font-black center gap-2">
+            <Icon name="design" />
+            <Text as="div" type="expandedExtraLight">
+              {text}
+            </Text>
           </div>
           <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
             <Text type="expandedExtraLight">{content}</Text>
