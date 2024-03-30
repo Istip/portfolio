@@ -21,4 +21,6 @@ export default {
   coverAlt: "It's me, Isti.",
   copy: "Copy address to clipboard",
   copied: "Copied to clipboard",
+  clickToOpen: "Click to open",
+  clickToClose: "Click to close",
 } as const;
