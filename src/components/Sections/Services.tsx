@@ -35,15 +35,15 @@ export default function Services() {
     {
       id: 3,
       text: "backend",
-      icon: "design",
+      icon: "data",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
     {
       id: 4,
-      text: "maintain",
-      icon: "design",
+      text: "maintanance",
+      icon: "message",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
