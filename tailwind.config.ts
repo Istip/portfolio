@@ -14,7 +14,7 @@ const config: Config = {
         primary: "#3EEA8D",
         primaryDark: "#2BAA65",
         primaryLight: "#CCF4DE",
-        light: "#F9F9F9",
+        light: "#F2F0EF",
       },
       height: {
         hero: "calc(100vh - 80px)",
