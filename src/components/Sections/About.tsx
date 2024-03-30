@@ -20,15 +20,6 @@ export default function About() {
         <div className="w-full h-64 bg-primaryDark rounded-2xl" />
       </div>
 
-      <Text type="expanded" className="text-5xl my-5">
-        i design
-      </Text>
-
-      <div className="grid grid-cols-2 gap-10">
-        <div className="w-full h-64 bg-primaryDark rounded-2xl" />
-        <div className="w-full h-64 bg-primaryDark rounded-2xl" />
-      </div>
-
       <AboutScroller />
     </div>
   );
