@@ -11,7 +11,7 @@ const AboutScroller = () => {
   return (
     <section
       ref={targetRef}
-      className="relative z-10 h-[700vh] rounded-2xl mt-40 mx-2 md:mx-5 my-10"
+      className="relative z-10 h-[300vh] rounded-2xl mt-40 mx-2 md:mx-5 my-10"
     >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div className="flex gap-40 mb-20" style={{ x }}>
@@ -26,5 +26,4 @@ const AboutScroller = () => {
     </section>
   );
 };
-
 export default AboutScroller;
