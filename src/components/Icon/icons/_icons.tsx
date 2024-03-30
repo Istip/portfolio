@@ -12,6 +12,10 @@ import UserIcon from "./UserIcon";
 import ArrowDownIcon from "./ArrowDownIcon";
 import TrashIcon from "./TrashIcon";
 import ClipboardIcon from "./ClipboardIcon";
+import DesignIcon from "./DesignIcon";
+import PageIcon from "./PageIcon";
+import DataIcon from "./DataIcon";
+import MessageIcon from "./MessageIcon";
 
 const icons = {
   user: <UserIcon />,
@@ -28,6 +32,10 @@ const icons = {
   arrowDown: <ArrowDownIcon />,
   trash: <TrashIcon />,
   clipboard: <ClipboardIcon />,
+  design: <DesignIcon />,
+  page: <PageIcon />,
+  data: <DataIcon />,
+  message: <MessageIcon />,
 };
 
 export default icons;
