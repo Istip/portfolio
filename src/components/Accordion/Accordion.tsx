@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Icon, { IconName } from "../Icon/Icon";
 import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
-import { getI18n } from "@/locales/server";
 import { useI18n } from "@/locales/client";
 
 interface Props {
