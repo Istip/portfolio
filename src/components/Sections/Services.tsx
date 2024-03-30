@@ -28,6 +28,13 @@ export default function Services() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
+    {
+      id: 4,
+      text: "maintain",
+      content: "Lorem, ipsum dolor",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
+    },
   ];
 
   return (
