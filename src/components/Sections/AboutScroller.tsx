@@ -18,7 +18,7 @@ const AboutScroller = () => {
           {Array.from({ length: 5 }).map((_, i) => (
             <div
               key={i}
-              className="w-[500px] h-64 bg-primaryDark rounded-2xl flex"
+              className="w-[500px] h-[500px] bg-primaryDark rounded-2xl flex"
             />
           ))}
         </motion.div>
