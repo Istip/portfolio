@@ -1,6 +1,11 @@
+"use client";
+
+import { AnimatePresence, motion } from "framer-motion";
 import Icon, { IconName } from "../Icon/Icon";
 import Text from "../Text/Text";
-import { AnimatePresence, motion } from "framer-motion";
+import Tooltip from "../Tooltip/Tooltip";
+import { getI18n } from "@/locales/server";
+import { useI18n } from "@/locales/client";
 
 interface Props {
   text: React.ReactNode | string;
@@ -24,47 +29,51 @@ export default function Accordion({
 }: Props) {
   const isSelected = selected === id;
 
+  const t = useI18n();
+
   return (
     <div onClick={() => setSelected(isSelected ? false : id)}>
-      <div
-        className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
+      <Tooltip content={`${t("clickToOpen")} ${text}`}>
+        <div
+          className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
        relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
          className ?? ""
        } ${isSelected ? "bg-primary text-dark" : "text-primary"}`}
-      >
-        <div className="flex items-center justify-between gap-10 lowercase">
-          <div className="relative z-[1] text-4xl tracking-tighter font-black center gap-2">
-            <Icon name={icon} />
-            <Text as="div" type="expandedExtraLight">
-              {text}
-            </Text>
-          </div>
-          <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
-            <Text type="expandedExtraLight">{content}</Text>
-          </div>
-        </div>
-        <div
-          className={`absolute right-0 transition-all ease-in-out duration-500 top-1/2    h-0 group-hover:h-full bg-primary w-full`}
-        />
-        <div
-          className={`absolute right-0 transition-all ease-in-out duration-500 bottom-1/2 h-0 group-hover:h-full bg-primary w-full`}
-        />
-      </div>
-      <AnimatePresence mode="wait">
-        {isSelected && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "100%", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="overflow-hidden"
-          >
-            <div className="md:px-[50px] px-5 py-10 bg-primary h-full overflow-hidden">
-              <Text className="text-dark">{children}</Text>
+        >
+          <div className="flex items-center justify-between gap-10 lowercase">
+            <div className="relative z-[1] text-4xl tracking-tighter font-black center gap-2">
+              <Icon name={icon} />
+              <Text as="div" type="expandedExtraLight">
+                {text}
+              </Text>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
+              <Text type="expandedExtraLight">{content}</Text>
+            </div>
+          </div>
+          <div
+            className={`absolute right-0 transition-all ease-in-out duration-500 top-1/2    h-0 group-hover:h-full bg-primary w-full`}
+          />
+          <div
+            className={`absolute right-0 transition-all ease-in-out duration-500 bottom-1/2 h-0 group-hover:h-full bg-primary w-full`}
+          />
+        </div>
+        <AnimatePresence mode="wait">
+          {isSelected && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "100%", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="overflow-hidden"
+            >
+              <div className="md:px-[50px] px-5 py-10 bg-primary h-full overflow-hidden">
+                <Text className="text-dark">{children}</Text>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </Tooltip>
     </div>
   );
 }
