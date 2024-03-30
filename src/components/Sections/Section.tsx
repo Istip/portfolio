@@ -20,7 +20,7 @@ export default function Section({
   title,
   number,
   colors = ["text-dark", "text-dark"],
-  from = "#F9F9F9",
+  from = "#F2F0EF",
   to = "#3EEA8D",
   padding = true,
 }: Props) {

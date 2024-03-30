@@ -30,8 +30,8 @@ export default function Home() {
         number={3}
         colors={["text-primaryDark", "text-dark"]}
         title="contact"
-        from="#F9F9F9"
-        to="#F9F9F9"
+        from="#F2F0EF"
+        to="#F2F0EF"
       >
         <Contact />
       </Section>
