@@ -13,7 +13,7 @@ import Text from "../Text/Text";
 interface TooltipProps {
   children: React.ReactNode;
   content: React.ReactNode;
-  variant?: "light" | "dark" | "primary";
+  variant?: "light" | "dark" | "primary" | "plain";
 }
 
 const Tooltip: React.FC<TooltipProps> = ({
@@ -27,6 +27,10 @@ const Tooltip: React.FC<TooltipProps> = ({
     { name: "light", style: "bg-light border border-dark text-dark" },
     { name: "dark", style: "bg-dark border border-dark text-light" },
     { name: "primary", style: "bg-primary border border-primary text-dark" },
+    {
+      name: "plain",
+      style: "bg-transparent border border-transparent text-dark",
+    },
   ];
 
   const selectedVariant = variants.find((v) => v.name === variant);

@@ -34,8 +34,11 @@ export default function Accordion({
   const tooltipContent = !selected ? t("clickToOpen") : t("clickToClose");
 
   return (
-    <div onClick={() => setSelected(isSelected ? false : id)}>
-      <Tooltip content={`${tooltipContent} ${text}`}>
+    <div
+      onClick={() => setSelected(isSelected ? false : id)}
+      className="select-none"
+    >
+      <Tooltip variant="plain" content={`${tooltipContent} ${text}`}>
         <div
           className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
        relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
