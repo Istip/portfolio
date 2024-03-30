@@ -19,4 +19,5 @@ export default {
     contact: "Contact",
   },
   coverAlt: "It's me, Isti.",
+  copy: "Copy address to clipboard",
 } as const;

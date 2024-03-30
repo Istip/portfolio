@@ -19,4 +19,5 @@ export default {
     contact: "Kapcsolat",
   },
   coverAlt: "Én vagyok, Isti.",
+  copy: "Cím másolása a vágólapra",
 } as const;
