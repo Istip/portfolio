@@ -19,15 +19,15 @@ export default function Accordion({
   setSelected,
   id,
 }: Props) {
-  console.log("✅  selected:", selected);
+  const isSelected = selected === id;
 
   return (
-    <div onClick={() => setSelected(selected === id ? false : id)}>
+    <div onClick={() => setSelected(isSelected ? false : id)}>
       <div
-        className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col text-primary hover:text-dark 
+        className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
        relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
          className ?? ""
-       }`}
+       } ${isSelected ? "bg-primary text-dark" : "text-primary"}`}
       >
         <div className="flex items-center justify-between gap-10 lowercase">
           <div className="relative z-[1] text-4xl tracking-tighter font-black">
@@ -37,11 +37,15 @@ export default function Accordion({
             <Text type="expandedExtraLight">{content}</Text>
           </div>
         </div>
-        <div className="absolute right-0 transition-all ease-in-out duration-500 top-1/2    h-0 group-hover:h-full bg-primary w-full" />
-        <div className="absolute right-0 transition-all ease-in-out duration-500 bottom-1/2 h-0 group-hover:h-full bg-primary w-full" />
+        <div
+          className={`absolute right-0 transition-all ease-in-out duration-500 top-1/2    h-0 group-hover:h-full bg-primary w-full`}
+        />
+        <div
+          className={`absolute right-0 transition-all ease-in-out duration-500 bottom-1/2 h-0 group-hover:h-full bg-primary w-full`}
+        />
       </div>
       <AnimatePresence mode="wait">
-        {selected === id && (
+        {isSelected && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "100%", opacity: 1 }}
