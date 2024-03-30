@@ -31,7 +31,7 @@ export default function Accordion({
 
   const t = useI18n();
 
-  const tooltipContent = !selected ? t("clickToOpen") : t("clickToClose");
+  const tooltipContent = !isSelected ? t("clickToOpen") : t("clickToClose");
 
   return (
     <div
