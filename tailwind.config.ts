@@ -17,7 +17,7 @@ const config: Config = {
         light: "#F2F0EF",
       },
       height: {
-        hero: "calc(100vh - 80px)",
+        hero: "calc(100vh - 80px - 36px - 36px)",
       },
     },
   },
