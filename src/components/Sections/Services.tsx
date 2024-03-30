@@ -2,14 +2,24 @@
 
 import { useState } from "react";
 import Accordion from "../Accordion/Accordion";
+import Icon, { IconName } from "../Icon/Icon";
+
+interface ServiceItems {
+  id: number;
+  text: string;
+  icon: IconName;
+  content: string;
+  description: string;
+}
 
 export default function Services() {
   const [selected, setSelected] = useState<number | boolean>(false);
 
-  const items = [
+  const items: ServiceItems[] = [
     {
       id: 1,
       text: "design",
+      icon: "design",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
@@ -17,6 +27,7 @@ export default function Services() {
     {
       id: 2,
       text: "frontend",
+      icon: "page",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
@@ -24,6 +35,7 @@ export default function Services() {
     {
       id: 3,
       text: "backend",
+      icon: "design",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
@@ -31,6 +43,7 @@ export default function Services() {
     {
       id: 4,
       text: "maintain",
+      icon: "design",
       content: "Lorem, ipsum dolor",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
@@ -45,6 +58,7 @@ export default function Services() {
           text={item.text}
           content={item.content}
           id={item.id}
+          icon={item.icon}
           selected={selected}
           setSelected={setSelected}
         >
