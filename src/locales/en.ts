@@ -18,4 +18,5 @@ export default {
     services: "Services",
     contact: "Contact",
   },
+  coverAlt: "It's me, Isti.",
 } as const;

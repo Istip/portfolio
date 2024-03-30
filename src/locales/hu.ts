@@ -18,4 +18,5 @@ export default {
     services: "Szolgáltatások",
     contact: "Kapcsolat",
   },
+  coverAlt: "Én vagyok, Isti.",
 } as const;
