@@ -23,4 +23,20 @@ export default {
   copied: "Másolva a vágólapra",
   clickToOpen: "Kattints, hogy megnyisd: ",
   clickToClose: "Kattints, hogy bezárd: ",
+  contactPage: {
+    intro:
+      "Kreatív fejlesztő vagyok évek óta tapasztalattal a termékek és a webes élmények építésében. Együttműködtem egyénekkel és csapatokkal kis- és középvállalkozások és nagyvállalatok számára, beleértve a Wise, a Google, az Interswitch és az Intelia cégeket.",
+    outro:
+      "Kreatív fejlesztő vagyok évek óta tapasztalattal a termékek és a webes élmények építésében. Együttműködtem egyénekkel és csapatokkal kis- és középvállalkozások és nagyvállalatok számára, beleértve a Wise, a Google, az Interswitch és az Intelia cégeket.",
+    name: "név",
+    namePlaceholder: "Kérlek add meg a neved",
+    email: "email",
+    emailPlaceholder: "Kérlek add meg az email címed",
+    subject: "tárgy",
+    subjectPlaceholder: "Kérlek add meg a tárgyat",
+    message: "üzenet",
+    messagePlaceholder: "Kérlek írd meg az üzeneted",
+    sending: "Küldés...",
+    submit: "Üzenet küldése",
+  },
 } as const;
