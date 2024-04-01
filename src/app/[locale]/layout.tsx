@@ -5,6 +5,7 @@ import Showcase from "@/components/Showcase/Showcase";
 import Lenis from "@/utils/lenis";
 import Noise from "@/utils/noise";
 import "../globals.css";
+import { mona } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Istvan Pasztor",
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={locale} suppressHydrationWarning={true}>
-      <body className="antialiased scroll-smooth bg-light text-dark">
+      <body
+        className={`${mona.className} antialiased scroll-smooth bg-light text-dark`}
+      >
         <Lenis />
         <I18nProviderClient locale={locale}>
           <Navbar />
