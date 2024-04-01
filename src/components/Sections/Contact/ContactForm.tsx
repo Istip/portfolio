@@ -2,12 +2,15 @@
 
 import DoubleButton from "@/components/Button/DoubleButton";
 import Text from "@/components/Text/Text";
+import { useScopedI18n } from "@/locales/client";
 import { useState } from "react";
 
 export default function ContactForm() {
   const initialFormData = { name: "", email: "", subject: "", message: "" };
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
+
+  const t = useScopedI18n("contactPage");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,7 +41,7 @@ export default function ContactForm() {
         <div>
           <Text className="mb-[5px]">
             <label htmlFor="name" className={labelStyles}>
-              Name
+              {t("name")}
             </label>
           </Text>
           <input
@@ -47,7 +50,7 @@ export default function ContactForm() {
             id="name"
             name="name"
             value={formData.name}
-            placeholder="Name"
+            placeholder={t("namePlaceholder")}
             className={inputStyles}
             onChange={handleChange}
             disabled={loading}
@@ -57,7 +60,7 @@ export default function ContactForm() {
         <div>
           <Text className="mb-[5px]">
             <label htmlFor="email" className={labelStyles}>
-              Email
+              {t("email")}
             </label>
           </Text>
           <input
@@ -66,7 +69,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             value={formData.email}
-            placeholder="Email"
+            placeholder={t("emailPlaceholder")}
             className={inputStyles}
             onChange={handleChange}
             disabled={loading}
@@ -76,7 +79,7 @@ export default function ContactForm() {
         <div>
           <Text className="mb-[5px]">
             <label htmlFor="subject" className={labelStyles}>
-              Subject
+              {t("subject")}
             </label>
           </Text>
           <input
@@ -85,7 +88,7 @@ export default function ContactForm() {
             id="subject"
             name="subject"
             value={formData.subject}
-            placeholder="Subject"
+            placeholder={t("subjectPlaceholder")}
             className={inputStyles}
             onChange={handleChange}
             disabled={loading}
@@ -95,14 +98,14 @@ export default function ContactForm() {
         <div>
           <Text className="mb-[5px]">
             <label htmlFor="message" className={labelStyles}>
-              Message
+              {t("message")}{" "}
             </label>
           </Text>
           <textarea
             required
             id="message"
             name="message"
-            placeholder="Message"
+            placeholder={t("messagePlaceholder")}
             value={formData.message}
             className={inputStyles}
             rows={6}
@@ -117,7 +120,7 @@ export default function ContactForm() {
             className="border border-primary bg-primary"
             withIcon
           >
-            {loading ? "Sending..." : "Submit Message"}
+            {loading ? t("sending") : t("submit")}
           </DoubleButton>
         </div>
       </form>
