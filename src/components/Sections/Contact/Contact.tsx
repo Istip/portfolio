@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { useI18n } from "@/locales/client";
+import { motion } from "framer-motion";
 import Icon from "../../Icon/Icon";
 import Text from "../../Text/Text";
 import Tooltip from "../../Tooltip/Tooltip";
-import { motion } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 export default function Contact() {
   const t = useI18n();
@@ -57,6 +58,8 @@ export default function Contact() {
           </button>
         </Tooltip>
       </div>
+
+      <ContactForm />
     </div>
   );
 }
