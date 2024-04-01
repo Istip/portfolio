@@ -2,13 +2,13 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Text from "../../Text/Text";
 import { useScopedI18n } from "@/locales/client";
+import Text from "../../Text/Text";
 
 interface Props {
   children: React.ReactNode;
-  number: number;
-  title: "about" | "services" | "contact";
+  number?: number;
+  title?: "about" | "services" | "contact";
   colors?: [string, string];
   from?: string;
   to?: string;
@@ -36,14 +36,16 @@ export default function Section({
 
   return (
     <motion.section ref={ref} className="" style={{ backgroundColor }}>
-      <div className="flex items-center justify-between text-5xl mb-9 md:px-[50px] px-5 py-9 lowercase">
-        <Text type="expanded" className={`${colors[0]}`}>
-          {`0${number}`}
-        </Text>
-        <Text as="h2" type="expanded" className={`${colors[1]}`}>
-          {t(title)}
-        </Text>
-      </div>
+      {title && number && (
+        <div className="flex items-center justify-between text-5xl mb-9 md:px-[50px] px-5 py-9 lowercase">
+          <Text type="expanded" className={`${colors[0]}`}>
+            {`0${number}`}
+          </Text>
+          <Text as="h2" type="expanded" className={`${colors[1]}`}>
+            {t(title)}
+          </Text>
+        </div>
+      )}
 
       <div className={`py-9 ${padding ? "md:px-[50px] px-5" : ""}`}>
         {children}
