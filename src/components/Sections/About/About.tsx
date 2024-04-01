@@ -1,4 +1,4 @@
-import Text from "../Text/Text";
+import Text from "../../Text/Text";
 import AboutScroller from "./AboutScroller";
 
 export default function About() {

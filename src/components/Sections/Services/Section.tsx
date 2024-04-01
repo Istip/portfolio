@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Text from "../Text/Text";
+import Text from "../../Text/Text";
 import { useScopedI18n } from "@/locales/client";
 
 interface Props {

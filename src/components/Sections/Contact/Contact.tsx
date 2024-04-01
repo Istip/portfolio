@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useI18n } from "@/locales/client";
-import Icon from "../Icon/Icon";
-import Text from "../Text/Text";
-import Tooltip from "../Tooltip/Tooltip";
+import Icon from "../../Icon/Icon";
+import Text from "../../Text/Text";
+import Tooltip from "../../Tooltip/Tooltip";
 import { motion } from "framer-motion";
 
 export default function Contact() {
