@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { I18nProviderClient } from "@/locales/client";
 import Navbar from "@/components/Navbar/Navbar";
-import "../globals.css";
 import Showcase from "@/components/Showcase/Showcase";
 import Lenis from "@/utils/lenis";
 import Noise from "@/utils/noise";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Istvan Pasztor",
