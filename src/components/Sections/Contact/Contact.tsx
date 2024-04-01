@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useI18n } from "@/locales/client";
+import { useI18n, useScopedI18n } from "@/locales/client";
 import { motion } from "framer-motion";
 import Icon from "../../Icon/Icon";
 import Text from "../../Text/Text";
@@ -10,6 +10,7 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   const t = useI18n();
+  const tscoped = useScopedI18n("contactPage");
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = (text: string) => {
@@ -22,12 +23,7 @@ export default function Contact() {
 
   return (
     <div>
-      <Text className="text-2xl">
-        I am a creative developer with years of experience in building products
-        and appealing web experiences. I have collaborated with individuals and
-        teams to build experiences for SMEs and large enterprises including
-        Wise, Google, Interswitch and Intelia.
-      </Text>
+      <Text className="text-2xl">{tscoped("intro")}</Text>
 
       <div className="flex items-center justify-between py-8">
         <a
@@ -62,12 +58,7 @@ export default function Contact() {
       <ContactForm />
 
       <div className="mt-12">
-        <Text className="text-2xl">
-          I am a creative developer with years of experience in building
-          products and appealing web experiences. I have collaborated with
-          individuals and teams to build experiences for SMEs and large
-          enterprises including Wise, Google, Interswitch and Intelia.
-        </Text>
+        <Text className="text-2xl">{tscoped("outro")}</Text>
       </div>
     </div>
   );
