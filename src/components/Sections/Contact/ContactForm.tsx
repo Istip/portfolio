@@ -117,7 +117,7 @@ export default function ContactForm() {
             className="border border-primary bg-primary"
             withIcon
           >
-            {loading ? "Sending..." : "Submit"}
+            {loading ? "Sending..." : "Submit Message"}
           </DoubleButton>
         </div>
       </form>

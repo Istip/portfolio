@@ -60,6 +60,15 @@ export default function Contact() {
       </div>
 
       <ContactForm />
+
+      <div className="mt-12">
+        <Text className="text-2xl">
+          I am a creative developer with years of experience in building
+          products and appealing web experiences. I have collaborated with
+          individuals and teams to build experiences for SMEs and large
+          enterprises including Wise, Google, Interswitch and Intelia.
+        </Text>
+      </div>
     </div>
   );
 }
