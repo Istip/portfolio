@@ -3,12 +3,6 @@ import Text from "../Text/Text";
 import Marquee from "react-fast-marquee";
 
 const Showcase = () => {
-  // random number between 400 and 800
-  const randomNumber = () => Math.floor(Math.random() * (800 - 400) + 400);
-  const randomWidth = `w-[${randomNumber()}px]`;
-
-  console.log("✅  randomWidth:", randomWidth);
-
   return (
     <aside className="sticky top-0 bottom-0 w-full h-screen bg-dark grid grid-cols-1 py-[70px] px-10 gap-10 select-none">
       <Marquee

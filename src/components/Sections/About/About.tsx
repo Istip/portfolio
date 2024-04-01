@@ -1,5 +1,4 @@
 import Text from "../../Text/Text";
-import AboutScroller from "./AboutScroller";
 
 export default function About() {
   return (
@@ -20,7 +19,14 @@ export default function About() {
         <div className="w-full h-64 bg-primaryDark rounded-2xl" />
       </div>
 
-      <AboutScroller />
+      <Text type="expanded" className="text-5xl my-5">
+        i design
+      </Text>
+
+      <div className="grid grid-cols-2 gap-10">
+        <div className="w-full h-64 bg-primaryDark rounded-2xl" />
+        <div className="w-full h-64 bg-primaryDark rounded-2xl" />
+      </div>
     </div>
   );
 }

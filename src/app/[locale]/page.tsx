@@ -3,6 +3,7 @@ import Section from "@/components/Sections/Services/Section";
 import About from "@/components/Sections/About/About";
 import Services from "@/components/Sections/Services";
 import Contact from "@/components/Sections/Contact/Contact";
+import AboutScroller from "@/components/Sections/About/AboutScroller";
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
 
       <Section number={1} title="about">
         <About />
+      </Section>
+
+      <Section from="#3EEA8D" to="#111111">
+        <AboutScroller />
       </Section>
 
       <Section
