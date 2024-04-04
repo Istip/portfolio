@@ -1,4 +1,4 @@
-import { getI18n, getScopedI18n } from "@/locales/server";
+import { getScopedI18n } from "@/locales/server";
 import Text from "../Text/Text";
 
 const statuses = [
