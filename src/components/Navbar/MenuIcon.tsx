@@ -1,7 +1,7 @@
 import { getI18n } from "@/locales/server";
 import Text from "../Text/Text";
 
-export default async function Menu() {
+export default async function MenuIcon() {
   const t = await getI18n();
 
   return (
