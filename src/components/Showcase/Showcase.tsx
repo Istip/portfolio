@@ -1,4 +1,3 @@
-import React from "react";
 import Text from "../Text/Text";
 import Marquee from "react-fast-marquee";
 
