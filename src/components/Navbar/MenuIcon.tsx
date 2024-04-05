@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useI18n } from "@/locales/client";
+import { AnimatePresence } from "framer-motion";
 import Text from "../Text/Text";
 import Menu from "./Menu";
-import { AnimatePresence } from "framer-motion";
 
 export default function MenuIcon() {
   const [open, setOpen] = useState(false);
@@ -12,7 +12,7 @@ export default function MenuIcon() {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout">
         {open && <Menu setOpen={setOpen} />}
       </AnimatePresence>
       <li>
