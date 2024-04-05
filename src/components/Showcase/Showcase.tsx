@@ -22,7 +22,7 @@ const Showcase = () => {
   };
 
   return (
-    <aside className="sticky top-0 bottom-0 w-full h-screen bg-dark grid grid-cols-1 py-[70px] px-10 gap-10 select-none">
+    <aside className="sticky top-0 bottom-0 w-full h-screen bg-dark grid grid-cols-1 py-[70px] px-10 gap-5 select-none">
       <Marquee
         autoFill
         direction="left"
