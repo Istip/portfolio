@@ -42,6 +42,13 @@ export default {
     submit: "Üzenet küldése",
   },
   menuItems: {
+    home: "Főoldal",
+    about: "Rólam",
+    showcase: "Bemutató",
+    services: "Szolgáltatások",
+    contact: "Kapcsolat",
+  },
+  menuItemsTooltip: {
     home: "Vissza a főoldalra",
     about: "Tudj meg többet rólam",
     showcase: "Nézd meg a munkáimat",

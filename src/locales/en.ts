@@ -41,6 +41,13 @@ export default {
     submit: "Submit Message",
   },
   menuItems: {
+    home: "Home",
+    about: "About",
+    showcase: "Showcase",
+    services: "Services",
+    contact: "Contact",
+  },
+  menuItemsTooltip: {
     home: "Back to Homepage",
     about: "More details about Me",
     showcase: "Check out my Work",
