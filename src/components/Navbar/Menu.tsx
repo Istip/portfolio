@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
+import { useScopedI18n } from "@/locales/client";
 import { motion } from "framer-motion";
+import { MenuItem, MenuItemTranslation, menuItems } from "./menuItem";
 import Icon from "../Icon/Icon";
-import { MenuItem, menuItems } from "./menuItem";
 import Link from "next/link";
 import Text from "../Text/Text";
+import Tooltip from "../Tooltip/Tooltip";
 
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function Menu({ setOpen }: Props) {
-  const [selected, setSelected] = useState<null | MenuItem>(null);
+  const [selected, setSelected] = useState<MenuItem | null>(null);
   const [hovered, setHovered] = useState(false);
+
+  const scopedTooltip = useScopedI18n("menuItemsTooltip");
+  const scopedMenu = useScopedI18n("menuItems");
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -68,15 +73,20 @@ export default function Menu({ setOpen }: Props) {
                 onMouseLeave={() => setSelected(null)}
                 className="my-2"
               >
-                <Text
-                  as="li"
-                  type="expandedBlack"
-                  className={`uppercase text-7xl transition-all ${
-                    hovered && selected !== item ? "opacity-50 pl-5" : ""
-                  }`}
+                <Tooltip
+                  variant="primary"
+                  content={scopedTooltip(item.name as MenuItemTranslation)}
                 >
-                  {item.name}
-                </Text>
+                  <Text
+                    as="li"
+                    type="expandedBlack"
+                    className={`uppercase text-7xl transition-all ${
+                      hovered && selected !== item ? "opacity-50 pl-5" : ""
+                    }`}
+                  >
+                    {scopedMenu(item.name as MenuItemTranslation)}
+                  </Text>
+                </Tooltip>
               </Link>
             ))}
           </ul>
