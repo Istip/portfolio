@@ -11,6 +11,7 @@ interface Props {
 
 export default function Menu({ setOpen }: Props) {
   const [selected, setSelected] = useState<null | MenuItem>(null);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -25,10 +26,6 @@ export default function Menu({ setOpen }: Props) {
       document.removeEventListener("keydown", handleKeyPress);
     };
   }, [setOpen]);
-
-  useEffect(() => {
-    console.log("✅ selected:", selected);
-  }, [selected]);
 
   return (
     <motion.div
@@ -57,16 +54,27 @@ export default function Menu({ setOpen }: Props) {
         >
           {selected?.name}
         </motion.div>
-        <div className="col-span-2 flex items-center p-10 group">
-          <ul className="flex flex-col">
+        <div className="col-span-2 flex items-center p-10">
+          <ul
+            className="flex flex-col"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
             {menuItems.map((item) => (
               <Link
                 href={item.link}
                 key={item.id}
                 onMouseEnter={() => setSelected(item)}
                 onMouseLeave={() => setSelected(null)}
+                className="my-2"
               >
-                <Text as="li" className="uppercase text-7xl">
+                <Text
+                  as="li"
+                  type="expandedBlack"
+                  className={`uppercase text-7xl transition-all ${
+                    hovered && selected !== item ? "opacity-50 pl-5" : ""
+                  }`}
+                >
                   {item.name}
                 </Text>
               </Link>
