@@ -12,9 +12,7 @@ export default function MenuIcon() {
 
   return (
     <>
-      <AnimatePresence mode="popLayout">
-        {open && <Menu setOpen={setOpen} />}
-      </AnimatePresence>
+      <AnimatePresence>{open && <Menu setOpen={setOpen} />}</AnimatePresence>
       <li>
         <button
           className="center gap-2 group uppercase"
