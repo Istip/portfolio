@@ -30,25 +30,14 @@
 
 /* SCROLLBAR REPLACEMENT */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8a8a8a;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  border: 0;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
-}
-
-::-webkit-scrollbar-track:hover {
-  background: #242424;
 }
