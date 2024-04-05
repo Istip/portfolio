@@ -5,6 +5,13 @@ export type MenuItem = {
   link: string;
 };
 
+export type MenuItemTranslation =
+  | "home"
+  | "about"
+  | "showcase"
+  | "services"
+  | "contact";
+
 export const menuItems = [
   { id: 1, bg: "bg-red-500", name: "home", link: "/" },
   { id: 2, bg: "bg-sky-500", name: "about", link: "/about" },
