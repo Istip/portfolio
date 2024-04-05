@@ -40,4 +40,11 @@ export default {
     sending: "Sending...",
     submit: "Submit Message",
   },
+  menuItems: {
+    home: "Back to Homepage",
+    about: "More details about Me",
+    showcase: "Check out my Work",
+    services: "What Services I Offer",
+    contact: "Get in Touch",
+  },
 } as const;

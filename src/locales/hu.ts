@@ -1,3 +1,5 @@
+import { menuItems } from "@/components/Navbar/menuItem";
+
 export default {
   hello: "Szia",
   status: {
@@ -38,5 +40,12 @@ export default {
     messagePlaceholder: "Kérlek írd meg az üzeneted",
     sending: "Küldés...",
     submit: "Üzenet küldése",
+  },
+  menuItems: {
+    home: "Vissza a főoldalra",
+    about: "Tudj meg többet rólam",
+    showcase: "Nézd meg a munkáimat",
+    services: "Ismerkedj meg a szolgáltatásokkal",
+    contact: "Lépjünk kapcsolatba",
   },
 } as const;
