@@ -32,6 +32,21 @@ export default function Menu({ setOpen }: Props) {
     };
   }, [setOpen]);
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const li = {
+    hidden: { opacity: 0, x: 40 },
+    show: { opacity: 1, x: 0 },
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: "100vw" }}
@@ -60,36 +75,38 @@ export default function Menu({ setOpen }: Props) {
           {selected?.name}
         </motion.div>
         <div className="col-span-2 flex items-center p-10">
-          <ul
+          <motion.ul
             className="flex flex-col"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            variants={container}
+            initial="hidden"
+            animate="show"
           >
             {menuItems.map((item) => (
-              <Link
-                href={item.link}
-                key={item.id}
-                onMouseEnter={() => setSelected(item)}
-                onMouseLeave={() => setSelected(null)}
-                className="my-2"
-              >
-                <Tooltip
-                  variant="primary"
-                  content={scopedTooltip(item.name as MenuItemTranslation)}
+              <motion.li key={item.id} className="my-2" variants={li}>
+                <Link
+                  href={item.link}
+                  onMouseEnter={() => setSelected(item)}
+                  onMouseLeave={() => setSelected(null)}
                 >
-                  <Text
-                    as="li"
-                    type="expandedBlack"
-                    className={`uppercase text-7xl transition-all ${
-                      hovered && selected !== item ? "opacity-50 pl-5" : ""
-                    }`}
+                  <Tooltip
+                    variant="primary"
+                    content={scopedTooltip(item.name as MenuItemTranslation)}
                   >
-                    {scopedMenu(item.name as MenuItemTranslation)}
-                  </Text>
-                </Tooltip>
-              </Link>
+                    <Text
+                      type="expandedBlack"
+                      className={`uppercase text-7xl transition-all ${
+                        hovered && selected !== item ? "opacity-50 pl-5" : ""
+                      }`}
+                    >
+                      {scopedMenu(item.name as MenuItemTranslation)}
+                    </Text>
+                  </Tooltip>
+                </Link>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </motion.div>
