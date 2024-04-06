@@ -54,4 +54,5 @@ export default {
     services: "What Services I Offer",
     contact: "Get in Touch",
   },
+  showcaseSrc: "Showcase Image",
 } as const;

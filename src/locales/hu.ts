@@ -55,4 +55,5 @@ export default {
     services: "Ismerkedj meg a szolgáltatásokkal",
     contact: "Lépjünk kapcsolatba",
   },
+  showcaseSrc: "Bemutató kép",
 } as const;
