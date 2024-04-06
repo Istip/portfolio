@@ -15,7 +15,7 @@ const LanguageSelector = () => {
       <button onClick={toggleLocale} className="uppercase">
         <Text
           as="div"
-          className="text-xs bg-white p-2 rounded-full border border-dark transition-all hover:bg-primaryDark"
+          className="text-xs bg-white p-2 rounded-lg border border-dark transition-all hover:bg-primary"
         >
           {swapLocale}
         </Text>
