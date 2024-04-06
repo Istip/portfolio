@@ -56,4 +56,5 @@ export default {
     contact: "Lépjünk kapcsolatba",
   },
   showcaseSrc: "Bemutató kép",
+  backToHome: "Vissza a főoldalra",
 } as const;

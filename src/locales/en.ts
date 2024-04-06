@@ -55,4 +55,5 @@ export default {
     contact: "Get in Touch",
   },
   showcaseSrc: "Showcase Image",
+  backToHome: "Bring me back to Homepage",
 } as const;
