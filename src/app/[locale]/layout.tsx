@@ -7,10 +7,35 @@ import Noise from "@/utils/noise";
 import "../globals.css";
 import { mona } from "@/utils/fonts";
 
-export const metadata: Metadata = {
-  title: "Istvan Pasztor",
-  description: "Creative developer and designer",
-};
+// export const metadata: Metadata = {
+//   title: "Istvan Pasztor",
+//   description: "Creative developer and designer",
+// };
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const title = locale === "en" ? "Istvan Pasztor" : "Pásztor István";
+  const description =
+    locale === "en"
+      ? "Creative developer and designer"
+      : "Kreatív fejlesztő és tervező";
+
+  const metadata: Metadata =
+    locale === "en"
+      ? {
+          title: "Istvan Pasztor",
+          description: "Creative developer and designer",
+        }
+      : {
+          title: "Pásztor István",
+          description: "Kreatív fejlesztő és tervező",
+        };
+
+  return metadata;
+}
 
 export default function RootLayout({
   params: { locale },
