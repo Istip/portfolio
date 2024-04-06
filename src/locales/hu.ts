@@ -1,5 +1,3 @@
-import { menuItems } from "@/components/Navbar/menuItem";
-
 export default {
   hello: "Szia",
   status: {
