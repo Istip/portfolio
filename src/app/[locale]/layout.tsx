@@ -7,11 +7,6 @@ import Noise from "@/utils/noise";
 import "../globals.css";
 import { mona } from "@/utils/fonts";
 
-// export const metadata: Metadata = {
-//   title: "Istvan Pasztor",
-//   description: "Creative developer and designer",
-// };
-
 export async function generateMetadata({
   params: { locale },
 }: {
