@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import Showcase from "@/components/Showcase/Showcase";
 import Lenis from "@/utils/lenis";
 import Noise from "@/utils/noise";
-import "../globals.css";
 import { mona } from "@/utils/fonts";
+import "../globals.css";
 
 export async function generateMetadata({
   params: { locale },
