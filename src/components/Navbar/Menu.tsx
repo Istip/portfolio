@@ -32,6 +32,14 @@ export default function Menu({ setOpen }: Props) {
     };
   }, [setOpen]);
 
+  useEffect(() => {
+    if (selected) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [selected]);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -53,7 +61,7 @@ export default function Menu({ setOpen }: Props) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 1, x: "100vw" }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 w-full h-full bg-dark z-[99999] center"
+      className="fixed top-0 left-0 right-0 w-full h-full z-[99999] center"
       onClick={() => setOpen(false)}
     >
       <button
@@ -68,13 +76,15 @@ export default function Menu({ setOpen }: Props) {
             selected?.bg ?? "bg-primary"
           }`}
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 0.95 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.25, delay: 0.5 }}
         >
-          {selected?.name}
+          {selected && (
+            <Icon name={selected ? selected.icon : "home"} size={100} />
+          )}
         </motion.div>
-        <div className="col-span-2 flex items-center p-10">
+        <div className="col-span-2 bg-dark flex items-center p-10">
           <motion.ul
             className="flex flex-col"
             onMouseEnter={() => setHovered(true)}
@@ -87,7 +97,7 @@ export default function Menu({ setOpen }: Props) {
               <motion.li key={item.id} className="my-2" variants={li}>
                 <Link
                   href={item.link}
-                  onMouseEnter={() => setSelected(item)}
+                  onMouseEnter={() => setSelected(item as MenuItem)}
                   onMouseLeave={() => setSelected(null)}
                 >
                   <Tooltip
