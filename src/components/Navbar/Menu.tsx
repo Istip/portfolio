@@ -32,14 +32,6 @@ export default function Menu({ setOpen }: Props) {
     };
   }, [setOpen]);
 
-  useEffect(() => {
-    if (selected) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [selected]);
-
   const container = {
     hidden: { opacity: 0 },
     show: {
