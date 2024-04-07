@@ -57,18 +57,18 @@ export default function Menu({ setOpen }: Props) {
       onClick={() => setOpen(false)}
     >
       <button
-        className="absolute right-6 top-6 pl-6"
+        className="absolute right-6 top-6 pl-6 z-[100000]"
         onClick={() => setOpen(false)}
       >
         <Icon name="close" />
       </button>
-      <div className="grid grid-cols-3 w-full h-full">
+      <div className="grid grid-cols-3 w-full h-full backdrop-blur">
         <motion.div
-          className={`center transition-colors ease-in-out duration-500 ${
+          className={`center transition-colors ease-in-out ${
             selected?.bg ?? "bg-primary"
           }`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.95 }}
+          initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+          animate={{ opacity: 0.8, backdropFilter: "blur(64px)" }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
