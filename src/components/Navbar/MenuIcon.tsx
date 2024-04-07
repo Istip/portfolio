@@ -20,6 +20,7 @@ export default function MenuIcon() {
         >
           <Text>{t("menu")}</Text>
           <div className="transition-all">
+            <span className="sr-only">Menu</span>
             <div className="h-[1px] w-8 transition-all duration-200 group-hover:w-16 bg-light rounded-full mb-1" />
             <div className="h-[1px] w-8 transition-all duration-200 group-hover:w-16 bg-light rounded-full mb-1" />
             <div className="h-[1px] w-8 transition-all duration-200 group-hover:w-16 bg-light rounded-full" />
