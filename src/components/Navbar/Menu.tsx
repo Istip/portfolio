@@ -78,7 +78,7 @@ export default function Menu({ setOpen }: Props) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.95 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           {selected && (
             <Icon name={selected ? selected.icon : "home"} size={100} />
