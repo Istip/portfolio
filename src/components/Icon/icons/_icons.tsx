@@ -16,6 +16,11 @@ import DesignIcon from "./DesignIcon";
 import PageIcon from "./PageIcon";
 import DataIcon from "./DataIcon";
 import MessageIcon from "./MessageIcon";
+import HomeIcon from "./HomeIcon";
+import UserProfile from "./UserProfile";
+import ShowcaseIcon from "./ShowcaseIcon";
+import ServicesIcon from "./ServicesIcon";
+import EnvelopeIcon from "./EnvelopeIcon";
 
 const icons = {
   user: <UserIcon />,
@@ -36,6 +41,11 @@ const icons = {
   page: <PageIcon />,
   data: <DataIcon />,
   message: <MessageIcon />,
+  home: <HomeIcon />,
+  userProfile: <UserProfile />,
+  showcase: <ShowcaseIcon />,
+  services: <ServicesIcon />,
+  envelope: <EnvelopeIcon />,
 };
 
 export default icons;
