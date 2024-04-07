@@ -45,7 +45,7 @@ export default function Showcase() {
                 alt={`${t("showcaseSrc")} 0${index}`}
                 width={width}
                 height={height}
-                className="mr-5 w-auto h-auto object-cover"
+                className="mr-5 object-cover"
               />
             </motion.div>
           </Link>
@@ -79,7 +79,7 @@ export default function Showcase() {
                 alt={`${t("showcaseSrc")} 0${index}`}
                 width={width}
                 height={height}
-                className="mr-5 w-auto h-auto object-cover"
+                className="mr-5 object-cover"
               />
             </motion.div>
           </Link>
