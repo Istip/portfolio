@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { I18nProviderClient } from "@/locales/client";
 import Navbar from "@/components/Navbar/Navbar";
-import Showcase from "@/components/Showcase/Showcase";
 import Lenis from "@/utils/lenis";
 import Noise from "@/utils/noise";
 import { mona } from "@/utils/fonts";
