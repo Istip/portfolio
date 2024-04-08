@@ -12,12 +12,6 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
-  const title = locale === "en" ? "Istvan Pasztor" : "Pásztor István";
-  const description =
-    locale === "en"
-      ? "Creative developer and designer"
-      : "Kreatív fejlesztő és tervező";
-
   const metadata: Metadata =
     locale === "en"
       ? {
