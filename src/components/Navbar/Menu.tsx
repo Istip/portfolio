@@ -62,7 +62,7 @@ export default function Menu({ setOpen }: Props) {
       >
         <Icon name="close" />
       </button>
-      <div className="grid grid-cols-3 w-full h-full backdrop-blur">
+      <div className="grid grid-cols-3 w-full h-full backdrop-blur-[16px]">
         <motion.div
           className={`center transition-colors ease-in-out ${
             selected?.bg ?? "bg-primary"
