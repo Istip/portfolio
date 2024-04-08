@@ -1,4 +1,4 @@
-import { getI18n, getScopedI18n } from "@/locales/server";
+import { useI18n, useScopedI18n } from "@/locales/client";
 import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
@@ -9,9 +9,9 @@ const statuses = [
   { name: "veryBusy", color: "bg-red-500" },
 ];
 
-export default async function Status() {
-  const scoped = await getScopedI18n("status");
-  const t = await getI18n();
+export default function Status() {
+  const scoped = useScopedI18n("status");
+  const t = useI18n();
 
   let { name, color } = statuses[0];
 
