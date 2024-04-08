@@ -1,5 +1,3 @@
-"use client";
-
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 import Text from "../Text/Text";
 
