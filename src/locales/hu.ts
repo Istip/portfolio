@@ -42,7 +42,7 @@ export default {
   menuItems: {
     home: "Főoldal",
     about: "Rólam",
-    showcase: "Bemutató",
+    showcase: "Munkáim",
     services: "Szolgáltatások",
     contact: "Kapcsolat",
   },

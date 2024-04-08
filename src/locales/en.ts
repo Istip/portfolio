@@ -43,7 +43,7 @@ export default {
   menuItems: {
     home: "Home",
     about: "About",
-    showcase: "Showcase",
+    showcase: "Work",
     services: "Services",
     contact: "Contact",
   },
