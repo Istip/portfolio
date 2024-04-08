@@ -47,10 +47,7 @@ export default function RootLayout({
         <Lenis />
         <I18nProviderClient locale={locale}>
           <Navbar />
-          <div className="grid grid-cols-2">
-            <div className="pt-20">{children}</div>
-            <Showcase />
-          </div>
+          {children}
           <Noise />
         </I18nProviderClient>
       </body>
