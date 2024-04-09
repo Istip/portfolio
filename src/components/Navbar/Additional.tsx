@@ -6,8 +6,11 @@ import { icons } from "./icons";
 export default function Additional() {
   const scoped = useScopedI18n("additional");
 
-  const currentTime = new Date().toLocaleTimeString("ro-RO", {
+  const currentHour = new Date().toLocaleTimeString("ro-RO", {
     hour: "2-digit",
+  });
+
+  const currentMinute = new Date().toLocaleTimeString("ro-RO", {
     minute: "2-digit",
   });
 
@@ -23,8 +26,10 @@ export default function Additional() {
       <div className="text-right">
         <Text as="span" type="expanded">
           {scoped("currentTime")}:{" "}
-          <Text as="span" type="expandedBold" className="animate-pulse">
-            {currentTime}
+          <Text as="span" type="expandedBold">
+            {currentHour}
+            <span className="animate-ping">:</span>
+            {currentMinute}
           </Text>
         </Text>
       </div>
