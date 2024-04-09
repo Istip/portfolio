@@ -34,8 +34,8 @@ export default function Showcase() {
               variants={variants}
             >
               <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/50 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expandedBold">
-                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-full transition-all hover:text-light hover:bg-dark">
+                <Text as="span" type="expanded">
+                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
                     {title}
                   </div>
                 </Text>
@@ -68,8 +68,8 @@ export default function Showcase() {
               variants={variants}
             >
               <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/50 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expandedBold">
-                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-full transition-all hover:text-light hover:bg-dark">
+                <Text as="span" type="expanded">
+                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
                     {title}
                   </div>
                 </Text>
