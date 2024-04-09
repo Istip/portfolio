@@ -28,7 +28,6 @@ export default {
       "I am a creative developer with years of experience in building products and appealing web experiences. I have collaborated with individuals and teams to build experiences for SMEs and large enterprises including Wise, Google, Interswitch and Intelia.",
     outro:
       "I am a creative developer with years of experience in building products and appealing web experiences. I have collaborated with individuals and teams to build experiences for SMEs and large enterprises including Wise, Google, Interswitch and Intelia.",
-
     name: "name",
     namePlaceholder: "Please enter your name",
     email: "email",
@@ -61,4 +60,5 @@ export default {
     location: "Szekelyudvarhely, Romania",
     currentTime: "Current Time",
   },
+  copyright: "Copyright ©",
 } as const;

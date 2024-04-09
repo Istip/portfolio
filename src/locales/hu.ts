@@ -60,4 +60,5 @@ export default {
     location: "Székelyudvarhely, Románia",
     currentTime: "Jelenlegi idő",
   },
+  copyright: "Szerzői jog fenntartva ©",
 } as const;
