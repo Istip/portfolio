@@ -6,6 +6,7 @@ import Icon from "../Icon/Icon";
 import Link from "next/link";
 import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
+import Additional from "./Additional";
 
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -72,9 +73,16 @@ export default function Menu({ setOpen }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          {selected && (
-            <Icon name={selected ? selected.icon : "home"} size={100} />
-          )}
+          <div className="w-full h-full flex items-center justify-between py-40 flex-col">
+            <div>
+              {selected ? (
+                <Icon name={selected ? selected.icon : "home"} size={100} />
+              ) : (
+                <div />
+              )}
+            </div>
+            <Additional />
+          </div>
         </motion.div>
         <div className="col-span-2 bg-dark flex items-center p-10">
           <motion.ul
