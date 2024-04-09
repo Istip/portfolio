@@ -55,4 +55,9 @@ export default {
   },
   showcaseSrc: "Bemutató kép",
   backToHome: "Vissza a főoldalra",
+  additional: {
+    name: "Pásztor István",
+    location: "Székelyudvarhely, Románia",
+    currentTime: "Jelenlegi idő",
+  },
 } as const;

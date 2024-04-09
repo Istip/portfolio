@@ -56,4 +56,9 @@ export default {
   },
   showcaseSrc: "Showcase Image",
   backToHome: "Bring me back to Homepage",
+  additional: {
+    name: "Istvan Pasztor",
+    location: "Szekelyudvarhely, Romania",
+    currentTime: "Current Time",
+  },
 } as const;
