@@ -41,6 +41,8 @@ export default function Additional() {
             href={icon.link}
             className="text-light hover:text-dark transition-colors"
             title={icon.title}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="sr-only">{icon.title}</span>
             {icon.render}
