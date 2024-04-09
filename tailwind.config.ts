@@ -11,7 +11,9 @@ const config: Config = {
       backgroundImage: {},
       colors: {
         dark: "#111111",
+
         primary: "#3EEA8D",
+
         primaryDark: "#2BAA65",
         primaryLight: "#CCF4DE",
         light: "#F2F0EF",
