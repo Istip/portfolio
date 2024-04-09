@@ -5,6 +5,7 @@ import Services from "@/components/Sections/Services";
 import Contact from "@/components/Sections/Contact/Contact";
 import AboutScroller from "@/components/Sections/About/AboutScroller";
 import Showcase from "@/components/Showcase/Showcase";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -42,6 +43,8 @@ export default function Home() {
         >
           <Contact />
         </Section>
+
+        <Footer />
       </div>
       <Showcase />
     </div>
