@@ -4,7 +4,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
 
 const statuses = [
-  { name: "available", color: "bg-primary" },
+  { name: "available", color: "bg-green-500" },
   { name: "partiallyAvailable", color: "bg-yellow-500" },
   { name: "veryBusy", color: "bg-red-500" },
 ];
