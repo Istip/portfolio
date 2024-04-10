@@ -42,12 +42,12 @@ export default function Contact() {
             <Text as="div" className="center uppercase gap-2">
               <Text type="mona" className="font-bold">
                 <motion.span
-                  animate={{ color: !copied ? "#A2A3A4" : "#3EEA8D" }}
+                  animate={{ color: !copied ? "#A2A3A4" : "#b8b8ff" }}
                 >
                   {copied ? t("copied") : t("copy")}
                 </motion.span>
               </Text>
-              <motion.span animate={{ color: !copied ? "#A2A3A4" : "#3EEA8D" }}>
+              <motion.span animate={{ color: !copied ? "#A2A3A4" : "#b8b8ff" }}>
                 <Icon name={copied ? "circleCheck" : "clipboard"} />
               </motion.span>
             </Text>

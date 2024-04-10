@@ -19,7 +19,7 @@ export default function Home() {
           <About />
         </Section>
 
-        <Section from="#3EEA8D" to="#111111">
+        <Section from="#b8b8ff" to="#111111">
           <AboutScroller />
         </Section>
 

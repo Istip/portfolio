@@ -12,11 +12,16 @@ const config: Config = {
       colors: {
         dark: "#111111",
 
-        primary: "#3EEA8D",
+        primary: "#b8b8ff",
 
-        primaryDark: "#2BAA65",
-        primaryLight: "#CCF4DE",
-        light: "#F2F0EF",
+        primaryDark: "#9381ff",
+        primaryLight: "#ffeedd",
+        light: "#F4F3EE",
+
+        // OLD COLORS:
+        // primary: "#3EEA8D",
+        // primaryDark: "#2BAA65",
+        // primaryLight: "#CCF4DE",
       },
       height: {
         hero: "calc(100vh - 82px - 36px - 36px)",

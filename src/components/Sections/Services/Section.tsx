@@ -21,7 +21,7 @@ export default function Section({
   number,
   colors = ["text-dark", "text-dark"],
   from = "#F2F0EF",
-  to = "#3EEA8D",
+  to = "#b8b8ff",
   padding = true,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
