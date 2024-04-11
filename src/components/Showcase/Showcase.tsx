@@ -21,11 +21,11 @@ export default function Showcase() {
       <Marquee
         autoFill
         direction="left"
-        speed={20}
+        speed={50}
         loop={0}
         className="w-full h-1/2"
       >
-        {imageList.slice(0, 4).map(({ src, title, width, height }, index) => (
+        {imageList.slice(0, 7).map(({ src, title, width, height }, index) => (
           <Link href="showcase" key={index}>
             <motion.div
               className="relative"
@@ -45,7 +45,7 @@ export default function Showcase() {
                 alt={`${t("showcaseSrc")} 0${index}`}
                 width={width}
                 height={height}
-                className="mr-5 object-cover h-full aspect-square"
+                className="mr-5 h-full"
               />
             </motion.div>
           </Link>
@@ -55,11 +55,11 @@ export default function Showcase() {
       <Marquee
         autoFill
         direction="right"
-        speed={20}
+        speed={50}
         loop={0}
         className="w-full h-1/2"
       >
-        {imageList.slice(4).map(({ src, title, width, height }, index) => (
+        {imageList.slice(7).map(({ src, title, width, height }, index) => (
           <Link href="showcase" key={index}>
             <motion.div
               className="relative"
@@ -79,7 +79,7 @@ export default function Showcase() {
                 alt={`${t("showcaseSrc")} 0${index}`}
                 width={width}
                 height={height}
-                className="mr-5 object-cover aspect-square"
+                className="mr-5 h-full"
               />
             </motion.div>
           </Link>
