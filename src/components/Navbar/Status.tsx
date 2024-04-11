@@ -2,6 +2,7 @@ import { useI18n, useScopedI18n } from "@/locales/client";
 import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
+import Icon from "../Icon/Icon";
 
 const statuses = [
   { name: "available", color: "bg-green-500" },
@@ -24,7 +25,7 @@ export default function Status() {
     <Tooltip content={t("backToHome")} variant="dark">
       <Link
         href="/"
-        className="center gap-2 text-dark bg-light px-2 py-1 rounded-full"
+        className="center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
       >
         <div className="relative">
           <div
@@ -35,6 +36,10 @@ export default function Status() {
           </div>
         </div>
         <Text type="expanded">{scoped(key)}</Text>
+
+        <div className="w-0 group-hover:w-full">
+          <Icon name="chevronRight" />
+        </div>
       </Link>
     </Tooltip>
   );
