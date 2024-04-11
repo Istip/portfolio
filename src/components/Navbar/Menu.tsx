@@ -107,7 +107,7 @@ export default function Menu({ setOpen }: Props) {
                     <Text
                       type="expandedBlack"
                       className={`uppercase text-7xl transition-all ${
-                        hovered && selected !== item ? "opacity-50 pl-5" : ""
+                        hovered && selected !== item ? "opacity-20 pl-5" : ""
                       }`}
                     >
                       {scopedMenu(item.name as MenuItemTranslation)}
