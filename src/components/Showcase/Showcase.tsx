@@ -34,7 +34,7 @@ export default function Showcase() {
               variants={variants}
             >
               <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/50 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expanded">
+                <Text as="span" type="expanded" className="text-xs">
                   <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
                     {title}
                   </div>
@@ -45,7 +45,7 @@ export default function Showcase() {
                 alt={`${t("showcaseSrc")} 0${index}`}
                 width={width}
                 height={height}
-                className="mr-5 object-cover aspect-square"
+                className="mr-5 object-cover h-full aspect-square"
               />
             </motion.div>
           </Link>
@@ -68,7 +68,7 @@ export default function Showcase() {
               variants={variants}
             >
               <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/50 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expanded">
+                <Text as="span" type="expanded" className="text-xs">
                   <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
                     {title}
                   </div>
