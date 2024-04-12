@@ -61,4 +61,6 @@ export default {
     currentTime: "Jelenlegi idő",
   },
   copyright: "Szerzői jog fenntartva ©",
+  mottoLine1: "hobbim és küldetésem",
+  mottoLine2: "FLAGSHIP webes élmények építése",
 } as const;

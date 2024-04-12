@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section>
-      <div className="flex flex-col justify-center gap-10 h-hero">
+      <div className="flex flex-col justify-center gap-10 h-screen -mt-[60px]">
         <Tooltip variant="dark" content={t("myName")}>
           <MaskText>{t("firstName")}</MaskText>
           <MaskText>{t("lastName")}</MaskText>
@@ -42,9 +42,9 @@ export default function Hero() {
       </div>
 
       <Text className="text-2xl text-stone-400 py-8">
-        on a mission to build
+        {t("mottoLine1")}
         <br />
-        FLAGSHIP web experiences
+        {t("mottoLine2")}
       </Text>
 
       <div className="center gap-2 py-5">

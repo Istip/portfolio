@@ -61,4 +61,6 @@ export default {
     currentTime: "Current Time",
   },
   copyright: "Copyright ©",
+  mottoLine1: "on a mission to build",
+  mottoLine2: "FLAGSHIP web experiences",
 } as const;
