@@ -63,4 +63,6 @@ export default {
   copyright: "Copyright ©",
   mottoLine1: "on a mission to build",
   mottoLine2: "FLAGSHIP web experiences",
+  aboutIntro:
+    "Hello! I'm a creative developer with several years of experience crafting digital products and web experiences. In addition to my full-time role as a developer, I enjoy expressing creativity through both design and development. To be honest, coding has been a passion of mine since my teenage years.",
 } as const;

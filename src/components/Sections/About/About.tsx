@@ -1,14 +1,12 @@
+import { getI18n } from "@/locales/server";
 import Text from "../../Text/Text";
 
-export default function About() {
+export default async function About() {
+  const t = await getI18n();
+
   return (
     <div>
-      <Text className="text-2xl">
-        I am a creative developer with years of experience in building products
-        and appealing web experiences. I have collaborated with individuals and
-        teams to build experiences for SMEs and large enterprises including
-        Wise, Google, Interswitch and Intelia.
-      </Text>
+      <Text className="text-2xl">{t("aboutIntro")}</Text>
 
       <Text type="expanded" className="text-5xl my-5">
         i develop

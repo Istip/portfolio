@@ -63,4 +63,6 @@ export default {
   copyright: "Szerzői jog fenntartva ©",
   mottoLine1: "hobbim és küldetésem",
   mottoLine2: "FLAGSHIP webes élmények építése",
+  aboutIntro:
+    "Hello! Isti vagyok és kreatív fejlesztőnek nevezném magam. Több éves tapasztalattal rendelkezem a digitális termékek és webes élmények építésében. A teljes munkaidős fejlesztői állásom mellett szenvedélyet érzek a kreativitás által kifejezni Önmagam a tervezés és a fejlesztés területén. Hogy őszinte legyen, mindig is szerettem kódolni.",
 } as const;
