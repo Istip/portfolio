@@ -52,7 +52,7 @@ export default function Accordion({
               </Text>
             </div>
             <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
-              <Text type="expandedExtraLight">{content}</Text>
+              <Icon name={content as IconName} />
             </div>
           </div>
           <div

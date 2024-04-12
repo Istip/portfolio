@@ -20,7 +20,7 @@ export default function Services() {
       id: 1,
       text: "design",
       icon: "design",
-      content: "Lorem, ipsum dolor",
+      content: "arrowDown",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
@@ -28,7 +28,7 @@ export default function Services() {
       id: 2,
       text: "frontend",
       icon: "page",
-      content: "Lorem, ipsum dolor",
+      content: "arrowDown",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
@@ -36,7 +36,7 @@ export default function Services() {
       id: 3,
       text: "backend",
       icon: "data",
-      content: "Lorem, ipsum dolor",
+      content: "arrowDown",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
@@ -44,7 +44,7 @@ export default function Services() {
       id: 4,
       text: "maintanance",
       icon: "message",
-      content: "Lorem, ipsum dolor",
+      content: "arrowDown",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
     },
