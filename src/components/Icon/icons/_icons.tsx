@@ -21,6 +21,10 @@ import UserProfile from "./UserProfile";
 import ShowcaseIcon from "./ShowcaseIcon";
 import ServicesIcon from "./ServicesIcon";
 import EnvelopeIcon from "./EnvelopeIcon";
+import WebsiteIcon from "./WebsiteIcon";
+import WebappIcon from "./WebappIcon";
+import UIIcon from "./UIIcon";
+import UXIcon from "./UXIcon";
 
 const icons = {
   user: <UserIcon />,
@@ -46,6 +50,10 @@ const icons = {
   showcase: <ShowcaseIcon />,
   services: <ServicesIcon />,
   envelope: <EnvelopeIcon />,
+  website: <WebsiteIcon />,
+  webapp: <WebappIcon />,
+  ui: <UIIcon />,
+  ux: <UXIcon />,
 };
 
 export default icons;
