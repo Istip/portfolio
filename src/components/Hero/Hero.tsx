@@ -51,7 +51,7 @@ export default function Hero() {
 
       <div className="center gap-2 py-5">
         <Link href="about" className="w-full">
-          <DoubleButton className="bg-light border border-dark text-dark hover:bg-dark hover:text-light">
+          <DoubleButton className="bg-white border border-dark text-dark hover:bg-dark hover:text-light">
             {t("about")}
           </DoubleButton>
         </Link>
