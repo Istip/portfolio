@@ -84,4 +84,5 @@ export default {
     backend: "Háttérrendszer leírása",
     maintanance: "Karbantartás leírása",
   },
+  scrollToTop: "Vissza az oldal tetejére",
 } as const;

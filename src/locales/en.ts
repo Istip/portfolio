@@ -83,4 +83,5 @@ export default {
     backend: "Backend description",
     maintanance: "Maintanance description",
   },
+  scrollToTop: "Scroll to top",
 } as const;
