@@ -9,13 +9,15 @@ export default async function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Text
-      as="div"
-      type="expanded"
-      className="bg-primary text-dark py-9 px-[50px] text-xs gap-10 select-none flex justify-between items-center w-full"
-    >
-      {t("copyright")} {t("firstName")} {t("lastName")} | {currentYear}
-      <ScrollToTop />
-    </Text>
+    <footer>
+      <Text
+        as="div"
+        type="expanded"
+        className="bg-primary text-dark py-9 px-[50px] text-xs gap-10 select-none flex justify-between items-center w-full"
+      >
+        {t("copyright")} {t("firstName")} {t("lastName")} | {currentYear}
+        <ScrollToTop />
+      </Text>
+    </footer>
   );
 }
