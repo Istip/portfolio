@@ -10,7 +10,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <div className="grid grid-cols-2">
-      <div className="pt-20">
+      <main className="pt-20">
         <div className="md:px-[50px] px-5 pb-9">
           <Hero />
         </div>
@@ -45,7 +45,7 @@ export default function Home() {
         </Section>
 
         <Footer />
-      </div>
+      </main>
       <Showcase />
     </div>
   );

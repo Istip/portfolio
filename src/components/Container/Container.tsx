@@ -3,5 +3,5 @@ export default function PageContainer({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="pt-[82px]">{children}</div>;
+  return <main className="pt-[82px]">{children}</main>;
 }
