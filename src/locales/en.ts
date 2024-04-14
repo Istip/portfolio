@@ -71,4 +71,16 @@ export default {
   webapps: "Web Applications",
   ui: "User Interfaces",
   ux: "User Experiences",
+  services: {
+    design: "Design",
+    frontend: "Frontend",
+    backend: "Backend",
+    maintanance: "Maintanance",
+  },
+  servicesContent: {
+    design: "Design description",
+    frontend: "Frontend description",
+    backend: "Backend description",
+    maintanance: "Maintanance description",
+  },
 } as const;

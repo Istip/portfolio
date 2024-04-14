@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Accordion from "../Accordion/Accordion";
-import Icon, { IconName } from "../Icon/Icon";
+import { IconName } from "../Icon/Icon";
+import { useScopedI18n } from "@/locales/client";
 
 interface ServiceItems {
   id: number;
@@ -15,38 +16,37 @@ interface ServiceItems {
 export default function Services() {
   const [selected, setSelected] = useState<number | boolean>(false);
 
+  const scopedServicesT = useScopedI18n("services");
+  const scopedServicesContentT = useScopedI18n("servicesContent");
+
   const items: ServiceItems[] = [
     {
       id: 1,
-      text: "design",
+      text: scopedServicesT("design"),
       icon: "design",
       content: "arrowDown",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
+      description: scopedServicesContentT("design"),
     },
     {
       id: 2,
-      text: "frontend",
+      text: scopedServicesT("frontend"),
       icon: "page",
       content: "arrowDown",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
+      description: scopedServicesContentT("frontend"),
     },
     {
       id: 3,
-      text: "backend",
+      text: scopedServicesT("backend"),
       icon: "data",
       content: "arrowDown",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
+      description: scopedServicesContentT("backend"),
     },
     {
       id: 4,
-      text: "maintanance",
+      text: scopedServicesT("maintanance"),
       icon: "message",
       content: "arrowDown",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, quos, illum eaque, voluptatem molestiae aperiam dolores ipsa officiis ullam harum saepe cumque ipsam. Dignissimos incidunt reprehenderit, culpa veniam at nemo!",
+      description: scopedServicesContentT("maintanance"),
     },
   ];
 

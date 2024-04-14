@@ -71,4 +71,16 @@ export default {
   webapps: "Webalkalmazásokat",
   ui: "Felhasználói felületeket",
   ux: "Felhasználói élményeket",
+  services: {
+    design: "Design",
+    frontend: "Felhasználói felület",
+    backend: "Háttérrendszer",
+    maintanance: "Karbantartás",
+  },
+  servicesContent: {
+    design: "Design leírása",
+    frontend: "Felhasználói felület leírása",
+    backend: "Háttérrendszer leírása",
+    maintanance: "Karbantartás leírása",
+  },
 } as const;
