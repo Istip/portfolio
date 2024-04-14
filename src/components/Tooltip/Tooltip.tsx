@@ -86,7 +86,7 @@ const Tooltip: React.FC<TooltipProps> = ({
             animate="visible"
             exit="hidden"
             variants={tooltipVariants}
-            className={`${selectedVariant?.style} fixed px-3 py-2 text-xs font-normal rounded-full rounded-tl-none pointer-events-none`}
+            className={`${selectedVariant?.style} fixed px-3 py-2 text-xs font-normal rounded-full rounded-tl-none pointer-events-none z-[999999]`}
             style={{
               top: tooltipY,
               left: tooltipX,
