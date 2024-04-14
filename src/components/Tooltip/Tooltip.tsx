@@ -29,7 +29,7 @@ const Tooltip: React.FC<TooltipProps> = ({
     { name: "primary", style: "bg-primary border border-primary text-dark" },
     {
       name: "plain",
-      style: "bg-transparent border border-transparent text-dark",
+      style: "bg-transparent border border-transparent text-primaryDark",
     },
   ];
 
@@ -64,9 +64,6 @@ const Tooltip: React.FC<TooltipProps> = ({
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        type: "spring",
-      },
     },
   };
 
