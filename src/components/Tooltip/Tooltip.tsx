@@ -70,8 +70,8 @@ const Tooltip: React.FC<TooltipProps> = ({
     },
   };
 
-  const springX = useSpring(cursorX, { stiffness: 1500, damping: 90 });
-  const springY = useSpring(cursorY, { stiffness: 1500, damping: 90 });
+  const springX = useSpring(cursorX, { stiffness: 500, damping: 90 });
+  const springY = useSpring(cursorY, { stiffness: 500, damping: 90 });
 
   const tooltipX = useTransform(springX, (x) => x + 8);
   const tooltipY = useTransform(springY, (y) => y + 16);
