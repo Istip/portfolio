@@ -54,7 +54,7 @@ export default function Menu({ setOpen }: Props) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 1, x: "100vw" }}
       transition={{ duration: 0.25, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 w-full h-full z-[99999] center text-light"
+      className="fixed top-0 left-0 right-0 w-full h-full z-[9999] center text-light"
       onClick={() => setOpen(false)}
     >
       <button
