@@ -31,6 +31,8 @@ export default function Hero() {
             width={1600}
             height={800}
             alt={t("coverAlt")}
+            placeholder="blur"
+            blurDataURL="/images/cover.webp"
             className="w-full h-full object-cover"
           />
         </motion.div>
