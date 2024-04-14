@@ -17,7 +17,7 @@ const Navbar = () => {
   const text = pathname !== "/" ? "text-dark" : "text-light";
 
   return (
-    <>
+    <header>
       <AnimatePresence>{open && <Menu setOpen={setOpen} />}</AnimatePresence>
       <nav className={`w-full fixed z-10 p-5 ${text}`}>
         <ul className="flex items-center justify-between mx-auto">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </ul>
         </ul>
       </nav>
-    </>
+    </header>
   );
 };
 
