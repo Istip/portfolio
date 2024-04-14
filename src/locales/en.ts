@@ -57,7 +57,7 @@ export default {
   backToHome: "Bring me back to Homepage",
   additional: {
     name: "Istvan Pasztor",
-    location: "Szekelyudvarhely, Romania",
+    location: "Szekelyudvarhely, Transilvania / Romania",
     currentTime: "Current Time",
   },
   copyright: "Copyright ©",

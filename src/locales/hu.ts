@@ -57,7 +57,7 @@ export default {
   backToHome: "Vissza a főoldalra",
   additional: {
     name: "Pásztor István",
-    location: "Székelyudvarhely, Románia",
+    location: "Székelyudvarhely, Erdély / Románia",
     currentTime: "Jelenlegi idő",
   },
   copyright: "Szerzői jog fenntartva ©",
