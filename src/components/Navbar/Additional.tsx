@@ -39,7 +39,7 @@ export default function Additional() {
           <Link
             key={icon.link}
             href={icon.link}
-            className="text-light hover:text-dark transition-colors"
+            className="text-light hover:text-primaryDark transition-colors"
             title={icon.title}
             target="_blank"
             rel="noopener noreferrer"
