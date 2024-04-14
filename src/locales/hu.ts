@@ -49,7 +49,7 @@ export default {
   menuItemsTooltip: {
     home: "Vissza a főoldalra",
     about: "Tudj meg többet rólam",
-    showcase: "Nézd meg a munkáimat",
+    showcase: "Nézd meg a munkáim",
     services: "Ismerkedj meg a szolgáltatásokkal",
     contact: "Lépjünk kapcsolatba",
   },
@@ -79,7 +79,8 @@ export default {
   },
   servicesContent: {
     design: "Design leírása",
-    frontend: "Felhasználói felület leírása",
+    frontend:
+      "A felhasználói felület tervezése és fejlesztése kiemelt fontosságú az online jelenlét sikeréhez. Rugalmas, felhasználóbarát és esztétikus felhasználói felületeket építek, amelyek segítenek az ügyfeleknek jobban megérteni és élvezni az online élményt.",
     backend: "Háttérrendszer leírása",
     maintanance: "Karbantartás leírása",
   },
