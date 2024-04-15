@@ -7,6 +7,7 @@ import LanguageSelector from "./LanguageSelector";
 import Status from "./Status";
 import MenuIcon from "./MenuIcon";
 import Menu from "./Menu";
+import NavbarRoundel from "./NavbarRoundel";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -20,13 +21,23 @@ const Navbar = () => {
     <header>
       <AnimatePresence>{open && <Menu setOpen={setOpen} />}</AnimatePresence>
       <nav className={`w-full fixed z-10 p-5 ${text}`}>
-        <ul className="flex items-center justify-between mx-auto">
+        <div className="flex items-center justify-between mx-auto">
           <Status />
-          <ul className={`center gap-4 px-2 pb-2 rounded-bl-2xl ${bg}`}>
-            <LanguageSelector />
-            <MenuIcon setOpen={setOpen} text={text} />
-          </ul>
-        </ul>
+          <div className="flex flex-col justify-end items-end">
+            <div className="flex">
+              <div className="text-dark">
+                <NavbarRoundel />
+              </div>
+              <ul className={`center gap-4 px-2 pb-2 rounded-bl-2xl ${bg}`}>
+                <LanguageSelector />
+                <MenuIcon setOpen={setOpen} text={text} />
+              </ul>
+            </div>
+            <div className="flex text-dark">
+              <NavbarRoundel />
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
   );
