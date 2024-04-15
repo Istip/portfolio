@@ -1,4 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function NavbarRoundel() {
+  const pathname = usePathname();
+
+  if (pathname !== "/") return null;
+
   return (
     <>
       <svg
