@@ -26,29 +26,30 @@ export default function Showcase() {
         className="w-full h-1/2"
       >
         {imageList.slice(0, 7).map(({ src, title, width, height }, index) => (
-          <Link href="showcase" key={index}>
-            <motion.div
-              className="relative"
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
-              <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/75 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expanded" className="text-xs">
-                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
-                    {title}
-                  </div>
-                </Text>
-              </div>
-              <Image
-                src={src}
-                alt={`${t("showcaseSrc")} 0${index}`}
-                width={width}
-                height={height}
-                className="mr-5 h-full"
-              />
-            </motion.div>
-          </Link>
+          <motion.div
+            key={index}
+            className="relative"
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+          >
+            <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/75 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
+              <Text
+                as="span"
+                type="expandedBlack"
+                className="text-xs text-light"
+              >
+                {title}
+              </Text>
+            </div>
+            <Image
+              src={src}
+              alt={`${t("showcaseSrc")} 0${index}`}
+              width={width}
+              height={height}
+              className="mr-5 h-full"
+            />
+          </motion.div>
         ))}
       </Marquee>
 
@@ -60,29 +61,30 @@ export default function Showcase() {
         className="w-full h-1/2"
       >
         {imageList.slice(7).map(({ src, title, width, height }, index) => (
-          <Link href="showcase" key={index}>
-            <motion.div
-              className="relative"
-              initial="hidden"
-              animate="visible"
-              variants={variants}
-            >
-              <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/75 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
-                <Text as="span" type="expanded" className="text-xs">
-                  <div className="px-4 py-2 bg-light border border-dark text-dark rounded-2xl transition-all hover:text-light hover:bg-dark">
-                    {title}
-                  </div>
-                </Text>
-              </div>
-              <Image
-                src={src}
-                alt={`${t("showcaseSrc")} 0${index}`}
-                width={width}
-                height={height}
-                className="mr-5 h-full"
-              />
-            </motion.div>
-          </Link>
+          <motion.div
+            key={index}
+            className="relative"
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+          >
+            <div className="absolute top-0 bottom-0 left-0 right-0 bg-dark/75 mr-5 transition-opacity opacity-0 hover:opacity-100 center duration-500">
+              <Text
+                as="span"
+                type="expandedBlack"
+                className="text-xs text-light"
+              >
+                {title}
+              </Text>
+            </div>
+            <Image
+              src={src}
+              alt={`${t("showcaseSrc")} 0${index}`}
+              width={width}
+              height={height}
+              className="mr-5 h-full"
+            />
+          </motion.div>
         ))}
       </Marquee>
     </aside>
