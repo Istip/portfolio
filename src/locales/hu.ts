@@ -77,10 +77,16 @@ export default {
     backend: "Háttérrendszer",
     maintanance: "Karbantartás",
   },
+  // Content shown in the services section's accordion
   servicesContent: {
-    design: "Design leírása",
-    frontend:
-      "A felhasználói felület tervezése és fejlesztése kiemelt fontosságú az online jelenlét sikeréhez. Rugalmas, felhasználóbarát és esztétikus felhasználói felületeket építek, amelyek segítenek az ügyfeleknek jobban megérteni és élvezni az online élményt.",
+    design1:
+      "A felhasználói felület meghatározza az első benyomást, az elégedettséget, javítja az élményt és növeli az elköteleződést. Ezeket figyelembe véve, valamint az elmúlt évek alatt kifejlődött felhasználói viselkedéseket és trendeket tanulmányozva olyan UI/UX vizualitást készítek, ami modern, dinamikus és könnyen is kezelhető.",
+    design2:
+      "Amikor kérésre készítem el egyes felhasználói felületek vizuális megjelenését, mindig több alternatívával szeretek dolgozni. Így a fejlesztés előtti prezentáción könnyebben választhatod ki a számodra legmegfelelőbb design -t. Közösen dolgozunk, hogy az eredmény az ízlésedhez igazodjon.",
+    frontend1:
+      "A felhasználói felület tervezése és fejlesztése kiemelt fontosságú az online jelenlét sikeréhez. Rugalmas, felhasználóbarát és esztétikus felhasználói felületeket építek, amelyek segítenek az ügyfeleidnek jobban megérteni és élvezni az online élményt. Fontosnak tartom az egyediséget, kiemelkedő vizualitást és hogy a közös munkánk olyan eredménnyel járjon amit a felhasználók szívesen megnéznek újból és újból.",
+    frontend2:
+      "A legmodernebb technológiákat használom annak érdekében, hogy a böngészés ne csak élvezetes, hanem funkcionális és biztonságos is legyen. Egyszerű prezentációs oldalaktól egészen az összetett webes alkalmazásokig mindenféle projekten dolgoztam már.",
     backend: "Háttérrendszer leírása",
     maintanance: "Karbantartás leírása",
   },

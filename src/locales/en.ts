@@ -77,9 +77,16 @@ export default {
     backend: "Backend",
     maintanance: "Maintanance",
   },
+  // Content shown in the services section's accordion
   servicesContent: {
-    design: "Design description",
-    frontend: "Frontend description",
+    design1:
+      "The user interface determines the first impression, satisfaction, improves the experience, and increases commitment. Taking these into account, as well as studying user behaviors and trends that have developed over the past years, I create UI/UX visuals that are modern, dynamic and easy to use.",
+    design2:
+      "When I create the visual appearance of individual user interfaces upon request, I always like to work with multiple alternatives. This way, you can more easily choose the design that suits you best during the presentation before development. We work together to ensure that the result aligns with your taste.",
+    frontend1:
+      "The design and development of user interfaces are crucial for the success of online presence. I build flexible, user-friendly, and aesthetically pleasing interfaces that help your customers better understand and enjoy the online experience. I prioritize uniqueness, outstanding visuals, and aim for our collaboration to yield results that users will gladly revisit time and time again.",
+    frontend2:
+      "I use the latest technologies to ensure that browsing is not only enjoyable but also functional and secure. From simple presentation pages to complex web applications, I have worked on a wide range of projects.",
     backend: "Backend description",
     maintanance: "Maintanance description",
   },

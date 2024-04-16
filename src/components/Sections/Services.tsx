@@ -10,7 +10,7 @@ interface ServiceItems {
   text: string;
   icon: IconName;
   content: string;
-  description: string;
+  description: string[];
 }
 
 export default function Services() {
@@ -25,28 +25,40 @@ export default function Services() {
       text: scopedServicesT("design"),
       icon: "design",
       content: "arrowDown",
-      description: scopedServicesContentT("design"),
+      description: [
+        scopedServicesContentT("design1"),
+        scopedServicesContentT("design2"),
+      ],
     },
     {
       id: 2,
       text: scopedServicesT("frontend"),
       icon: "page",
       content: "arrowDown",
-      description: scopedServicesContentT("frontend"),
+      description: [
+        scopedServicesContentT("frontend1"),
+        scopedServicesContentT("frontend2"),
+      ],
     },
     {
       id: 3,
       text: scopedServicesT("backend"),
       icon: "data",
       content: "arrowDown",
-      description: scopedServicesContentT("backend"),
+      description: [
+        scopedServicesContentT("backend"),
+        scopedServicesContentT("backend"),
+      ],
     },
     {
       id: 4,
       text: scopedServicesT("maintanance"),
       icon: "message",
       content: "arrowDown",
-      description: scopedServicesContentT("maintanance"),
+      description: [
+        scopedServicesContentT("maintanance"),
+        scopedServicesContentT("maintanance"),
+      ],
     },
   ];
 
@@ -62,7 +74,9 @@ export default function Services() {
           selected={selected}
           setSelected={setSelected}
         >
-          {item.description}
+          {item.description.map((desc, index) => (
+            <p key={index}>{desc}</p>
+          ))}
         </Accordion>
       ))}
     </>
