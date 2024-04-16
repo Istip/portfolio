@@ -25,9 +25,9 @@ export default {
   clickToClose: "Click to close",
   contactPage: {
     intro:
-      "I am a creative developer with years of experience in building products and appealing web experiences. I have collaborated with individuals and teams to build experiences for SMEs and large enterprises including Wise, Google, Interswitch and Intelia.",
+      "If you have any questions about me, my services, or if you're interested in collaborating, don't hesitate to contact me! In the next section, by clicking on the email address, you can immediately open your email application, or copy my address to the clipboard. If it's more convenient for you, simply fill out the contact form.",
     outro:
-      "I am a creative developer with years of experience in building products and appealing web experiences. I have collaborated with individuals and teams to build experiences for SMEs and large enterprises including Wise, Google, Interswitch and Intelia.",
+      "I look forward to creating an outstanding and useful web interface for your target audience together, one small step at a time.",
     name: "name",
     namePlaceholder: "Please enter your name",
     email: "email",

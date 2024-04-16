@@ -25,9 +25,9 @@ export default {
   clickToClose: "Kattints, hogy bezárd: ",
   contactPage: {
     intro:
-      "Kreatív fejlesztő vagyok évek óta tapasztalattal a termékek és a webes élmények építésében. Együttműködtem egyénekkel és csapatokkal kis- és középvállalkozások és nagyvállalatok számára, beleértve a Wise, a Google, az Interswitch és az Intelia cégeket.",
+      "Ha kérdésed van rólam, szolgáltatásaimról, vagy érdekel együttműködésünk, ne habozz felvenni velem a kapcsolatot! A következő részlegen belül az e-mail címre kattintva azonnal elindíthatod az e-mail alkalmazásod, vagy a vágólapra másolhatod a címem. Ha számodra kényelmesebb, akkor egyszerűen töltsd ki a kapcsolatfelvételi űrlapot.",
     outro:
-      "Kreatív fejlesztő vagyok évek óta tapasztalattal a termékek és a webes élmények építésében. Együttműködtem egyénekkel és csapatokkal kis- és középvállalkozások és nagyvállalatok számára, beleértve a Wise, a Google, az Interswitch és az Intelia cégeket.",
+      "Várom, hogy együtt, apró lépésekkel, kiemelkedő és hasznos webes felületet hozzunk létre a célközönséged számára.",
     name: "név",
     namePlaceholder: "Kérlek add meg a neved",
     email: "email",
