@@ -87,8 +87,12 @@ export default {
       "A felhasználói felület tervezése és fejlesztése kiemelt fontosságú az online jelenlét sikeréhez. Rugalmas, felhasználóbarát és esztétikus felhasználói felületeket építek, amelyek segítenek az ügyfeleidnek jobban megérteni és élvezni az online élményt. Fontosnak tartom az egyediséget, kiemelkedő vizualitást és hogy a közös munkánk olyan eredménnyel járjon amit a felhasználók szívesen megnéznek újból és újból.",
     frontend2:
       "A legmodernebb technológiákat használom annak érdekében, hogy a böngészés ne csak élvezetes, hanem funkcionális és biztonságos is legyen. Egyszerű prezentációs oldalaktól egészen az összetett webes alkalmazásokig mindenféle projekten dolgoztam már.",
-    backend: "Háttérrendszer leírása",
+    backend1:
+      "Foglalkozom háttérrendszerek (backend) létrehozásával, üzemeltetésével és folyamatos karbantartásával. Ide értendő az adatbázisok és felhőrendszerek.",
+    backend2:
+      "Az esetek döntő részében, hosszú múlttal rendelkező, gyakran frissített és megbízható harmadik féltől származó szolgáltatásokat kapcsolunk össze a felhasználói felülettel. Az adatok mindig biztonságban és titkosítva vannak.",
     maintanance: "Karbantartás leírása",
   },
-  scrollToTop: "Vissza az oldal tetejére",
+  scrollToTop:
+    "Mivel a webes szakmában alkalmazott technológia gyorsan fejlődik, a karbantartás szerepe is kiemelkedő fontosságot kapott. Ezért gyakran kínálom fel az időszakos felülvizsgálatokat és kód-, valamint verziófrissítéseket szolgáltatásként. Mindkét fél számára fontos, hogy a befejezett projekt mindig naprakészen működjön.",
 } as const;

@@ -87,8 +87,12 @@ export default {
       "The design and development of user interfaces are crucial for the success of online presence. I build flexible, user-friendly, and aesthetically pleasing interfaces that help your customers better understand and enjoy the online experience. I prioritize uniqueness, outstanding visuals, and aim for our collaboration to yield results that users will gladly revisit time and time again.",
     frontend2:
       "I use the latest technologies to ensure that browsing is not only enjoyable but also functional and secure. From simple presentation pages to complex web applications, I have worked on a wide range of projects.",
-    backend: "Backend description",
-    maintanance: "Maintanance description",
+    backend1:
+      "I deal with the creation, operation, and continuous maintenance of backend systems. This includes databases and cloud systems.",
+    backend2:
+      "In most cases, we integrate long-standing, frequently updated, and reliable third-party services with the user interface together. Your data is always kept safe and encrypted.",
+    maintanance:
+      "As technology in the web industry evolves fast, the role of maintenance has become increasingly important. Therefore, I often offer periodic reviews, code and version updates as a service. It's important for both parties that the completed project always functions up-to-date.",
   },
   scrollToTop: "Scroll to top",
 } as const;

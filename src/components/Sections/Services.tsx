@@ -46,8 +46,8 @@ export default function Services() {
       icon: "data",
       content: "arrowDown",
       description: [
-        scopedServicesContentT("backend"),
-        scopedServicesContentT("backend"),
+        scopedServicesContentT("backend1"),
+        scopedServicesContentT("backend2"),
       ],
     },
     {
@@ -55,10 +55,7 @@ export default function Services() {
       text: scopedServicesT("maintanance"),
       icon: "message",
       content: "arrowDown",
-      description: [
-        scopedServicesContentT("maintanance"),
-        scopedServicesContentT("maintanance"),
-      ],
+      description: [scopedServicesContentT("maintanance")],
     },
   ];
 
