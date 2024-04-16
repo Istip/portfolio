@@ -10,18 +10,12 @@ const config: Config = {
     extend: {
       backgroundImage: {},
       colors: {
-        dark: "#111111",
-
-        primary: "#b8b8ff",
-
         primaryDark: "#9381ff",
-        primaryLight: "#ffeedd",
-        light: "#F2F0EF",
+        primary: "#b8b8ff",
+        primaryLight: "#E8E8FA",
 
-        // OLD COLORS:
-        // primary: "#3EEA8D",
-        // primaryDark: "#2BAA65",
-        // primaryLight: "#CCF4DE",
+        dark: "#111111",
+        light: "#F2F0EF",
       },
       height: {
         hero: "calc(100vh - 82px - 36px - 36px)",
