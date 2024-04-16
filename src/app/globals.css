@@ -13,7 +13,7 @@
   position: fixed;
   inset: -200%;
   background-image: url("/images/noise.png");
-  opacity: 4%;
+  opacity: 3%;
   pointer-events: none;
   animation: shift 0.35s linear infinite both;
   z-index: 9999;
