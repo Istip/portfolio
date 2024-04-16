@@ -72,7 +72,9 @@ export default function Accordion({
               className="overflow-hidden"
             >
               <div className="md:px-[50px] px-5 py-10 bg-primary h-full overflow-hidden">
-                <Text className="text-dark">{children}</Text>
+                <Text as="div" className="text-dark space-y-4">
+                  {children}
+                </Text>
               </div>
             </motion.div>
           )}
