@@ -19,7 +19,7 @@ export default function Home() {
           <About />
         </Section>
 
-        <Section from="#b8b8ff" to="#111111">
+        <Section from="#b8b8ff" to="#111111" padding={false}>
           <AboutScroller />
         </Section>
 
