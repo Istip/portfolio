@@ -37,7 +37,7 @@ export default function Section({
   return (
     <motion.section ref={ref} className="" style={{ backgroundColor }}>
       {title && number && (
-        <div className="flex items-center justify-between text-5xl mb-9 md:px-[50px] px-5 py-9 lowercase">
+        <div className="flex items-center justify-between text-5xl md:px-[50px] px-5 py-9 lowercase">
           <Text type="expanded" className={`${colors[0]}`}>
             {`0${number}`}
           </Text>
