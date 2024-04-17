@@ -9,7 +9,6 @@ interface ServiceItems {
   id: number;
   text: string;
   icon: IconName;
-  content: string;
   description: string[];
 }
 
@@ -24,7 +23,6 @@ export default function Services() {
       id: 1,
       text: scopedServicesT("design"),
       icon: "design",
-      content: "arrowDown",
       description: [
         scopedServicesContentT("design1"),
         scopedServicesContentT("design2"),
@@ -34,7 +32,6 @@ export default function Services() {
       id: 2,
       text: scopedServicesT("frontend"),
       icon: "page",
-      content: "arrowDown",
       description: [
         scopedServicesContentT("frontend1"),
         scopedServicesContentT("frontend2"),
@@ -44,7 +41,6 @@ export default function Services() {
       id: 3,
       text: scopedServicesT("backend"),
       icon: "data",
-      content: "arrowDown",
       description: [
         scopedServicesContentT("backend1"),
         scopedServicesContentT("backend2"),
@@ -54,7 +50,6 @@ export default function Services() {
       id: 4,
       text: scopedServicesT("maintanance"),
       icon: "message",
-      content: "arrowDown",
       description: [scopedServicesContentT("maintanance")],
     },
   ];
@@ -65,7 +60,6 @@ export default function Services() {
         <Accordion
           key={item.id}
           text={item.text}
-          content={item.content}
           id={item.id}
           icon={item.icon}
           selected={selected}
