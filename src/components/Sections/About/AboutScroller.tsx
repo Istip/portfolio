@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Text from "@/components/Text/Text";
 import { useScopedI18n } from "@/locales/client";
+import AboutScrollerItem from "./AboutScrollerItem";
 
 const AboutScroller = () => {
   const targetRef = useRef(null);
@@ -25,22 +26,8 @@ const AboutScroller = () => {
     <section ref={targetRef} className="relative h-[300vh] rounded-2xl">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div className="flex gap-20 mb-20" style={{ x }}>
-          {sections.map((section, i) => (
-            <div
-              key={i}
-              className="w-[500px] h-full flex items-center flex-col gap-4 text-center p-10"
-            >
-              <Text
-                as="h3"
-                type="expandedBold"
-                className="text-4xl text-primaryDark uppercase"
-              >
-                {section.title}
-              </Text>
-              <Text className="text-2xl text-primaryLight">
-                {section.descripton}
-              </Text>
-            </div>
+          {sections.map(({ title, descripton }, i) => (
+            <AboutScrollerItem key={i} title={title} descripton={descripton} />
           ))}
         </motion.div>
       </div>
