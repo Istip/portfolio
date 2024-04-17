@@ -19,7 +19,6 @@ interface Props {
 export default function Accordion({
   text,
   className,
-  content,
   children,
   selected,
   setSelected,
@@ -37,7 +36,7 @@ export default function Accordion({
       onClick={() => setSelected(isSelected ? false : id)}
       className="select-none"
     >
-      <Tooltip variant="plain" content={`${tooltipContent} ${text}`}>
+      <Tooltip variant="light" content={`${tooltipContent} ${text}`}>
         <div
           className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
        relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
@@ -52,7 +51,7 @@ export default function Accordion({
               </Text>
             </div>
             <div className="relative font-light text-base z-[1] transition-all text-transparent group-hover:text-dark">
-              <Icon name={content as IconName} />
+              •
             </div>
           </div>
           <div
