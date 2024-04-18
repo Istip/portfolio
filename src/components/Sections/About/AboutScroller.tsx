@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Text from "@/components/Text/Text";
 import { useScopedI18n } from "@/locales/client";
 import AboutScrollerItem from "./AboutScrollerItem";
 
