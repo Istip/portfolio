@@ -16,7 +16,7 @@ const AboutScroller = () => {
   const sections = [
     { title: t("improve.title"), descripton: t("improve.description") },
     { title: t("design.title"), descripton: t("design.description") },
-    { title: t("pet.title"), descripton: t("games.description") },
+    { title: t("pet.title"), descripton: t("pet.description") },
     { title: t("games.title"), descripton: t("games.description") },
     { title: t("football.title"), descripton: t("football.description") },
     { title: t("bikes.title"), descripton: t("bikes.description") },
