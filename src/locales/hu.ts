@@ -1,34 +1,34 @@
 export default {
   hobby: {
     improve: {
-      title: "Improve",
+      title: "Önfejlesztés",
       description:
-        "I always strive to improve my skills and knowledge. I follow tech news and blogs to stay up to date. I can declare that my work has became my hobby. I'm always looking for new challenges and opportunities to learn.",
+        "Mindig törekszem arra, hogy fejlesszem a készségeimet és tudásomat. Folyamatosan követem a legfrissebb technológiával kapcsolatos híreket, blogokat, hogy naprakész maradjak. Kijelenthetem, hogy a munkám a hobbimmá vált. Keresem az új kihívásokat és lehetőségeket, hogy újat tanulhassak.",
     },
     design: {
       title: "Design",
       description:
-        "In the last couple of years I've been mostly coding, but I also like to express my creativity through design. I like to create modern, dynamic and user-friendly interfaces. And for that I like to click around in Figma.",
+        "Az utóbbi pár évben főként kódolással foglalkoztam, de szeretem kifejezni kreativitásomat a tervezés által is. Szeretek modern, dinamikus és felhasználóbarát felületeket létrehozni, és ehhez szívesen használom a Figmát.",
     },
     pet: {
-      title: "Pets",
+      title: "Háziállatok",
       description:
-        "I always loved pets and last year we've adopted a newborn kitten. She's a tabby cat named Stormy.",
+        "Mindig is szerettem az állatokat, és tavaly örökbe fogadtunk egy újszülött kismacskát. Ő egy csíkos macska, akit Stormynak neveztünk el.",
     },
     games: {
-      title: "Games",
+      title: "Videójátékok",
       description:
-        "Unfortunately, I tend to stuck in front of my monitor and play a lot of Elasto Mania. I'm kind of addicted at this level. However, I still suck at that game after all those hours invested into.",
+        "Sajnos hajlamos vagyok a monitor előtt ragadni, és sokat játszani az Elasto Maniával. Valahogy rákattantam erre a játékra. Még mindig gyengén teljesítek benne, annak ellenére, hogy ennyi időt fektettem bele.",
     },
     bikes: {
-      title: "Bikes",
+      title: "Motrok",
       description:
-        "Since I was a kid, I've always loved motorcycles. At the moment I ride a Suzuki Bandit. Just love the feeling of freedom it gives, the speed and the wind in my face. Side note: my love for bikes was not inspired by playing Elasto Mania.",
+        "Kiskorom óta mindig szerettem a motorokat. Manapság egy Suzuki Banditet vezetek. Szeretem a szabadság érzetet amit motrozás közben érehezet, meg egyszerűen a sebességet mega szelet. Megjegyzés: a motorok iránti szeretetem nem az Elasto Mania játék hatására alakult ki.",
     },
     football: {
-      title: "Football",
+      title: "Foci",
       description:
-        "As a kid I used to play football in different teams as a center forward. Now I only watch football, I don't play it anymore. I'm a Brazil fan since I've first seen Rivaldo playing back in 2001. I also support Manchester United in good and bad. Mostly bad.",
+        "Kiskoromban különböző csapatokban fociztam. Most már csak nézem a labdarúgást. Brazilia rajongója vagyok, mióta 2001-ben először láttam Rivaldot játszani. Továbbá hűséges támogatója vagyok a Manchester Unitednek, még a nehéz időkben is (volt belőlük bőven).",
     },
   },
   status: {

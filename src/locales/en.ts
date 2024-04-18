@@ -3,32 +3,32 @@ export default {
     improve: {
       title: "Improve",
       description:
-        "I always strive to improve my skills and knowledge. I follow tech news and blogs to stay up to date. I can declare that my work has became my hobby. I'm always looking for new challenges and opportunities to learn.",
+        "I always strive to improve my skills and knowledge. I follow tech news and blogs to stay up to date. I can declare that my work has become my hobby. I'm always looking for new challenges and opportunities to learn.",
     },
     design: {
       title: "Design",
       description:
-        "In the last couple of years I've been mostly coding, but I also like to express my creativity through design. I like to create modern, dynamic and user-friendly interfaces. And for that I like to click around in Figma.",
+        "In the last couple of years, I've been primarily coding, but I also enjoy expressing my creativity through design. I like to create modern, dynamic, and user-friendly interfaces, and for that, I enjoy working with Figma.",
     },
     pet: {
       title: "Pets",
       description:
-        "I always loved pets and last year we've adopted a newborn kitten. She's a tabby cat named Stormy.",
+        "I've always loved pets, and last year we adopted a newborn kitten. She's a tabby cat named Stormy.",
     },
     games: {
       title: "Games",
       description:
-        "Unfortunately, I tend to stuck in front of my monitor and play a lot of Elasto Mania. I'm kind of addicted at this level. However, I still suck at that game after all those hours invested into.",
+        "Unfortunately, I tend to get stuck in front of my monitor and play a lot of Elasto Mania. I'm kind of addicted to this game. However, I still suck at it after investing so many hours.",
     },
     bikes: {
       title: "Bikes",
       description:
-        "Since I was a kid, I've always loved motorcycles. At the moment I ride a Suzuki Bandit. Just love the feeling of freedom it gives, the speed and the wind in my face. Side note: my love for bikes was not inspired by playing Elasto Mania.",
+        "Since I was a kid, I've always loved motorcycles. At the moment, I ride a Suzuki Bandit. I just love the feeling of freedom it gives, the speed, and the wind in my face. Side note: my love for bikes was not inspired by playing Elasto Mania.",
     },
     football: {
       title: "Football",
       description:
-        "As a kid I used to play football in different teams as a center forward. Now I only watch football, I don't play it anymore. I'm a Brazil fan since I've first seen Rivaldo playing back in 2001. I also support Manchester United in good and bad. Mostly bad.",
+        "As a kid, I used to play football for various teams. Now, I only watch football. I've been a fan of Brazil since I first saw Rivaldo playing back in 2001. I'm also a loyal supporter of Manchester United, even during the tough times. And trust me, there have been plenty of those.",
     },
   },
   status: {
