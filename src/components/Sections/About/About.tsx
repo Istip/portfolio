@@ -10,7 +10,7 @@ export default async function About() {
     <div>
       <Text className="text-3xl mb-16">{t("aboutIntro")}</Text>
 
-      <Text type="expanded" className="text-5xl my-5">
+      <Text type="expandedBold" className="text-3xl my-5">
         {t("iDevelop")}
       </Text>
 
@@ -33,8 +33,8 @@ export default async function About() {
         </TiltCard>
       </div>
 
-      <Text type="expanded" className="text-5xl mb-5 mt-16">
-        {t("iDesign")}
+      <Text type="expandedBold" className="text-3xl mb-5 mt-16">
+        {t("fre")}
       </Text>
 
       <div className="grid grid-cols-2 gap-10">
