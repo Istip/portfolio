@@ -34,7 +34,7 @@ export default async function About() {
       </div>
 
       <Text type="expandedBold" className="text-3xl mb-5 mt-16">
-        {t("fre")}
+        {t("iDesign")}
       </Text>
 
       <div className="grid grid-cols-2 gap-10">
