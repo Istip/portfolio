@@ -17,17 +17,19 @@ export default function AboutScrollerItem({ title, descripton }: Props) {
     <div
       ref={ref}
       className={`${
-        isInView ? "opacity-100 scale-100" : "opacity-10 scale-50"
-      } transition-all duration-500 w-[500px] h-full flex items-center flex-col gap-4 text-center p-10`}
+        isInView
+          ? "opacity-100 scale-100 bg-light/70"
+          : "opacity-10 scale-5 bg-light/10"
+      } transition-all duration-500 rounded-2xl w-[500px] h-full flex items-center flex-col gap-4 p-10`}
     >
       <Text
         as="h3"
         type="expandedBold"
-        className="text-4xl text-light uppercase px-4 py-2 rounded-2xl bg-primaryDark"
+        className="text-4xl text-primaryDark uppercase pb-2 rounded-2xl w-full text-left"
       >
         {title}
       </Text>
-      <Text className="text-2xl text-primaryLight">{descripton}</Text>
+      <Text className="text-2xl text-dark">{descripton}</Text>
     </div>
   );
 }
