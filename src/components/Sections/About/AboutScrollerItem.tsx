@@ -23,7 +23,7 @@ export default function AboutScrollerItem({ title, descripton }: Props) {
       <Text
         as="h3"
         type="expandedBold"
-        className="text-4xl text-primaryDark uppercase"
+        className="text-4xl text-light uppercase px-4 py-2 rounded-2xl bg-primaryDark"
       >
         {title}
       </Text>
