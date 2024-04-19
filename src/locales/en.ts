@@ -126,4 +126,5 @@ export default {
       "As technology in the web industry evolves fast, the role of maintenance has become increasingly important. Therefore, I often offer periodic reviews, code and version updates as a service. It's important for both parties that the completed project always functions up-to-date.",
   },
   scrollToTop: "Scroll to top",
+  freeTime: "When I'm not working...",
 } as const;

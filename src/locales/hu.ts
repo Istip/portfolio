@@ -126,4 +126,5 @@ export default {
       "Mivel a webes szakmában alkalmazott technológia gyorsan fejlődik, a karbantartás szerepe is kiemelkedő fontosságot kapott. Ezért gyakran kínálom fel az időszakos felülvizsgálatokat és kód-, valamint verziófrissítéseket szolgáltatásként. Mindkét fél számára fontos, hogy a befejezett projekt mindig naprakészen működjön.",
   },
   scrollToTop: "Ugrás az oldal tetejére",
+  freeTime: "Amikor pedig nem dolgozom...",
 } as const;
