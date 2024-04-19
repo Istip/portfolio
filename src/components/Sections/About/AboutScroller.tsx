@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useScopedI18n } from "@/locales/client";
 import AboutScrollerItem from "./AboutScrollerItem";
+import Icon from "@/components/Icon/Icon";
 
 const AboutScroller = () => {
   const targetRef = useRef(null);
@@ -24,7 +25,12 @@ const AboutScroller = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh] rounded-2xl">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div className="flex gap-20 mb-20" style={{ x }}>
+        <div className="absolute top-1/2 left-0 bottom-1/2 my-auto">
+          <div className="p-0.5 center ml-2 rounded-full bg-light text-dark opacity-50">
+            <Icon name="arrowDown" />
+          </div>
+        </div>
+        <motion.div className="center gap-40 mb-20" style={{ x }}>
           {sections.map(({ title, descripton }, i) => (
             <AboutScrollerItem key={i} title={title} descripton={descripton} />
           ))}
