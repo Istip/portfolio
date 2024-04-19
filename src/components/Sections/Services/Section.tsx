@@ -32,7 +32,7 @@ export default function Section({
     target: ref,
   });
 
-  const backgroundColor = useTransform(scrollYProgress, [0, 0.5], [from, to]);
+  const backgroundColor = useTransform(scrollYProgress, [0, 0.9], [from, to]);
 
   return (
     <motion.section ref={ref} className="" style={{ backgroundColor }}>
