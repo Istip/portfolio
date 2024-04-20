@@ -25,34 +25,29 @@ export default function Contact() {
     <div>
       <Text className="text-2xl">{tscoped("intro")}</Text>
 
-      <div className="flex items-center justify-between py-8">
-        <a
-          href="mailto:isticsek@gmail.com"
-          className="text-2xl underline underline-offset-[6px] text-stone-400 hover:text-primary transition-colors duration-300"
-        >
-          <Text>isticsek@gmail.com</Text>
-        </a>
+      <div className="flex items-center justify-between py-8 gap-2">
+        <Text className="text-2xl w-full">{t("reachMe")}</Text>
 
-        <Tooltip content="isticsek@gmail.com">
-          <button
-            disabled={copied}
-            type="button"
-            onClick={() => copyToClipboard("isticsek@gmail.com")}
+        <div className=" center">
+          <a
+            href="mailto:isticsek@gmail.com"
+            className="text-2xl center rounded-2xl px-4 py-2 bg-primaryDark mr-0.5 text-light hover:text-dark transition-colors"
           >
-            <Text as="div" className="center uppercase gap-2">
-              <Text type="mona" className="font-bold">
-                <motion.span
-                  animate={{ color: !copied ? "#A2A3A4" : "#b8b8ff" }}
-                >
-                  {copied ? t("copied") : t("copy")}
-                </motion.span>
-              </Text>
-              <motion.span animate={{ color: !copied ? "#A2A3A4" : "#b8b8ff" }}>
+            <Text>isticsek@gmail.com</Text>
+          </a>
+
+          <Tooltip content={copied ? t("copied") : t("copy")}>
+            <button
+              disabled={copied}
+              type="button"
+              onClick={() => copyToClipboard("isticsek@gmail.com")}
+            >
+              <motion.div className="center rounded-2xl px-4 py-3 bg-primaryDark text-light">
                 <Icon name={copied ? "circleCheck" : "clipboard"} />
-              </motion.span>
-            </Text>
-          </button>
-        </Tooltip>
+              </motion.div>
+            </button>
+          </Tooltip>
+        </div>
       </div>
 
       <ContactForm />

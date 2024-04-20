@@ -127,4 +127,5 @@ export default {
   },
   scrollToTop: "Ugrás az oldal tetejére",
   freeTime: "Amikor pedig nem dolgozom...",
+  reachMe: "Lépj kapcsolatba:",
 } as const;

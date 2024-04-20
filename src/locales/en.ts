@@ -127,4 +127,5 @@ export default {
   },
   scrollToTop: "Scroll to top",
   freeTime: "When I'm not working...",
+  reachMe: "Reach me out:",
 } as const;
