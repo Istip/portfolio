@@ -9,6 +9,7 @@ import {
   useSpring,
 } from "framer-motion";
 import Text from "../Text/Text";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface TooltipProps {
   children: React.ReactNode;
@@ -22,6 +23,9 @@ const Tooltip: React.FC<TooltipProps> = ({
   variant = "primary",
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
+  const { width } = useWindowSize();
+
+  const smallerScreen = width && width < 1024;
 
   const variants = [
     {
@@ -89,7 +93,7 @@ const Tooltip: React.FC<TooltipProps> = ({
       </div>
 
       <AnimatePresence>
-        {showTooltip && (
+        {showTooltip && !smallerScreen && (
           <motion.div
             initial="hidden"
             animate="visible"
