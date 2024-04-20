@@ -10,9 +10,11 @@ export default function Additional() {
     hour: "2-digit",
   });
 
-  const currentMinute = new Date().toLocaleTimeString("ro-RO", {
-    minute: "2-digit",
-  });
+  const currentMinute = new Date()
+    .toLocaleTimeString("ro-RO", {
+      minute: "2-digit",
+    })
+    .padStart(2, "0");
 
   return (
     <div className="text-dark space-y-4">
