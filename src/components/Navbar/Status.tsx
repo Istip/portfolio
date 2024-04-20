@@ -27,6 +27,10 @@ export default function Status() {
         href="/"
         className="center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
       >
+        <div className="w-0 hidden group-hover:block group-hover:w-full">
+          <Icon name="chevronLeft" />
+        </div>
+
         <div className="relative">
           <div
             className={`${color} w-4 aspect-square rounded-full animate-ping`}
@@ -36,10 +40,6 @@ export default function Status() {
           </div>
         </div>
         <Text type="expanded">{scoped(key)}</Text>
-
-        <div className="w-0 group-hover:w-full">
-          <Icon name="chevronRight" />
-        </div>
       </Link>
     </Tooltip>
   );
