@@ -16,7 +16,7 @@ export default function Showcase() {
   };
 
   return (
-    <aside className="sticky flex flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full h-screen bg-dark p-5">
+    <aside className="sticky  flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full h-screen bg-dark p-5 hidden lg:flex">
       <Marquee
         autoFill
         direction="left"
@@ -51,7 +51,6 @@ export default function Showcase() {
           </motion.div>
         ))}
       </Marquee>
-
       <Marquee
         autoFill
         direction="right"

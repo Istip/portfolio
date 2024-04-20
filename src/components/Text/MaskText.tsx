@@ -38,7 +38,11 @@ const MaskText: React.FC<Props> = ({ once = false, children, className }) => {
           animate={inView ? "enter" : ""}
           className={`${className} m-0`}
         >
-          <Text as="h1" type="expanded" className="text-8xl lowercase">
+          <Text
+            as="h1"
+            type="expanded"
+            className="text-7xl md:text-8xl lowercase"
+          >
             {children}
           </Text>
         </motion.div>

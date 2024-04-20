@@ -9,7 +9,7 @@ import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-2">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
       <main className="pt-20">
         <div className="md:px-[50px] px-5 pb-9">
           <Hero />

@@ -49,7 +49,7 @@ export default function Hero() {
         {t("mottoLine2")}
       </Text>
 
-      <div className="center gap-2 py-5">
+      <div className="center gap-2 py-5 flex-col xl:flex-row">
         <Link href="about" className="w-full">
           <DoubleButton className="bg-white border border-dark text-dark hover:bg-dark hover:text-light">
             {t("about")}

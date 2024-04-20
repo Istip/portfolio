@@ -14,29 +14,29 @@ const Navbar = () => {
 
   const pathname = usePathname();
 
-  const bg = pathname !== "/" ? "bg-transparent" : "bg-dark";
-  const text = pathname !== "/" ? "text-dark" : "text-light";
+  const bg = pathname !== "/" ? "bg-transparent" : "lg:bg-dark bg-transparent";
+  const text = pathname !== "/" ? "text-dark" : "lg:text-light text-dark";
 
   return (
     <header>
       <AnimatePresence>{open && <Menu setOpen={setOpen} />}</AnimatePresence>
-      <nav className={`w-full fixed z-10 p-5 ${text}`}>
-        <div className="flex items-center justify-between mx-auto">
-          <Status />
-          <div className="flex flex-col justify-end items-end">
-            <div className="flex">
-              <div className="text-dark">
-                <NavbarRoundel />
-              </div>
-              <ul className={`center gap-4 px-2 pb-2 rounded-bl-2xl ${bg}`}>
-                <LanguageSelector />
-                <MenuIcon setOpen={setOpen} text={text} />
-              </ul>
-            </div>
-            <div className="flex text-dark">
+      <nav
+        className={`w-full fixed z-10 p-5 flex items-center rounded-b-2xl md:rounded-none md:bg-transparent bg-light justify-between mx-auto ${text}`}
+      >
+        <Status />
+        <div className="flex flex-col justify-end items-end">
+          <div className="flex">
+            <div className="text-dark">
               <NavbarRoundel />
             </div>
+            <ul
+              className={`center gap-4 lg:px-2 lg:pb-2 rounded-bl-2xl  ${bg}`}
+            >
+              <LanguageSelector />
+              <MenuIcon setOpen={setOpen} text={text} />
+            </ul>
           </div>
+          <NavbarRoundel />
         </div>
       </nav>
     </header>

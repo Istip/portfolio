@@ -8,7 +8,7 @@ export default function NavbarRoundel() {
   if (pathname !== "/") return null;
 
   return (
-    <>
+    <div className="hidden lg:flex text-dark">
       <svg
         width="8"
         height="8"
@@ -23,6 +23,6 @@ export default function NavbarRoundel() {
           fill="currentColor"
         />
       </svg>
-    </>
+    </div>
   );
 }

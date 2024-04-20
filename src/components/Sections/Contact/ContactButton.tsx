@@ -20,8 +20,8 @@ export default function ContactButton() {
   };
 
   return (
-    <div className="flex items-center justify-between py-8 gap-2">
-      <Text className="text-2xl w-full">{t("reachMe")}</Text>
+    <div className="flex items-center justify-center py-8 gap-2 flex-col xl:flex-row xl:justify-between">
+      <Text className="text-2xl">{t("reachMe")}</Text>
 
       <div className=" center">
         <a
