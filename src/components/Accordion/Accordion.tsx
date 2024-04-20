@@ -39,7 +39,7 @@ export default function Accordion({
       <Tooltip variant="light" content={`${tooltipContent} ${text}`}>
         <div
           className={` w-full transition-all ease-in-out duration-500 cursor-pointer flex flex-col hover:text-dark 
-       relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 border-b border-primary/10 last:border-0 ${
+       relative overflow-hidden group md:px-[50px] px-5 py-10 hover:pl-0 hover:pr-0 ${
          className ?? ""
        } ${isSelected ? "bg-primary text-dark" : "text-primary"}`}
         >
@@ -70,10 +70,17 @@ export default function Accordion({
               transition={{ duration: 0.5 }}
               className="overflow-hidden"
             >
-              <div className="md:px-[50px] px-5 py-10 bg-primary h-full overflow-hidden">
-                <Text as="div" className="text-dark space-y-4">
-                  {children}
-                </Text>
+              <div className="md:px-[50px] px-5 pb-10 bg-primary h-full overflow-hidden">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <Text as="div" className="text-dark space-y-4">
+                    {children}
+                  </Text>
+                </motion.div>
               </div>
             </motion.div>
           )}
