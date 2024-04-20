@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/locales/client";
 import { imageList } from "./images";
 import Text from "../Text/Text";
-import Link from "next/link";
 
 export default function Showcase() {
   const t = useI18n();
