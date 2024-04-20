@@ -24,9 +24,18 @@ const Tooltip: React.FC<TooltipProps> = ({
   const [showTooltip, setShowTooltip] = useState(false);
 
   const variants = [
-    { name: "light", style: "bg-light border border-dark text-dark" },
-    { name: "dark", style: "bg-dark border border-dark text-light" },
-    { name: "primary", style: "bg-primary border border-primary text-dark" },
+    {
+      name: "light",
+      style: "bg-light border border-dark text-dark",
+    },
+    {
+      name: "dark",
+      style: "bg-dark border border-dark text-light",
+    },
+    {
+      name: "primary",
+      style: "bg-primary border border-primary text-dark",
+    },
     {
       name: "plain",
       style: "bg-transparent border border-transparent text-primaryDark",
