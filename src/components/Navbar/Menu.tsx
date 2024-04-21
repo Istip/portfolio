@@ -63,9 +63,9 @@ export default function Menu({ setOpen }: Props) {
       >
         <Icon name="close" />
       </button>
-      <div className="grid grid-cols-3 w-full h-full backdrop-blur-[16px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-full backdrop-blur-[16px]">
         <motion.div
-          className={`center transition-colors ease-in-out ${
+          className={`center transition-colors ease-in-out px-10 ${
             selected?.bg ?? "bg-primary"
           }`}
           initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
@@ -73,8 +73,8 @@ export default function Menu({ setOpen }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="w-full h-full flex items-center justify-between py-40 flex-col">
-            <div>
+          <div className="w-full h-full flex items-start lg:items-center justify-center lg:justify-between py-10 flex-col">
+            <div className="hidden lg:block">
               {selected ? (
                 <Icon name={selected ? selected.icon : "home"} size={100} />
               ) : (
@@ -84,7 +84,8 @@ export default function Menu({ setOpen }: Props) {
             <Additional />
           </div>
         </motion.div>
-        <div className="col-span-2 bg-dark flex items-center p-10">
+
+        <div className="col-span-2 bg-dark flex items-center p-10 text-left">
           <motion.ul
             className="flex flex-col"
             onMouseEnter={() => setHovered(true)}
@@ -106,8 +107,10 @@ export default function Menu({ setOpen }: Props) {
                   >
                     <Text
                       type="expandedBlack"
-                      className={`uppercase text-7xl transition-all ${
-                        hovered && selected !== item ? "opacity-20 pl-5" : ""
+                      className={`uppercase text-2xl sm:text-5xl md:text-6xl xl:text-7xl transition-all ${
+                        hovered && selected !== item
+                          ? "opacity-10 pl-0 lg:pl-5"
+                          : ""
                       }`}
                     >
                       {scopedMenu(item.name as MenuItemTranslation)}
