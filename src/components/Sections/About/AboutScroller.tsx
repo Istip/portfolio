@@ -49,7 +49,7 @@ const AboutScroller = () => {
       </Text>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <div className="absolute top-1/2 left-0 bottom-1/2 my-auto">
-          <div className="p-0.5 center ml-2 rounded-full bg-light text-dark opacity-50">
+          <div className="p-0.5 center ml-2 rounded-full bg-light text-dark border border-dark opacity-50">
             <Icon name="arrowDown" />
           </div>
         </div>
