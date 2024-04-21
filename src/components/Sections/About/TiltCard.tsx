@@ -15,7 +15,7 @@ export default function TiltCard({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <Tilt options={options} className="relative group">
+    <Tilt options={options} className="relative group -z-0">
       <div className="relative z-10">{children}</div>
       <div className="absolute w-full h-full bg-primaryDark transition-all top-0 left-0 scale-100 rounded-3xl group-hover:rounded-3xl group-hover:scale-105 hidden lg:block" />
     </Tilt>
