@@ -20,16 +20,16 @@ export default function AboutScrollerItem({ title, descripton }: Props) {
         isInView
           ? "opacity-100 scale-100 bg-light/70"
           : "opacity-10 scale-5 bg-light/10"
-      } transition-all duration-500 rounded-2xl w-[500px] h-full flex items-center flex-col gap-4 p-10`}
+      } transition-all duration-500 rounded-2xl w-[200px] md:w-[350px] lg:w-[400px] xl:w-[500px] h-full flex items-center flex-col gap-4 p-10`}
     >
       <Text
         as="h3"
         type="expandedBold"
-        className="text-4xl text-primaryDark uppercase pb-2 rounded-2xl w-full text-left"
+        className="text-sm md:text-4xl text-primaryDark uppercase pb-2 rounded-2xl w-full text-left"
       >
         {title}
       </Text>
-      <Text className="text-2xl text-dark">{descripton}</Text>
+      <Text className="text-xs sm:text-2xl text-dark">{descripton}</Text>
     </div>
   );
 }
