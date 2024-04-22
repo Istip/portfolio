@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useScopedI18n } from "@/locales/client";
 import { motion } from "framer-motion";
@@ -10,9 +12,10 @@ import Additional from "./Additional";
 
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: boolean;
 }
 
-export default function Menu({ setOpen }: Props) {
+export default function Menu({ setOpen, open }: Props) {
   const [selected, setSelected] = useState<MenuItem | null>(null);
   const [hovered, setHovered] = useState(false);
 
@@ -32,6 +35,16 @@ export default function Menu({ setOpen }: Props) {
       document.removeEventListener("keydown", handleKeyPress);
     };
   }, [setOpen]);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [open]);
 
   const container = {
     hidden: { opacity: 0 },

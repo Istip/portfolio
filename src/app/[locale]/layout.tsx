@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { I18nProviderClient } from "@/locales/client";
 import Navbar from "@/components/Navbar/Navbar";
-import Lenis from "@/utils/lenis";
 import Noise from "@/utils/noise";
 import { mona } from "@/utils/fonts";
 import "../globals.css";
@@ -37,7 +36,6 @@ export default function RootLayout({
       <body
         className={`${mona.className} antialiased scroll-smooth bg-light text-dark`}
       >
-        <Lenis />
         <I18nProviderClient locale={locale}>
           <Navbar />
           {children}
