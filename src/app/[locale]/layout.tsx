@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Noise from "@/utils/noise";
 import { mona } from "@/utils/fonts";
 import "../globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 export async function generateMetadata({
   params: { locale },
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${mona.className} antialiased scroll-smooth bg-light text-dark`}
       >
+        <NextTopLoader zIndex={999999} color="#9381ff" />
         <I18nProviderClient locale={locale}>
           <Navbar />
           {children}
