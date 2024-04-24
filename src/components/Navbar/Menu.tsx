@@ -82,10 +82,12 @@ export default function Menu({ setOpen, open }: Props) {
       onClick={() => setOpen(false)}
     >
       <button
-        className="absolute right-6 top-6 pl-6 z-[100000]"
+        className="absolute right-6 top-6 pl-6 z-[100000] text-dark lg:text-light"
         onClick={() => setOpen(false)}
       >
-        <Icon name="close" />
+        <div className="hover:animate-spin">
+          <Icon name="close" />
+        </div>
       </button>
       <div className="grid grid-cols-1 lg:grid-cols-3 w-full h-full backdrop-blur-[16px]">
         <motion.div
