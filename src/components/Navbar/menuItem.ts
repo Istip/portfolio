@@ -15,7 +15,7 @@ export type MenuItemTranslation =
   | "services"
   | "contact";
 
-export const menuItems = [
+export const menuItemsSmall = [
   {
     id: 1,
     icon: "home",
@@ -46,6 +46,37 @@ export const menuItems = [
   },
   {
     id: 5,
+    icon: "envelope",
+    bg: "bg-red-600",
+    name: "contact",
+    link: "/contact",
+  },
+];
+
+export const menuItemsLarge = [
+  {
+    id: 1,
+    icon: "home",
+    bg: "bg-yellow-500",
+    name: "home",
+    link: "/",
+  },
+  {
+    id: 2,
+    icon: "userProfile",
+    bg: "bg-amber-500",
+    name: "about",
+    link: "/about",
+  },
+  {
+    id: 3,
+    icon: "services",
+    bg: "bg-rose-500",
+    name: "services",
+    link: "/services",
+  },
+  {
+    id: 4,
     icon: "envelope",
     bg: "bg-red-600",
     name: "contact",

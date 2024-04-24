@@ -3,12 +3,18 @@
 import { useEffect, useState } from "react";
 import { useScopedI18n } from "@/locales/client";
 import { motion } from "framer-motion";
-import { MenuItem, MenuItemTranslation, menuItems } from "./menuItem";
+import {
+  MenuItem,
+  MenuItemTranslation,
+  menuItemsLarge,
+  menuItemsSmall,
+} from "./menuItem";
 import Icon from "../Icon/Icon";
 import Link from "next/link";
 import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
 import Additional from "./Additional";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface Props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -18,6 +24,9 @@ interface Props {
 export default function Menu({ setOpen, open }: Props) {
   const [selected, setSelected] = useState<MenuItem | null>(null);
   const [hovered, setHovered] = useState(false);
+
+  const { width } = useWindowSize();
+  const largeScreen = width && width > 1024;
 
   const scopedTooltip = useScopedI18n("menuItemsTooltip");
   const scopedMenu = useScopedI18n("menuItems");
@@ -60,6 +69,8 @@ export default function Menu({ setOpen, open }: Props) {
     hidden: { opacity: 0, x: 40 },
     show: { opacity: 1, x: 0 },
   };
+
+  const slicedMenuItems = largeScreen ? menuItemsLarge : menuItemsSmall;
 
   return (
     <motion.div
@@ -107,7 +118,7 @@ export default function Menu({ setOpen, open }: Props) {
             initial="hidden"
             animate="show"
           >
-            {menuItems.map((item) => (
+            {slicedMenuItems.map((item) => (
               <motion.li key={item.id} className="my-2" variants={li}>
                 <Link
                   href={item.link}
