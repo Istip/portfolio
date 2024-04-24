@@ -35,12 +35,11 @@ export default function Section({
   const backgroundColor = useTransform(scrollYProgress, [0, 0.9], [from, to]);
 
   return (
-    <motion.section ref={ref} className="" style={{ backgroundColor }}>
+    <motion.section ref={ref} style={{ backgroundColor }}>
       {title && number && (
-        <div className="flex flex-col md:flex-row items-center justify-between text-5xl tracking-tighter md:tracking-normal md:px-[50px] px-5 pt-9 lowercase">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between text-5xl tracking-tighter md:tracking-normal md:px-[50px] px-5 pt-9 lowercase">
           <Text type="expandedBold" className={`${colors[0]}`}>
             {`0${number}`}
-            <span className="sm:hidden inline-block">/</span>
           </Text>
           <Text
             as="h2"
