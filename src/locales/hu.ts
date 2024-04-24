@@ -95,7 +95,7 @@ export default {
   mottoLine1: "hobbim és küldetésem",
   mottoLine2: "FLAGSHIP webes élmények építése",
   aboutIntro:
-    "Hello! Isti vagyok és kreatív fejlesztőnek nevezném magam. Több éves tapasztalattal rendelkezem a digitális termékek és webes élmények építésében. A teljes munkaidős fejlesztői állásom mellett szenvedélyet érzek a kreativitás által kifejezni Önmagam a tervezés és a fejlesztés területén. Hogy őszinte legyen, mindig is szerettem maradandót alkotni.",
+    "Hello! Isti vagyok és kreatív fejlesztőnek nevezném magam. Több éves tapasztalattal rendelkezem a digitális termékek és webes élmények építésében. Fejlesztői állásom mellett szenvedélyet érzek kifejezni a kreativitásom a tervezés és fejlesztés által. Hogy őszinte legyek, mindig is szerettem maradandót alkotni.",
   iDevelop: "Fejlesztek",
   iDesign: "Tervezek",
   websites: "Weboldalakat",
