@@ -7,7 +7,7 @@ import { useI18n } from "@/locales/client";
 import { imageList } from "./images";
 import Text from "../Text/Text";
 
-export default function Showcase() {
+export default function Showcase({ hideable = true }: { hideable?: boolean }) {
   const t = useI18n();
 
   const variants = {
@@ -15,8 +15,14 @@ export default function Showcase() {
     visible: { opacity: 1, transition: { delay: 0.25, duration: 2 } },
   };
 
+  const Wrapper = hideable ? "aside" : "div";
+
   return (
-    <aside className="sticky flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full h-screen bg-dark p-5 hidden lg:flex">
+    <Wrapper
+      className={`sticky flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full h-screen bg-dark p-5 ${
+        hideable ? "hidden lg:flex" : "flex"
+      }`}
+    >
       <Marquee
         autoFill
         direction="left"
@@ -85,6 +91,6 @@ export default function Showcase() {
           </motion.div>
         ))}
       </Marquee>
-    </aside>
+    </Wrapper>
   );
 }
