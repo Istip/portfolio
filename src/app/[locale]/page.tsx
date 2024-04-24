@@ -1,49 +1,20 @@
 import Hero from "@/components/Hero/Hero";
-import Section from "@/components/Sections/Services/Section";
-import About from "@/components/Sections/About/About";
-import Services from "@/components/Sections/Services";
-import Contact from "@/components/Sections/Contact/Contact";
-import AboutScroller from "@/components/Sections/About/AboutScroller";
-import Showcase from "@/components/Showcase/Showcase";
+import AboutSection from "@/components/Sections/About/AboutSection/AboutSection";
+import AboutScrollerSection from "@/components/Sections/About/AboutScrollerSection/AboutScrollerSection";
+import ServicesSection from "@/components/Sections/Services/ServicesSection";
+import ContactSection from "@/components/Sections/Contact/ContactSection";
 import Footer from "@/components/Footer/Footer";
+import Showcase from "@/components/Showcase/Showcase";
 
 export default function Home() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2">
       <main className="pt-20">
-        <div className="md:px-[50px] px-5 pb-9">
-          <Hero />
-        </div>
-
-        <Section number={1} title="about">
-          <About />
-        </Section>
-
-        <Section from="#b8b8ff" to="#111111" padding={false}>
-          <AboutScroller />
-        </Section>
-
-        <Section
-          number={2}
-          colors={["text-white", "text-white"]}
-          title="services"
-          from="#111111"
-          to="#111111"
-          padding={false}
-        >
-          <Services />
-        </Section>
-
-        <Section
-          number={3}
-          colors={["text-primaryDark", "text-dark"]}
-          title="contact"
-          from="#F2F0EF"
-          to="#F2F0EF"
-        >
-          <Contact />
-        </Section>
-
+        <Hero />
+        <AboutSection />
+        <AboutScrollerSection />
+        <ServicesSection />
+        <ContactSection />
         <Footer />
       </main>
       <Showcase />

@@ -1,5 +1,5 @@
 import { getI18n } from "@/locales/server";
-import Text from "../../Text/Text";
+import Text from "../../../Text/Text";
 import Icon from "@/components/Icon/Icon";
 import TiltCard from "./TiltCard";
 
@@ -18,7 +18,10 @@ export default async function About() {
         <TiltCard>
           <div className="w-full aspect-square transition-all bg-primaryDark hover:bg-dark hover:text-light duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="website" size={64} />
-            <Text className="text-md tracking-wide" type="expandedBold">
+            <Text
+              className="text-md tracking-wide text-center"
+              type="expandedBold"
+            >
               {t("websites")}
             </Text>
           </div>
@@ -26,7 +29,10 @@ export default async function About() {
         <TiltCard>
           <div className="w-full aspect-square bg-primaryDark hover:bg-dark hover:text-light transition-all duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="webapp" size={64} />
-            <Text className="text-md tracking-wide" type="expandedBold">
+            <Text
+              className="text-md tracking-wide text-center"
+              type="expandedBold"
+            >
               {t("webapps")}
             </Text>
           </div>
@@ -41,7 +47,10 @@ export default async function About() {
         <TiltCard>
           <div className="w-full aspect-square bg-primaryDark hover:bg-dark hover:text-light transition-all duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="ui" size={64} />
-            <Text className="text-md tracking-wide" type="expandedBold">
+            <Text
+              className="text-md tracking-wide text-center"
+              type="expandedBold"
+            >
               {t("ui")}
             </Text>
           </div>
@@ -49,7 +58,10 @@ export default async function About() {
         <TiltCard>
           <div className="w-full aspect-square bg-primaryDark hover:bg-dark hover:text-light transition-all duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="ux" size={64} />
-            <Text className="text-md tracking-wide" type="expandedBold">
+            <Text
+              className="text-md tracking-wide text-center"
+              type="expandedBold"
+            >
               {t("ux")}
             </Text>
           </div>

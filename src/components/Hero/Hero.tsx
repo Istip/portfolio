@@ -13,7 +13,7 @@ export default function Hero() {
   const t = useI18n();
 
   return (
-    <section>
+    <section className="md:px-[50px] px-5 pb-9">
       <div className="flex flex-col justify-center gap-10 h-screen -mt-[60px]">
         <Tooltip variant="dark" content={t("myName")}>
           <MaskText>{t("firstName")}</MaskText>
