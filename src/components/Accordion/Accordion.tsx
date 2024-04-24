@@ -44,7 +44,7 @@ export default function Accordion({
        } ${isSelected ? "bg-primary text-dark" : "text-primary"}`}
         >
           <div className="flex items-center justify-between gap-10 lowercase">
-            <div className="relative z-[1] text-4xl tracking-tighter font-black center gap-2">
+            <div className="relative z-[1] text-2xl tracking-normal md:text-4xl md:tracking-tighter font-black center gap-2">
               <Icon name={icon} />
               <Text as="div" type="expandedExtraLight">
                 {text}
