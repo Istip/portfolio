@@ -37,7 +37,7 @@ export default function Section({
   return (
     <motion.section ref={ref} className="" style={{ backgroundColor }}>
       {title && number && (
-        <div className="flex flex-col md:flex-row items-center justify-between text-5xl md:px-[50px] px-5 py-9 lowercase">
+        <div className="flex flex-col md:flex-row items-center justify-between text-5xl tracking-tighter md:tracking-normal md:px-[50px] px-5 py-9 lowercase">
           <Text type="expandedBold" className={`${colors[0]}`}>
             {`0${number}`}
             <span className="sm:hidden inline-block">/</span>
@@ -45,7 +45,7 @@ export default function Section({
           <Text
             as="h2"
             type="expanded"
-            className={`${colors[1]} overflow-hidden py-0.5`}
+            className={`${colors[1]} overflow-hidden p-0.5`}
           >
             {t(title)}
           </Text>
