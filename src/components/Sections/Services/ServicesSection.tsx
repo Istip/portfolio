@@ -5,7 +5,7 @@ export default function ServicesSection() {
   return (
     <Section
       number={2}
-      colors={["text-white", "text-white"]}
+      colors={["text-primaryDark", "text-white"]}
       title="services"
       from="#111111"
       to="#111111"
