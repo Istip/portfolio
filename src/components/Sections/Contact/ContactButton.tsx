@@ -20,13 +20,13 @@ export default function ContactButton() {
   };
 
   return (
-    <div className="flex items-center justify-center py-8 gap-2 flex-col xl:flex-row xl:justify-between">
+    <div className="flex items-center mt-10 px-5 rounded-3xl justify-center py-8 gap-2 flex-col xl:flex-row xl:justify-between bg-primary/50">
       <Text className="text-2xl">{t("reachMe")}</Text>
 
-      <div className=" center">
+      <div className="center">
         <a
           href="mailto:isticsek@gmail.com"
-          className="text-2xl center rounded-2xl px-4 py-2 bg-primaryDark mr-0.5 text-light hover:text-dark transition-colors"
+          className="text-2xl center rounded-2xl px-4 py-2 bg-primaryDark mr-[1px] text-light hover:text-dark transition-colors"
         >
           <Text>isticsek@gmail.com</Text>
         </a>
