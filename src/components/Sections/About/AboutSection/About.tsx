@@ -8,7 +8,7 @@ export default async function About() {
 
   return (
     <div>
-      <Text className="text-3xl mb-16">{t("aboutIntro")}</Text>
+      <Text className="text-xl sm:text-3xl mb-16">{t("aboutIntro")}</Text>
 
       <Text type="expandedBold" className="text-3xl my-5">
         {t("iDevelop")}
