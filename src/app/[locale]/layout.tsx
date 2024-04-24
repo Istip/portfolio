@@ -37,7 +37,7 @@ export default function RootLayout({
       <body
         className={`${mona.className} antialiased scroll-smooth bg-light text-dark`}
       >
-        <NextTopLoader zIndex={999999} color="#9381ff" />
+        <NextTopLoader zIndex={999999} color="#9381ff" showSpinner={false} />
         <I18nProviderClient locale={locale}>
           <Navbar />
           {children}
