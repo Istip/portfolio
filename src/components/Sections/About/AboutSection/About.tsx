@@ -14,7 +14,7 @@ export default async function About() {
         {t("iDevelop")}
       </Text>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
         <TiltCard>
           <div className="w-full aspect-square transition-all bg-primaryDark hover:bg-dark hover:text-light duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="website" size={64} />
@@ -43,7 +43,7 @@ export default async function About() {
         {t("iDesign")}
       </Text>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
         <TiltCard>
           <div className="w-full aspect-square bg-primaryDark hover:bg-dark hover:text-light transition-all duration-500 rounded-2xl center gap-4 flex-col">
             <Icon name="ui" size={64} />

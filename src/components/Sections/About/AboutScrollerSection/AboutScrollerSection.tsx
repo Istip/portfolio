@@ -49,7 +49,7 @@ export default function AboutScrollerSection() {
           <Marquee autoFill direction="left" speed={100} loop={0} pauseOnHover>
             {sections.map(({ title, descripton }, index) => (
               <div
-                className="bg-primaryDark p-10 mr-10 rounded-2xl flex flex-col h-full max-w-72 sm:max-w-96"
+                className="p-10 mr-10 rounded-2xl flex flex-col h-full max-w-72 sm:max-w-96"
                 key={index}
               >
                 <Text
