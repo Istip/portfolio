@@ -43,7 +43,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <Text className="text-2xl text-stone-400 py-8">
+      <Text className="text-2xl text-stone-500 hover:text-primaryDark transition-colors duration-500 py-8">
         {t("mottoLine1")}
         <br />
         {t("mottoLine2")}
