@@ -41,7 +41,7 @@ const MaskText: React.FC<Props> = ({ once = false, children, className }) => {
           <Text
             as="h1"
             type="expanded"
-            className="text-7xl md:text-8xl lowercase"
+            className="text-7xl md:text-8xl lowercase py-1"
           >
             {children}
           </Text>
