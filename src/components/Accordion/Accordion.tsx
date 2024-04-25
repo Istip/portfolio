@@ -12,7 +12,7 @@ interface Props {
   className?: string;
   children: React.ReactNode;
   selected: number | boolean;
-  setSelected: React.Dispatch<React.SetStateAction<number | boolean>>;
+  setSelected: React.Dispatch<React.SetStateAction<number>>;
   id: number;
   icon: IconName;
 }
@@ -33,7 +33,7 @@ export default function Accordion({
 
   return (
     <div
-      onClick={() => setSelected(isSelected ? false : id)}
+      onClick={() => setSelected(isSelected ? 0 : id)}
       className="select-none"
     >
       <Tooltip variant="light" content={`${tooltipContent} ${text}`}>

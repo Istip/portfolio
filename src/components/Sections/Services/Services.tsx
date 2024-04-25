@@ -13,7 +13,7 @@ interface ServiceItems {
 }
 
 export default function Services() {
-  const [selected, setSelected] = useState<number | boolean>(false);
+  const [selected, setSelected] = useState<number>(0);
 
   const scopedServicesT = useScopedI18n("services");
   const scopedServicesContentT = useScopedI18n("servicesContent");
