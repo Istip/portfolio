@@ -4,9 +4,8 @@ import { useScopedI18n } from "@/locales/client";
 import Section from "../../Section/Section";
 import AboutScroller from "./AboutScroller";
 import useWindowSize from "@/hooks/useWindowSize";
-import Marquee from "react-fast-marquee";
 import FreeTime from "./FreeTime";
-import Text from "@/components/Text/Text";
+import AboutScrollerMarquee from "./AboutScrollerMarquee";
 
 export default function AboutScrollerSection() {
   const { width } = useWindowSize();
@@ -45,26 +44,19 @@ export default function AboutScrollerSection() {
     return (
       <Section from="#b8b8ff" to="#b8b8ff" padding={false}>
         <FreeTime />
-        <div className="h-screen center">
-          <Marquee autoFill direction="left" speed={100} loop={0} pauseOnHover>
-            {sections.map(({ title, descripton }, index) => (
-              <div
-                className="p-10 mr-10 rounded-2xl flex flex-col h-full max-w-72 sm:max-w-96"
-                key={index}
-              >
-                <Text
-                  as="h3"
-                  type="expandedBold"
-                  className="text-sm sm:text-4xl text-dark uppercase pb-2 rounded-2xl w-full text-left"
-                >
-                  {title}
-                </Text>
-                <Text className="text-xs sm:text-2xl text-dark">
-                  {descripton}
-                </Text>
-              </div>
-            ))}
-          </Marquee>
+        <div className="min-h-screen center flex-col">
+          <AboutScrollerMarquee sections={sections.slice(0, 2)}>
+            HI!
+          </AboutScrollerMarquee>
+          <AboutScrollerMarquee
+            direction="right"
+            sections={sections.slice(2, 4)}
+          >
+            SZIA!
+          </AboutScrollerMarquee>
+          <AboutScrollerMarquee first sections={sections.slice(4)}>
+            SALUT!
+          </AboutScrollerMarquee>
         </div>
       </Section>
     );
