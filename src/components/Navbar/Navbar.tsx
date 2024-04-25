@@ -26,7 +26,7 @@ const Navbar = () => {
           {open && <Menu setOpen={setOpen} open={open} />}
         </AnimatePresence>
         <nav
-          className={`w-full fixed z-10 p-5 flex items-center rounded-b-2xl md:rounded-none md:bg-transparent bg-light justify-between mx-auto ${text}`}
+          className={`w-full fixed z-10 p-5 pb-5 md:pb-0 flex items-center rounded-b-2xl md:rounded-none md:bg-transparent bg-light justify-between mx-auto ${text}`}
         >
           <Status />
           <div className="flex flex-col justify-end items-end">
