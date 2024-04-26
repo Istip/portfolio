@@ -26,7 +26,7 @@ export default function Scene() {
 
         <Float floatIntensity={0.2} speed={1.5}>
           <mesh
-            position={[width! / 250, width! / -2500, 0]}
+            position={[width! / 250, width! / 500, 0]}
             rotation={[16, 16, 16]}
           >
             <boxGeometry args={[10, 10, 1]} />
