@@ -1,15 +1,35 @@
 import PageContainer from "@/components/Container/Container";
+import ContactButton from "@/components/Sections/Contact/ContactButton";
+import ContactForm from "@/components/Sections/Contact/ContactForm";
+import Text from "@/components/Text/Text";
+import { getScopedI18n } from "@/locales/server";
+import Scene from "./Scene";
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getScopedI18n("contactPage");
+
   return (
-    <PageContainer>
-      ContactPage
-      <div className="text-7xl">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, cum
-        dolor quod dolorum quibusdam ratione odit dolores. Recusandae minima
-        ipsum inventore dolore sint iste? Ipsa, officia! Adipisci distinctio
-        quidem unde?
+    <>
+      <div className="fixed w-screen h-screen top-0 left-0 right-0 bottom-0 -z-[1]">
+        <Scene />
       </div>
-    </PageContainer>
+      <PageContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:p-[50px] p-5 gap-5 md:gap-10">
+          <div>
+            <Text className="text-lg sm:text-xl lg:text-2xl">{t("intro")}</Text>
+            <ContactButton />
+            <Text className="text-lg sm:text-xl hidden md:flex lg:text-2xl mt-12">
+              {t("outro")}
+            </Text>
+          </div>
+          <div className="place-items-center w-full">
+            <ContactForm />
+          </div>
+          <Text className="text-lg sm:text-xl md:hidden flex lg:text-2xl lg:mt-12 my-5">
+            {t("outro")}
+          </Text>
+        </div>
+      </PageContainer>
+    </>
   );
 }
