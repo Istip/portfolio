@@ -33,7 +33,7 @@ export default function ContactForm() {
 
   const labelStyles = "text-dark font-bold cursor-pointer uppercase";
   const inputStyles =
-    "rounded-2xl border border-dark bg-white text-dark p-[10px] disabled:opacity-50 w-full outline-none hover:border-primaryDark focus:border-primaryDark transition-all duration-300";
+    "rounded-2xl border border-dark bg-white text-dark p-[10px] disabled:opacity-50 w-full outline-none md:hover:border-primaryDark md:focus:border-primaryDark transition-all duration-300";
 
   return (
     <div className="mt-6">
