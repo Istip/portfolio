@@ -20,7 +20,7 @@ export default function ContactButton() {
   };
 
   return (
-    <div className="flex items-center mt-10 px-5 rounded-3xl justify-center py-8 gap-2 flex-col xl:flex-row xl:justify-between bg-primary/50">
+    <div className="flex items-center mt-10 px-5 rounded-3xl justify-center py-8 gap-2 flex-col xl:flex-row xl:justify-between bg-primary/50 backdrop-blur">
       <Text className="text-2xl">{t("reachMe")}</Text>
 
       <div className="center">
