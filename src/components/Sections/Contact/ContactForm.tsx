@@ -31,7 +31,7 @@ export default function ContactForm() {
     }
   };
 
-  const labelStyles = "text-primaryDark font-bold cursor-pointer uppercase";
+  const labelStyles = "text-dark font-bold cursor-pointer uppercase";
   const inputStyles =
     "rounded-2xl border border-dark bg-white text-dark p-[10px] disabled:opacity-50 w-full outline-none hover:border-primaryDark focus:border-primaryDark transition-all duration-300";
 
