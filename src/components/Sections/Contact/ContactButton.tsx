@@ -26,7 +26,7 @@ export default function ContactButton() {
       <div className="center">
         <a
           href="mailto:isticsek@gmail.com"
-          className="text-2xl center rounded-2xl px-4 py-2 bg-primaryDark mr-[1px] text-light hover:text-dark transition-colors"
+          className="text-lg lg:text-2xl center rounded-2xl px-4 py-2 bg-primaryDark mr-[1px] text-light hover:text-dark transition-colors"
         >
           <Text>isticsek@gmail.com</Text>
         </a>
