@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <>
       <PageContainer>
-        <AboutSection />
+        <AboutSection showTitle={false} />
         <AboutScrollerSection />
       </PageContainer>
       <Footer />
