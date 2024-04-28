@@ -1,14 +1,16 @@
 import PageContainer from "@/components/Container/Container";
+import Footer from "@/components/Footer/Footer";
+import AboutScrollerSection from "@/components/Sections/About/AboutScrollerSection/AboutScrollerSection";
+import AboutSection from "@/components/Sections/About/AboutSection/AboutSection";
 
 export default function AboutPage() {
   return (
-    <PageContainer>
-      <div className="text-7xl">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, cum
-        dolor quod dolorum quibusdam ratione odit dolores. Recusandae minima
-        ipsum inventore dolore sint iste? Ipsa, officia! Adipisci distinctio
-        quidem unde?
-      </div>
-    </PageContainer>
+    <>
+      <PageContainer>
+        <AboutSection />
+        <AboutScrollerSection />
+      </PageContainer>
+      <Footer />
+    </>
   );
 }
