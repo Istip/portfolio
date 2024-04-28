@@ -1,8 +1,10 @@
 "use client";
 
 import Text from "@/components/Text/Text";
+import { useScopedI18n } from "@/locales/client";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Description, Title } from "./types";
 
 interface Props {
   title: string;
@@ -12,6 +14,8 @@ interface Props {
 export default function AboutScrollerItem({ title, descripton }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { margin: "0px -70% 0px -20%" });
+
+  const t = useScopedI18n("hobby");
 
   return (
     <div
@@ -27,9 +31,11 @@ export default function AboutScrollerItem({ title, descripton }: Props) {
         type="expandedBold"
         className="text-sm md:text-4xl text-primaryDark uppercase pb-2 rounded-2xl w-full text-left"
       >
-        {title}
+        {t(title as Title)}
       </Text>
-      <Text className="text-xs sm:text-2xl text-dark">{descripton}</Text>
+      <Text className="text-xs sm:text-2xl text-dark">
+        {t(descripton as Description)}
+      </Text>
     </div>
   );
 }

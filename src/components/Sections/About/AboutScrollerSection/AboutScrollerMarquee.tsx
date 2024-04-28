@@ -1,5 +1,7 @@
 import Text from "@/components/Text/Text";
 import Marquee from "react-fast-marquee";
+import { useScopedI18n } from "@/locales/client";
+import { Description, Title } from "./types";
 
 interface Props {
   children?: React.ReactNode;
@@ -12,13 +14,15 @@ interface Props {
   first?: boolean;
 }
 
-const AboutScrollerMarquee = ({
+export default function AboutScrollerMarquee({
   sections,
   direction = "left",
   speed = 30,
   children,
   first,
-}: Props) => {
+}: Props) {
+  const scopedT = useScopedI18n("hobby");
+
   return (
     <Marquee autoFill direction={direction} speed={speed} loop={0}>
       <div className="flex">
@@ -37,9 +41,11 @@ const AboutScrollerMarquee = ({
               type="expandedBold"
               className="text-sm sm:text-4xl text-dark uppercase pb-2 rounded-2xl w-full text-left"
             >
-              {title}
+              {scopedT(title as Title)}
             </Text>
-            <Text className="text-xs sm:text-2xl text-dark">{descripton}</Text>
+            <Text className="text-xs sm:text-2xl text-dark">
+              {scopedT(descripton as Description)}
+            </Text>
           </div>
         ))}
         {children && !first && (
@@ -50,6 +56,4 @@ const AboutScrollerMarquee = ({
       </div>
     </Marquee>
   );
-};
-
-export default AboutScrollerMarquee;
+}
