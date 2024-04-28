@@ -13,6 +13,7 @@ interface Props {
   from?: string;
   to?: string;
   padding?: boolean;
+  showTitle?: boolean;
 }
 
 export default function Section({
@@ -23,6 +24,7 @@ export default function Section({
   from = "#F2F0EF",
   to = "#b8b8ff",
   padding = true,
+  showTitle = true,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -36,7 +38,7 @@ export default function Section({
 
   return (
     <motion.section ref={ref} style={{ backgroundColor }}>
-      {title && number && (
+      {title && number && showTitle && (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between text-5xl tracking-tighter md:tracking-normal md:px-[50px] px-5 pt-9 lowercase">
           <Text type="expandedBold" className={`${colors[0]}`}>
             {`0${number}`}
