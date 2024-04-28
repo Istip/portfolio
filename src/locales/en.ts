@@ -61,7 +61,7 @@ export default {
       "I look forward to creating an outstanding and useful web interface for your target audience together, one small step at a time.",
     name: "name",
     namePlaceholder: "Please enter your name",
-    email: "email",
+    email: "email address",
     emailPlaceholder: "Please enter your email",
     subject: "subject",
     subjectPlaceholder: "Please enter the subject",

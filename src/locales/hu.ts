@@ -61,7 +61,7 @@ export default {
       "Várom, hogy együtt, apró lépésekkel, kiemelkedő és hasznos webes felületet hozzunk létre a célközönséged számára.",
     name: "név",
     namePlaceholder: "Kérlek add meg a neved",
-    email: "email",
+    email: "email cím",
     emailPlaceholder: "Kérlek add meg az email címed",
     subject: "tárgy",
     subjectPlaceholder: "Kérlek add meg a tárgyat",
