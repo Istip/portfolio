@@ -3,6 +3,7 @@ import Text from "../Text/Text";
 import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
 import Icon from "../Icon/Icon";
+import Logo from "../Logo/Logo";
 
 const statuses = [
   { name: "available", color: "bg-green-500" },
@@ -22,14 +23,17 @@ export default function Status() {
     | "veryBusy";
 
   return (
-    <Tooltip content={t("backToHome")} variant="dark">
+    <div className="center gap-2">
+      <Tooltip content={t("backToHome")} variant="dark">
+        <Link href="/" className="">
+          <Logo className="text-stone-800" />
+        </Link>
+      </Tooltip>
       <Link
-        href="/"
-        className="center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
+        href="/contact"
+        className="group center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
       >
-        <div className="w-0 hidden group-hover:block group-hover:w-full">
-          <Icon name="chevronLeft" />
-        </div>
+        <Text type="expanded">{scoped(key)}</Text>
 
         <div className="relative">
           <div
@@ -39,8 +43,10 @@ export default function Status() {
             <div className={`${color} w-3 aspect-square rounded-full`} />
           </div>
         </div>
-        <Text type="expanded">{scoped(key)}</Text>
+        <div className="w-0 hidden group-hover:block group-hover:w-full">
+          <Icon name="chevronRight" />
+        </div>
       </Link>
-    </Tooltip>
+    </div>
   );
 }
