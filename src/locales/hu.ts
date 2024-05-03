@@ -150,4 +150,8 @@ export default {
       2: "Ez lehet az az év amikor megismerkedem veled és közösen dolgozhatunk valami olyanon amire mindketten büszkék lehetünk majd a későbbiekben.",
     },
   },
+  servicesMarquee: {
+    1: "Honlaponként a holnapért 🌍",
+    2: "Erdélyi gyökerekkel 💖 interkontinentális szemlélettel",
+  },
 } as const;
