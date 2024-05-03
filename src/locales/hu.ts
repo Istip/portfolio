@@ -153,5 +153,13 @@ export default {
   servicesMarquee: {
     1: "Honlaponként a holnapért 🌍",
     2: "Erdélyi gyökerekkel 💖 globális szemlélettel",
+    3: "Webfejlesztés",
+    4: "Mobilszoftverek",
+    5: "Webalkalmazások",
+    6: "UI/UX tervezés",
+    7: "SEO",
+    8: "Grafikai tervezés",
+    9: "PWA",
+    10: "Adatbázisok és felhőrendszerek",
   },
 } as const;
