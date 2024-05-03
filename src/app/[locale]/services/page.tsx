@@ -12,17 +12,14 @@ export default async function ServicesPage() {
 
   const texts = [t("1"), t("2")];
   const technologies = [
-    "React",
-    "Next",
-    "Redux",
-    "Tailwind",
-    "Typescript",
-    "ThreeJS",
-    "Firebase",
-    "Figma",
-    "Blender",
-    "Redux",
-    "MongoDB",
+    t("3"),
+    t("4"),
+    t("5"),
+    t("6"),
+    t("7"),
+    t("8"),
+    t("9"),
+    t("10"),
   ];
 
   return (
@@ -31,22 +28,11 @@ export default async function ServicesPage() {
         <Image
           src={headerImage}
           alt="Services"
+          placeholder="blur"
           className="w-screen h-[60vh] object-cover"
         />
         <div className="absolute top-0 w-full h-full bg-light/50" />
       </div>
-      <Marquee
-        loop={0}
-        autoFill
-        className="bg-dark py-5 transform skew-x-3"
-        direction="right"
-      >
-        {technologies.map((technology, index) => (
-          <Text key={index} className="text-white text-2xl font-bold mr-5">
-            {technology}
-          </Text>
-        ))}
-      </Marquee>
       <Marquee
         loop={0}
         autoFill
@@ -58,7 +44,18 @@ export default async function ServicesPage() {
           </Text>
         ))}
       </Marquee>
-
+      <Marquee
+        loop={0}
+        autoFill
+        className="bg-dark py-5 transform skew-x-3"
+        direction="right"
+      >
+        {technologies.map((technology, index) => (
+          <Text key={index} className="text-white text-2xl font-bold mr-10">
+            {technology}
+          </Text>
+        ))}
+      </Marquee>
       <div className="bg-dark">
         <Services />
       </div>
