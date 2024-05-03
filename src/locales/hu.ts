@@ -32,9 +32,9 @@ export default {
     },
   },
   status: {
-    available: "elérhető",
-    partiallyAvailable: "részben elérhető",
-    veryBusy: "nagyon elfoglalt",
+    available: "elérhető közreműködésre",
+    partiallyAvailable: "részben elérhető közreműködésre",
+    veryBusy: "nagyon elfoglalt | nem vállal új projekteket",
   },
   about: "Bővebben rólam",
   contact: "Kapcsolatfelvétel",

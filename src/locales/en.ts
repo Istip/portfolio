@@ -32,9 +32,9 @@ export default {
     },
   },
   status: {
-    available: "available",
-    partiallyAvailable: "partially available",
-    veryBusy: "very busy",
+    available: "available for contributions",
+    partiallyAvailable: "partially available for contributions",
+    veryBusy: "very busy | not taking new projects",
   },
   about: "Get to know me",
   contact: "Contact Now",
