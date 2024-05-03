@@ -85,7 +85,7 @@ export default {
     contact: "Lépjünk kapcsolatba",
   },
   showcaseSrc: "Bemutató kép",
-  backToHome: "Vissza a főoldalra",
+  backToHome: "Klikk vissza a főoldalra",
   additional: {
     name: "Pásztor István",
     location: "Székelyudvarhely, Erdély / Románia",

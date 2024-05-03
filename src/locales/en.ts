@@ -85,7 +85,7 @@ export default {
     contact: "Get in Touch",
   },
   showcaseSrc: "Showcase Image",
-  backToHome: "Bring me back to Homepage",
+  backToHome: "Click to bring back to Home",
   additional: {
     name: "Istvan Pasztor",
     location: "Szekelyudvarhely, Transilvania / Romania",
