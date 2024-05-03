@@ -1,9 +1,9 @@
-import { useI18n, useScopedI18n } from "@/locales/client";
+import { useScopedI18n } from "@/locales/client";
 import Text from "../Text/Text";
-import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
-import Icon from "../Icon/Icon";
 import Logo from "../Logo/Logo";
+import * as Tooltip from "@radix-ui/react-tooltip";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const statuses = [
   { name: "available", color: "bg-green-500" },
@@ -11,11 +11,13 @@ const statuses = [
   { name: "veryBusy", color: "bg-red-500" },
 ];
 
-export default function Status({ onlyLogo = true }: { onlyLogo?: boolean }) {
+export default function Status() {
   const scoped = useScopedI18n("status");
-  const t = useI18n();
 
-  let { name, color } = statuses[0];
+  const { width } = useWindowSize();
+  const largeScreen = width && width > 1024;
+
+  let { name, color } = statuses[2];
 
   let key: "available" | "partiallyAvailable" | "veryBusy" = name as
     | "available"
@@ -24,31 +26,42 @@ export default function Status({ onlyLogo = true }: { onlyLogo?: boolean }) {
 
   return (
     <div className="center gap-2">
-      <Tooltip content={t("backToHome")} variant="dark">
-        <Link href="/" className="">
-          <Logo className="text-stone-800" />
-        </Link>
-      </Tooltip>
-      {!onlyLogo && (
-        <Link
-          href="/contact"
-          className="group center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
-        >
-          <Text type="expanded">{scoped(key)}</Text>
-
-          <div className="relative">
-            <div
-              className={`${color} w-4 aspect-square rounded-full animate-ping`}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className={`${color} w-3 aspect-square rounded-full`} />
-            </div>
-          </div>
-          <div className="w-0 hidden group-hover:block group-hover:w-full">
-            <Icon name="chevronRight" />
-          </div>
-        </Link>
-      )}
+      <Tooltip.Provider>
+        <Tooltip.Root delayDuration={0}>
+          <Tooltip.Trigger>
+            <Link href="/" className="">
+              <Logo className="text-stone-800" />
+            </Link>
+          </Tooltip.Trigger>
+          {largeScreen && (
+            <Tooltip.Portal>
+              <Tooltip.Content
+                side="bottom"
+                sideOffset={10}
+                className="mx-2 p-5 bg-stone-900 shadow-xl rounded-2xl text-light"
+              >
+                <Tooltip.Arrow className="fill-stone-900" />
+                <Link
+                  href="/contact"
+                  className="center gap-2 text-light px-2 py-1 rounded-xl relative"
+                >
+                  <div className="relative mr-2">
+                    <div
+                      className={`${color} w-4 aspect-square rounded-full animate-ping`}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div
+                        className={`${color} w-3 aspect-square rounded-full`}
+                      />
+                    </div>
+                  </div>
+                  <Text type="expanded">{scoped(key)}</Text>
+                </Link>
+              </Tooltip.Content>
+            </Tooltip.Portal>
+          )}
+        </Tooltip.Root>
+      </Tooltip.Provider>
     </div>
   );
 }
