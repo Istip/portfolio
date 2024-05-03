@@ -152,6 +152,6 @@ export default {
   },
   servicesMarquee: {
     1: "Honlaponként a holnapért 🌍.",
-    2: "Erdélyi gyökerekkel, 💖 interkontinentális szemlélettel.",
+    2: "Erdélyi gyökerekkel 💖 globális szemlélettel",
   },
 } as const;
