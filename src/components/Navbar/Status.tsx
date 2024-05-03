@@ -11,7 +11,7 @@ const statuses = [
   { name: "veryBusy", color: "bg-red-500" },
 ];
 
-export default function Status() {
+export default function Status({ onlyLogo = true }: { onlyLogo?: boolean }) {
   const scoped = useScopedI18n("status");
   const t = useI18n();
 
@@ -29,24 +29,26 @@ export default function Status() {
           <Logo className="text-stone-800" />
         </Link>
       </Tooltip>
-      <Link
-        href="/contact"
-        className="group center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
-      >
-        <Text type="expanded">{scoped(key)}</Text>
+      {!onlyLogo && (
+        <Link
+          href="/contact"
+          className="group center gap-2 text-dark bg-light group hover:px-4 transition-all px-2 py-1 rounded-full"
+        >
+          <Text type="expanded">{scoped(key)}</Text>
 
-        <div className="relative">
-          <div
-            className={`${color} w-4 aspect-square rounded-full animate-ping`}
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className={`${color} w-3 aspect-square rounded-full`} />
+          <div className="relative">
+            <div
+              className={`${color} w-4 aspect-square rounded-full animate-ping`}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className={`${color} w-3 aspect-square rounded-full`} />
+            </div>
           </div>
-        </div>
-        <div className="w-0 hidden group-hover:block group-hover:w-full">
-          <Icon name="chevronRight" />
-        </div>
-      </Link>
+          <div className="w-0 hidden group-hover:block group-hover:w-full">
+            <Icon name="chevronRight" />
+          </div>
+        </Link>
+      )}
     </div>
   );
 }

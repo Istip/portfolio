@@ -1,6 +1,6 @@
 export default function Logo({ className }: { className?: string }) {
   return (
-    <div className={`${className}`}>
+    <div className={`${className} text-stone-900`}>
       <svg
         width="34"
         height="24"
