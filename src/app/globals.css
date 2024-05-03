@@ -41,3 +41,15 @@
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* SELECTION COLORS */
+::-moz-selection {
+  /* Code for Firefox */
+  color: #111;
+  background: #b8b8ff;
+}
+
+::selection {
+  color: #111;
+  background: #b8b8ff;
+}
