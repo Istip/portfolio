@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useScopedI18n } from "@/locales/client";
 import Accordion from "../../Accordion/Accordion";
 import { IconName } from "../../Icon/Icon";
-import { useScopedI18n } from "@/locales/client";
 
 interface ServiceItems {
   id: number;
