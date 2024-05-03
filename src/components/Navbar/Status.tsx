@@ -17,7 +17,7 @@ export default function Status() {
   const { width } = useWindowSize();
   const largeScreen = width && width > 1024;
 
-  let { name, color } = statuses[2];
+  let { name, color } = statuses[0];
 
   let key: "available" | "partiallyAvailable" | "veryBusy" = name as
     | "available"
@@ -38,9 +38,8 @@ export default function Status() {
               <Tooltip.Content
                 side="bottom"
                 sideOffset={10}
-                className="mx-2 p-5 bg-stone-900 shadow-xl rounded-2xl text-light"
+                className="mx-5 px-3 py-2 bg-stone-900 shadow-xl rounded-full rounded-tl-none text-light"
               >
-                <Tooltip.Arrow className="fill-stone-900" />
                 <Link
                   href="/contact"
                   className="center gap-2 text-light px-2 py-1 rounded-xl relative"
@@ -55,7 +54,9 @@ export default function Status() {
                       />
                     </div>
                   </div>
-                  <Text type="expanded">{scoped(key)}</Text>
+                  <Text className="text-xs" type="expanded">
+                    {scoped(key)}
+                  </Text>
                 </Link>
               </Tooltip.Content>
             </Tooltip.Portal>
