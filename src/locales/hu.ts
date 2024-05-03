@@ -128,4 +128,26 @@ export default {
   scrollToTop: "Ugrás az oldal tetejére",
   freeTime: "Amikor pedig nem dolgozom...",
   reachMe: "Lépj kapcsolatba:",
+  years: {
+    2019: {
+      1: "Ezeket az éveket megelőzve foglalkoztam különböző projektekkel, mint például a weboldalak, webalkalmazások fejlesztése, 2D játékok tervezése, pixelart és még sok más, beleértve különböző grafikai szoftverek használatát is.",
+      2: "2019 volt a mérföldkő az életemben, amikoris egy külön felkérésre elkezdtem egy webalkalmazás fejlesztését, több évnyi kihagyás után. Ekkor fedeztem fel, hogy a webfejlesztés az, amit igazán szeretek csinálni. Azóta is ezzel foglalkozom.",
+      3: "Az új technológiák és eszközök megismerése, valamint azok használata, mindig is érdekelt. Így eléggé meglepődve tapasztaltam, hogy mindez mennyit változott az eltelt évek során.",
+    },
+    2021: {
+      1: "A COVID járvány alatt arra törekedtem, hogy minél többet tanuljak és fejlődjek a webfejlesztés területén. A tanultakat azonnal alkalmaztam a gyakorlatban, és ezáltal sikerült elérnem az első eredményeimet.",
+      2: "Mivel azelőtt más szakmában dolgoztam, a webfejlesztés területén való első lépéseim kihívást jelentettek számomra. Azonban a kitartásom és a szenvedélyem segített abban, hogy ne adjam fel, és folytassam a tanulást.",
+      3: "Ez volt az az év amikor jelentkeztem és megkaptam az első webfejlesztői állásomat.",
+      4: "A munkahelyem mellett, próbáltam szabadidőmben tovább fejlődni, és különböző projekteken dolgozni. Így lehetőségem volt kipróbálni magam a frontend és backend területén is, valamint különböző kliensekkel dolgozni.",
+    },
+    2022: {
+      1: "Az új év új kihívásokat hozott. Különböző nemzetiségű kliensekkel volt szerencsém megismerkedni és sok érdekes projekten vehettem részt.",
+      2: "Felkerestek egy nemzetközi cég részéről (NTT DATA), hogy dolgozzak egy nagyobb projekten. Nagyon izgalmasnak találtam úgy az ajánlatot mint a feladatot is, így örömmel vállaltam el. Azóta is dolgozom velük, nekik köszönhetően sok új dolgot tanultam és tapasztaltam meg.",
+      3: "A folyamatos együttműködés mellett, próbálok időt szakítani a saját projekteimre is. Így lehetőségem van kipróbálni és tanulni az új technológiákat, és ezáltal fejlődni a szakmámban.",
+    },
+    2024: {
+      1: "Úgy döntöttem, hogy időt és pénzt áldozok a saját hivatalos online portfolióm létrehozására. Így lehetőségem van bemutatni a munkáimat, és megosztani a tapasztalataimat.",
+      2: "Ez lehet az az év amikor megismerkedem veled és közösen dolgozhatunk valami olyanon amire mindketten büszkék lehetünk majd a későbbiekben.",
+    },
+  },
 } as const;
