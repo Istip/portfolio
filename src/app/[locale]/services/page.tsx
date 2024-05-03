@@ -1,11 +1,11 @@
 import { getScopedI18n } from "@/locales/server";
 import PageContainer from "@/components/Container/Container";
 import Image from "next/image";
-import image from "/public/images/services.webp";
 import Marquee from "react-fast-marquee";
 import Text from "@/components/Text/Text";
 import Footer from "@/components/Footer/Footer";
 import Services from "@/components/Sections/Services/Services";
+import headerImage from "/public/images/services.webp";
 
 export default async function ServicesPage() {
   const t = await getScopedI18n("servicesMarquee");
@@ -29,7 +29,7 @@ export default async function ServicesPage() {
     <PageContainer>
       <div className="relative top-0 bottom-0 left-0 right-0">
         <Image
-          src={image}
+          src={headerImage}
           alt="Services"
           className="w-screen h-[60vh] object-cover"
         />
