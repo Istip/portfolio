@@ -19,8 +19,8 @@ export default function Showcase({ hideable = true }: { hideable?: boolean }) {
 
   return (
     <Wrapper
-      className={`sticky flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full h-screen bg-dark p-5 ${
-        hideable ? "hidden lg:flex" : "flex"
+      className={`sticky flex-col gap-5 top-0 bottom-0 left-0 right-0 w-full bg-dark p-5 ${
+        hideable ? "hidden lg:flex h-screen" : "flex h-auto"
       }`}
     >
       <Marquee
