@@ -1,14 +1,20 @@
 import PageContainer from "@/components/Container/Container";
 import AboutScrollerSection from "@/components/Sections/About/AboutScrollerSection/AboutScrollerSection";
-import AboutSection from "@/components/Sections/About/AboutSection/AboutSection";
 import Footer from "@/components/Footer/Footer";
 import AboutMore from "@/components/Sections/About/AboutScrollerSection/AboutMore";
+import AboutIntro from "@/components/Sections/About/AboutSection/AboutIntro";
+import AboutCards from "@/components/Sections/About/AboutSection/AboutCards";
 
 export default function AboutPage() {
   return (
     <>
       <PageContainer>
-        <AboutSection showTitle={false} />
+        <div className="md:px-[50px] px-5 py-9">
+          <AboutIntro />
+          <div className="mx-0 xl:mx-56">
+            <AboutCards />
+          </div>
+        </div>
         <AboutScrollerSection />
         <AboutMore />
       </PageContainer>

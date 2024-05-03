@@ -4,7 +4,11 @@ import Icon, { IconName } from "@/components/Icon/Icon";
 import { getI18n } from "@/locales/server";
 import { Fragment } from "react";
 
-export default async function AboutCards() {
+export default async function AboutCards({
+  className,
+}: {
+  className?: string;
+}) {
   const t = await getI18n();
 
   const cards = [
@@ -25,7 +29,7 @@ export default async function AboutCards() {
   ];
 
   return (
-    <>
+    <div className={className}>
       {cards.map(({ title, items }) => (
         <Fragment key={title}>
           <Text type="expandedBold" className="text-3xl my-5">
@@ -48,6 +52,6 @@ export default async function AboutCards() {
           </div>
         </Fragment>
       ))}
-    </>
+    </div>
   );
 }
