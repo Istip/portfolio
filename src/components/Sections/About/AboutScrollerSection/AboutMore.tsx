@@ -1,5 +1,4 @@
 import Text from "@/components/Text/Text";
-import { Fragment } from "react";
 
 export default function AboutMore() {
   const timeline = [
@@ -21,15 +20,18 @@ export default function AboutMore() {
   ];
 
   return (
-    <div className="bg-primary grid grid-cols-4 md:px-[50px] px-5 py-10 gap-5">
-      {timeline.map((item, index) => (
-        <Fragment key={index}>
-          <Text as="div" className="text-5xl sticky top-1/2 h-full mb-20">
-            {item.year}
-          </Text>
-          <div className="col-span-3">{item.description}</div>
-        </Fragment>
+    <>
+      {timeline.map(({ year, description }, index) => (
+        <div
+          className="bg-primary grid grid-cols-4 md:px-[50px] px-5 py-10 gap-5 items-start"
+          key={index}
+        >
+          <div className="col-span-1 text-7xl sticky top-20 text-right">
+            <Text>{year}</Text>
+          </div>
+          <div className="col-span-3 text-2xl">{description}</div>
+        </div>
       ))}
-    </div>
+    </>
   );
 }
