@@ -15,8 +15,8 @@ export default function AboutPage() {
             <AboutCards />
           </div>
         </div>
-        <AboutScrollerSection />
         <AboutMore />
+        <AboutScrollerSection />
       </PageContainer>
       <Footer />
     </>
