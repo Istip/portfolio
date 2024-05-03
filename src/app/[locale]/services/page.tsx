@@ -31,7 +31,7 @@ export default async function ServicesPage() {
           placeholder="blur"
           className="w-screen h-[60vh] object-cover"
         />
-        <div className="absolute top-0 w-full h-full bg-light/50" />
+        <div className="absolute top-0 w-full h-full bg-dark/50" />
       </div>
       <Marquee
         loop={0}
