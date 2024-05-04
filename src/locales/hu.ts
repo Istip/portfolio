@@ -13,7 +13,7 @@ export default {
     pet: {
       title: "Háziállatok",
       description:
-        "Mindig is szerettem az állatokat, és tavaly örökbe fogadtunk egy újszülött kismacskát. Ő egy csíkos macska, akit Stormynak neveztünk el.",
+        "Mindig is szerettem az állatokat. Tavaly örökbe fogadtunk egy újszülött kismacskát. Ő egy csíkos macska, akit Stormynak neveztünk el.",
     },
     games: {
       title: "Videójátékok",
@@ -21,14 +21,14 @@ export default {
         "Sajnos hajlamos vagyok a monitor előtt ragadni, és sokat játszani az Elasto Maniával. Valahogy rákattantam erre a játékra. Még mindig gyengén teljesítek benne, annak ellenére, hogy ennyi időt fektettem bele.",
     },
     bikes: {
-      title: "Motrok",
+      title: "Motorok",
       description:
         "Mindig is szerettem a motrokat. Mostanában egy Suzuki Bandit -et vezetek. Szeretem a szabadság érzetet amit motrozás nyújt, a sebességet és a szelet. Megjegyzés: a motorok iránti szeretetem nem az Elasto Mania hatására alakult ki.",
     },
     football: {
       title: "Foci",
       description:
-        "Kiskoromban különböző csapatokban fociztam. Most már csak nézem a labdarúgást. Brazilia rajongója vagyok, mióta 2001-ben először láttam Rivaldot játszani. Továbbá hűséges támogatója vagyok a Manchester Unitednek, még a nehéz időkben is (volt belőlük bőven).",
+        "Kiskoromban különböző csapatokban fociztam. Most már csak nézem a labdarúgást. Brazil rajongó vagyok, mióta 2001-ben először láttam Rivaldot játszani. Továbbá hűséges támogatója vagyok jóban, rosszban a Manchester Unitednek.",
     },
   },
   status: {
@@ -56,9 +56,9 @@ export default {
   clickToClose: "Kattints, hogy bezárd: ",
   contactPage: {
     intro:
-      "Ha kérdésed van rólam, szolgáltatásaimról, vagy érdekel együttműködésünk, ne habozz felvenni velem a kapcsolatot! A következő részlegen belül az e-mail címre kattintva azonnal elindíthatod az e-mail alkalmazásod, vagy a vágólapra másolhatod a címem. Ha számodra kényelmesebb, akkor egyszerűen töltsd ki a kapcsolatfelvételi űrlapot.",
+      "Ha kérdésed van velem kapcsolatosan, szolgáltatásaimról, vagy lenne egy jó ötleted, akkor ne habozz felvenni velem a kapcsolatot! A következő részlegen belül az e-mail címre kattintva azonnal elindíthatod az e-mail alkalmazásod, vagy a vágólapra másolhatod a címem. Ha számodra kényelmesebb, akkor egyszerűen töltsd ki a kapcsolatfelvételi űrlapot. Mindenkinek válaszolok!",
     outro:
-      "Várom, hogy együtt, apró lépésekkel, kiemelkedő és hasznos webes felületet hozzunk létre a célközönséged számára.",
+      "Várom, hogy együtt, közös léptekkel, egy kiemelkedő, hasznos és funkcionális webes felületet hozzunk létre a célközönséged számára.",
     name: "név",
     namePlaceholder: "Kérlek add meg a neved",
     email: "email cím",
@@ -95,7 +95,7 @@ export default {
   mottoLine1: "hobbim és küldetésem",
   mottoLine2: "FLAGSHIP webes élmények építése",
   aboutIntro:
-    "Hello! Isti vagyok és kreatív fejlesztőnek nevezném magam. Több éves tapasztalattal rendelkezem a digitális termékek és webes élmények építésében. Fejlesztői állásom mellett szenvedélyet érzek kifejezni a kreativitásom a tervezés és fejlesztés által. Hogy őszinte legyek, mindig is szerettem maradandót alkotni.",
+    "Hello! Isti vagyok és kreatív fejlesztőnek nevezném magam. Több éves tapasztalattal rendelkezem a digitális termékek és webes élmények építésében. Webfejlesztői állásom mellett a tervezés és saját projektek fejlesztése által szeretem kibontakoztatni a kreativitásom. Mindig is szerettem maradandót alkotni.",
   iDevelop: "Fejlesztek",
   iDesign: "Tervezek",
   websites: "Weboldalakat",
@@ -130,20 +130,20 @@ export default {
   reachMe: "Lépj kapcsolatba:",
   years: {
     2019: {
-      1: "Ezeket az éveket megelőzve foglalkoztam különböző projektekkel, mint például a weboldalak, webalkalmazások fejlesztése, 2D játékok tervezése, pixelart és még sok más, beleértve különböző grafikai szoftverek használatát is.",
-      2: "2019 volt a mérföldkő az életemben, amikoris egy külön felkérésre elkezdtem egy webalkalmazás fejlesztését, több évnyi kihagyás után. Ekkor fedeztem fel, hogy a webfejlesztés az, amit igazán szeretek csinálni. Azóta is ezzel foglalkozom.",
-      3: "Az új technológiák és eszközök megismerése, valamint azok használata, mindig is érdekelt. Így eléggé meglepődve tapasztaltam, hogy mindez mennyit változott az eltelt évek során.",
+      1: "Ezeket az éveket megelőzve különböző projektekkel foglalkoztam, mint például a weboldalak, webalkalmazások fejlesztése, 2D játékok tervezése, pixelart és még sok más, beleértve különböző grafikai szoftverek használatát is.",
+      2: "Ez az év volt a mérföldkő az életemben. Több évnyi kihagyás után egy felkérésre elkezdtem dolgozni egy webalkalmazás fejlesztésén. Ekkor fedeztem fel, hogy a webfejlesztés az, amit igazán szeretek csinálni. Azóta is ezzel foglalkozom.",
+      3: "Mindig is érdekelt az új technológiák és eszközök megismerése, valamint azok használata. Így elég meglepődve tapasztaltam, hogy mindez mennyit változott az eltelt évek során.",
     },
     2021: {
       1: "A COVID járvány alatt arra törekedtem, hogy minél többet tanuljak és fejlődjek a webfejlesztés területén. A tanultakat azonnal alkalmaztam a gyakorlatban, és ezáltal sikerült elérnem az első eredményeimet.",
-      2: "Mivel azelőtt más szakmában dolgoztam, a webfejlesztés területén való első lépéseim kihívást jelentettek számomra. Azonban a kitartásom és a szenvedélyem segített abban, hogy ne adjam fel, és folytassam a tanulást.",
-      3: "Ez volt az az év amikor jelentkeztem és megkaptam az első webfejlesztői állásomat.",
-      4: "A munkahelyem mellett, próbáltam szabadidőmben tovább fejlődni, és különböző projekteken dolgozni. Így lehetőségem volt kipróbálni magam a frontend és backend területén is, valamint különböző kliensekkel dolgozni.",
+      2: "Mivel azelőtt más szakmában dolgoztam, így a webfejlesztés területén való felzárkózás kihivást jelentett számomra. Azonban a kitartásom és a szenvedélyem segített abban, hogy ne adjam fel, és folytassam a tanulást.",
+      3: "Ez volt az az év amikor jelentkeztem és megkaptam az első webfejlesztői állásom.",
+      4: "A munkahelyem mellett próbáltam szabadidőmben tovább fejlődni és különböző projekteken dolgozni. Így lehetőségem volt kipróbálni magam a frontend és backend területén is, valamint különböző kliensekkel dolgozni együtt.",
     },
     2022: {
       1: "Az új év új kihívásokat hozott. Különböző nemzetiségű kliensekkel volt szerencsém megismerkedni és sok érdekes projekten vehettem részt.",
-      2: "Felkerestek egy nemzetközi cég részéről (NTT DATA), hogy dolgozzak egy nagyobb projekten. Nagyon izgalmasnak találtam úgy az ajánlatot mint a feladatot is, így örömmel vállaltam el. Azóta is dolgozom velük, nekik köszönhetően sok új dolgot tanultam és tapasztaltam meg.",
-      3: "A folyamatos együttműködés mellett, próbálok időt szakítani a saját projekteimre is. Így lehetőségem van kipróbálni és tanulni az új technológiákat, és ezáltal fejlődni a szakmámban.",
+      2: "Felkerestek egy nemzetközi cégtől (NTT DATA), hogy dolgozzak egy nagyobb projekten. Nagyon izgalmasnak találtam úgy az ajánlatot mint a feladatot is, így örömmel vállaltam el. Azóta is dolgozom velük, nekik köszönhetően sok új dolgot tanultam és tapasztaltam meg.",
+      3: "A folyamatos együttműködés mellett próbálok időt szakítani a saját projekteimre is. Így lehetőségem van kipróbálni és tanulni az új technológiákat, ezáltal is fejlődni a szakmámban.",
     },
     2024: {
       1: "Úgy döntöttem, hogy időt és pénzt áldozok a saját hivatalos online portfolióm létrehozására. Így lehetőségem van bemutatni a munkáimat, és megosztani a tapasztalataimat.",
@@ -151,8 +151,8 @@ export default {
     },
   },
   servicesMarquee: {
-    1: "Honlaponként a holnapért 🌍",
-    2: "Erdélyi gyökerekkel 💖 globális szemlélettel",
+    1: "🌍 Honlaponként a holnapért",
+    2: "🐻 Erdélyi gyökerekkel globális szemlélettel",
     3: "Webfejlesztés",
     4: "Mobilszoftverek",
     5: "Webalkalmazások",

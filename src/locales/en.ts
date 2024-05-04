@@ -151,8 +151,8 @@ export default {
     },
   },
   servicesMarquee: {
-    1: "Per website for tomorrow 🌍",
-    2: "With Transylvanian roots 💖 global mindset",
+    1: "🌍 Per website for tomorrow",
+    2: "🐻 With Transylvanian roots but global mindset",
     3: "Web development",
     4: "Mobile software",
     5: "Web applications",
