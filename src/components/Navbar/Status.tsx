@@ -42,7 +42,7 @@ export default function Status() {
               >
                 <Link
                   href="/contact"
-                  className="center gap-2 text-light px-2 py-1 rounded-xl relative"
+                  className="center gap-2 text-light px-2 py-1 rounded-xl relative transition hover:opacity-50"
                 >
                   <div className="relative mr-2">
                     <div
