@@ -33,7 +33,7 @@ export default async function AboutMore() {
           <Text
             as="div"
             type="expandedBold"
-            className="col-span-1 text-2xl sm:text-5xl lg:text-7xl sticky top-20 text-dark"
+            className="col-span-1 text-2xl sm:text-5xl lg:text-7xl sticky top-20 text-primaryDark"
           >
             {year}
           </Text>
