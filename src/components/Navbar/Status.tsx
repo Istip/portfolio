@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "../Logo/Logo";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import useWindowSize from "@/hooks/useWindowSize";
+import Icon from "../Icon/Icon";
 
 const statuses = [
   { name: "available", color: "bg-green-500" },
@@ -42,7 +43,7 @@ export default function Status() {
               >
                 <Link
                   href="/contact"
-                  className="center gap-2 text-light px-2 py-1 rounded-xl relative transition hover:opacity-50"
+                  className="center gap-2 text-light px-2 py-1 rounded-xl relative transition hover:opacity-50 group"
                 >
                   <div className="relative mr-2">
                     <div
@@ -57,6 +58,9 @@ export default function Status() {
                   <Text className="text-xs" type="expanded">
                     {scoped(key)}
                   </Text>
+                  <div className="text-white pl-0 w-0 transition-all group-hover:w-auto group-hover:pl-2">
+                    <Icon name="chevronRight" />
+                  </div>
                 </Link>
               </Tooltip.Content>
             </Tooltip.Portal>
