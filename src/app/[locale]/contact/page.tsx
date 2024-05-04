@@ -7,6 +7,7 @@ import Scene from "./Scene";
 
 export default async function ContactPage() {
   const t = await getScopedI18n("contactPage");
+  const tSections = await getScopedI18n("sections");
 
   return (
     <>
@@ -14,6 +15,9 @@ export default async function ContactPage() {
         <Scene />
       </div>
       <PageContainer>
+        <Text type="expandedBlack" className="text-5xl mb-10 text-center">
+          {tSections("contact")}
+        </Text>
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:p-[50px] p-5 gap-5 md:gap-10">
           <div>
             <Text className="text-lg sm:text-xl lg:text-2xl">{t("intro")}</Text>

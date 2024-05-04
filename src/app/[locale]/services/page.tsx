@@ -9,6 +9,7 @@ import headerImage from "/public/images/services.webp";
 
 export default async function ServicesPage() {
   const t = await getScopedI18n("servicesMarquee");
+  const tSections = await getScopedI18n("sections");
 
   const texts = [t("1"), t("2")];
   const technologies = [
@@ -31,7 +32,14 @@ export default async function ServicesPage() {
           placeholder="blur"
           className="w-screen h-[60vh] object-cover"
         />
-        <div className="absolute top-0 w-full h-full bg-dark/50" />
+        <div className="absolute top-0 w-full h-full bg-dark/50 center">
+          <Text
+            type="expandedBlack"
+            className="text-3xl sm:text-5xl text-center text-light"
+          >
+            {tSections("services")}
+          </Text>
+        </div>
       </div>
       <Marquee
         loop={0}
