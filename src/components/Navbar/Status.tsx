@@ -39,11 +39,11 @@ export default function Status() {
               <Tooltip.Content
                 side="bottom"
                 sideOffset={10}
-                className="mx-5 px-3 py-2 bg-stone-900 shadow-xl rounded-full rounded-tl-none text-light"
+                className="mx-5 p-3 bg-stone-900 shadow-xl rounded-full rounded-tl-none text-light"
               >
                 <Link
                   href="/contact"
-                  className="center gap-2 text-light px-2 py-1 rounded-xl relative transition hover:opacity-50 group"
+                  className="center gap-2 text-light bg-stone-700 px-2 py-1 rounded-2xl relative transition hover:opacity-50 group"
                 >
                   <div className="relative mr-2">
                     <div
