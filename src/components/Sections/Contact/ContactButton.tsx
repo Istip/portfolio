@@ -4,7 +4,6 @@ import Icon from "@/components/Icon/Icon";
 import Text from "@/components/Text/Text";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import { useI18n } from "@/locales/client";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function ContactButton() {
@@ -37,9 +36,9 @@ export default function ContactButton() {
             type="button"
             onClick={() => copyToClipboard("isticsek@gmail.com")}
           >
-            <motion.div className="center rounded-2xl px-4 py-3 bg-primaryDark text-light">
+            <div className="center rounded-2xl px-4 py-3 bg-primaryDark text-light">
               <Icon name={copied ? "circleCheck" : "clipboard"} />
-            </motion.div>
+            </div>
           </button>
         </Tooltip>
       </div>
