@@ -1,10 +1,10 @@
+import { getScopedI18n } from "@/locales/server";
 import PageContainer from "@/components/Container/Container";
 import AboutScrollerSection from "@/components/Sections/About/AboutScrollerSection/AboutScrollerSection";
 import Footer from "@/components/Footer/Footer";
 import AboutMore from "@/components/Sections/About/AboutScrollerSection/AboutMore";
 import AboutIntro from "@/components/Sections/About/AboutSection/AboutIntro";
 import AboutCards from "@/components/Sections/About/AboutSection/AboutCards";
-import { getScopedI18n } from "@/locales/server";
 import Text from "@/components/Text/Text";
 
 export default async function AboutPage() {
