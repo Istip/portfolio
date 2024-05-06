@@ -1,4 +1,5 @@
 import { useScopedI18n } from "@/locales/client";
+import { usePathname } from "next/navigation";
 import Text from "../Text/Text";
 import Link from "next/link";
 import Logo from "../Logo/Logo";
@@ -13,6 +14,10 @@ const statuses = [
 ];
 
 export default function Status() {
+  const pathname = usePathname();
+
+  const disabledPath = pathname === "/contact";
+
   const scoped = useScopedI18n("status");
 
   const { width } = useWindowSize();
@@ -34,7 +39,7 @@ export default function Status() {
               <Logo className="text-stone-800" />
             </Link>
           </Tooltip.Trigger>
-          {largeScreen && (
+          {largeScreen && !disabledPath && (
             <Tooltip.Portal>
               <Tooltip.Content
                 side="bottom"
