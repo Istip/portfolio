@@ -1,8 +1,8 @@
+import { getScopedI18n } from "@/locales/server";
 import PageContainer from "@/components/Container/Container";
 import ContactButton from "@/components/Sections/Contact/ContactButton";
 import ContactForm from "@/components/Sections/Contact/ContactForm";
 import Text from "@/components/Text/Text";
-import { getScopedI18n } from "@/locales/server";
 import Scene from "./Scene";
 
 export default async function ContactPage() {
