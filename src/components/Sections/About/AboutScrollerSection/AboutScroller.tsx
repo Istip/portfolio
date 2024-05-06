@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AboutScrollerItem from "./AboutScrollerItem";
-import Icon from "@/components/Icon/Icon";
 import FreeTime from "./FreeTime";
+import Text from "@/components/Text/Text";
 
 interface Props {
   sections: { title: string; descripton: string }[];
@@ -17,10 +17,13 @@ const AboutScroller = ({ sections }: Props) => {
     <div ref={targetRef} className="relative h-[300vh] rounded-2xl">
       <FreeTime />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <div className="absolute top-1/2 left-0 bottom-1/2 my-auto">
-          <div className="p-0.5 center ml-2 rounded-full bg-light text-dark border border-dark opacity-50">
-            <Icon name="arrowDown" />
-          </div>
+        <div className="absolute z-10 top-1/2 left-1/2 bottom-1/2 my-auto">
+          <Text
+            as="div"
+            className="p-0.5 center ml-2 rounded-full text-red-500 text-5xl"
+          >
+            +
+          </Text>
         </div>
         <motion.div className="center gap-40 mb-20" style={{ x }}>
           {sections.map(({ title, descripton }, i) => (
