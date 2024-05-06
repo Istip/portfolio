@@ -1,10 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import { useI18n } from "@/locales/client";
 import Icon from "@/components/Icon/Icon";
 import Text from "@/components/Text/Text";
-import Tooltip from "@/components/Tooltip/Tooltip";
-import { useI18n } from "@/locales/client";
-import { useState } from "react";
 
 export default function ContactButton() {
   const [copied, setCopied] = useState(false);
@@ -29,18 +28,15 @@ export default function ContactButton() {
         >
           <Text>isticsek@gmail.com</Text>
         </a>
-
-        <Tooltip content={copied ? t("copied") : t("copy")}>
-          <button
-            disabled={copied}
-            type="button"
-            onClick={() => copyToClipboard("isticsek@gmail.com")}
-          >
-            <div className="center rounded-2xl px-4 py-3 bg-primaryDark text-light">
-              <Icon name={copied ? "circleCheck" : "clipboard"} />
-            </div>
-          </button>
-        </Tooltip>
+        <button
+          disabled={copied}
+          type="button"
+          onClick={() => copyToClipboard("isticsek@gmail.com")}
+        >
+          <div className="center rounded-2xl px-4 py-3 bg-primaryDark text-light">
+            <Icon name={copied ? "circleCheck" : "clipboard"} />
+          </div>
+        </button>
       </div>
     </div>
   );
