@@ -50,8 +50,6 @@ export default {
     contact: "Kapcsolat",
   },
   coverAlt: "Én vagyok, Isti.",
-  copy: "Cím másolása a vágólapra",
-  copied: "Másolva a vágólapra",
   clickToOpen: "Kattints, hogy megnyisd: ",
   clickToClose: "Kattints, hogy bezárd: ",
   contactPage: {
