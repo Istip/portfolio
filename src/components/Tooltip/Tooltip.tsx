@@ -15,12 +15,14 @@ interface TooltipProps {
   children: React.ReactNode;
   content: React.ReactNode;
   variant?: "light" | "dark" | "primary" | "plain";
+  full?: boolean;
 }
 
 const Tooltip: React.FC<TooltipProps> = ({
   children,
   content,
   variant = "primary",
+  full = true,
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
   const { width } = useWindowSize();
@@ -47,6 +49,8 @@ const Tooltip: React.FC<TooltipProps> = ({
   ];
 
   const selectedVariant = variants.find((v) => v.name === variant);
+
+  const fullStyle = full ? "rounded-2xl p-0" : "rounded-full px-3 py-2";
 
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
@@ -99,13 +103,15 @@ const Tooltip: React.FC<TooltipProps> = ({
             animate="visible"
             exit="hidden"
             variants={tooltipVariants}
-            className={`${selectedVariant?.style} fixed px-3 py-2 text-xs font-normal rounded-full rounded-tl-none pointer-events-none z-[999999]`}
+            className={`${selectedVariant?.style} ${fullStyle} rounded-tl-none fixed overflow-hidden text-xs font-normal pointer-events-none z-[999999]`}
             style={{
               top: tooltipY,
               left: tooltipX,
             }}
           >
-            <Text>{content}</Text>
+            <Text as="div" className={`${full ? "rounded-2xl" : ""}`}>
+              {content}
+            </Text>
           </motion.div>
         )}
       </AnimatePresence>
