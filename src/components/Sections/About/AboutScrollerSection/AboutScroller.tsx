@@ -20,7 +20,7 @@ const AboutScroller = ({ sections }: Props) => {
         <div className="absolute z-10 top-1/2 left-1/2 bottom-1/2 my-auto">
           <Text
             as="div"
-            className="p-0.5 center ml-2 rounded-full text-red-500 text-5xl"
+            className="p-0.5 center ml-2 rounded-full text-primaryDark text-5xl"
           >
             +
           </Text>
