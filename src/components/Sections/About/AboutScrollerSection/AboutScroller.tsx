@@ -25,7 +25,7 @@ const AboutScroller = ({ sections }: Props) => {
             +
           </Text>
         </div>
-        <motion.div className="center gap-40 mb-20" style={{ x }}>
+        <motion.div className="center gap-10 mb-20" style={{ x }}>
           {sections.map(({ title, descripton }, i) => (
             <AboutScrollerItem key={i} title={title} descripton={descripton} />
           ))}
