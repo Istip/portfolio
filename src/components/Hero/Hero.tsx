@@ -8,6 +8,9 @@ import Tooltip from "../Tooltip/Tooltip";
 import Link from "next/link";
 import MaskText from "../Text/MaskText";
 import Text from "../Text/Text";
+import animation from "/public/images/flagship.gif";
+
+const Flagship = () => <Image src={animation} alt="Animation" />;
 
 export default function Hero() {
   const t = useI18n();
@@ -43,10 +46,22 @@ export default function Hero() {
         </div>
       </div>
 
-      <Text className="text-2xl text-stone-500 hover:text-primaryDark transition-colors duration-500 py-8">
+      <Text as="div" className="text-2xl text-stone-500 py-8">
         {t("mottoLine1")}
         <br />
-        {t("mottoLine2")}
+        <div className="flex gap-2 items-center">
+          <Tooltip full={false} variant="dark" content={<Flagship />}>
+            <div>
+              <Text
+                as="span"
+                className="bg-primaryLight tracking-widest text-primaryDark py-1 pr-1 hover:px-3 hover:tracking-normal transition-all cursor-crosshair"
+              >
+                {t("mottoLine2").split(" ")[0]}
+              </Text>{" "}
+            </div>
+          </Tooltip>
+          {t("mottoLine2").split(" ").slice(1).join(" ")}
+        </div>
       </Text>
 
       <div className="center gap-2 py-5 flex-col xl:flex-row">
