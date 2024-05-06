@@ -15,7 +15,7 @@ export default async function ContactPage() {
         <Scene />
       </div>
       <PageContainer>
-        <Text type="expandedBlack" className="text-5xl mb-10 text-center">
+        <Text type="expandedBlack" className="text-5xl mb-10 text-center pt-9">
           {tSections("contact")}
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center md:p-[50px] p-5 gap-5 md:gap-10">
