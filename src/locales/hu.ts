@@ -23,7 +23,7 @@ export default {
     bikes: {
       title: "Motorok",
       description:
-        "Mindig is szerettem a motrokat. Mostanában egy Suzuki Bandit -et vezetek. Szeretem a szabadság érzetet amit motrozás nyújt, a sebességet és a szelet. Megjegyzés: a motorok iránti szeretetem nem az Elasto Mania hatására alakult ki.",
+        "Mindig is szerettem a motorokat. Mostanában egy Suzuki Bandit -et vezetek. Szeretem a szabadság érzetet amit motrozás nyújt, a sebességet és a szelet. Megjegyzés: a motorok iránti szeretetem nem az Elasto Mania hatására alakult ki.",
     },
     football: {
       title: "Foci",
