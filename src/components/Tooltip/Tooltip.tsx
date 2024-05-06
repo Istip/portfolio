@@ -50,7 +50,7 @@ const Tooltip: React.FC<TooltipProps> = ({
 
   const selectedVariant = variants.find((v) => v.name === variant);
 
-  const fullStyle = full ? "rounded-2xl p-0" : "rounded-full px-3 py-2";
+  const fullStyle = !full ? "rounded-2xl p-0" : "rounded-full px-3 py-2";
 
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
