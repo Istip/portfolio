@@ -41,7 +41,7 @@ const MaskText: React.FC<Props> = ({ once = false, children, className }) => {
           <Text
             as="h1"
             type="expanded"
-            className="text-5xl sm:text-7xl xl:text-8xl lowercase p-1"
+            className="text-5xl sm:text-7xl xl:text-8xl lowercase p-1 duration-500 transition hover:text-primaryDark"
           >
             {children}
           </Text>
