@@ -65,7 +65,7 @@ export default async function ServicesPage() {
         ))}
       </Marquee>
       <div className="bg-dark">
-        <Services />
+        <Services showExtra />
       </div>
       <Footer />
     </PageContainer>
