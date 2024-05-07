@@ -34,10 +34,12 @@ export default function Status() {
     <div className="center gap-2">
       <Tooltip.Provider>
         <Tooltip.Root delayDuration={0}>
-          <Tooltip.Trigger>
-            <Link href="/" className="">
+          <Tooltip.Trigger aria-description="LOGO">
+            <Link href="/">
               <Logo className="text-stone-800" />
+              <div className="sr-only">LOGO</div>
             </Link>
+            <div className="sr-only">LOGO</div>
           </Tooltip.Trigger>
           {largeScreen && !disabledPath && (
             <Tooltip.Portal>
