@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { I18nProviderClient } from "@/locales/client";
 import { mona } from "@/utils/fonts";
 import { enKeywords, huKeywords } from "@/utils/keywords";
+import { ToastContainer } from "react-toastify";
 import Navbar from "@/components/Navbar/Navbar";
 import Noise from "@/utils/noise";
 import NextTopLoader from "nextjs-toploader";
+import "react-toastify/dist/ReactToastify.css";
 import "../globals.css";
 
 export const sziasztok: Metadata = {
@@ -81,6 +83,12 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Noise />
+          <ToastContainer
+            position="bottom-center"
+            theme="colored"
+            hideProgressBar
+            closeOnClick
+          />
         </I18nProviderClient>
       </body>
     </html>
