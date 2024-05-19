@@ -160,4 +160,8 @@ export default {
     9: "PWA",
     10: "Adatbázisok és felhőrendszerek",
   },
+  contactSuccess:
+    "Köszönöm az üzeneted {user}! Hamarosan kapcsolatba lépek Veled.",
+  contactError:
+    "Sajnálom {user}, valami hiba történt. Kérlek próbáld újra később.",
 } as const;

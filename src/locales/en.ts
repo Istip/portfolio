@@ -160,4 +160,7 @@ export default {
     9: "PWA",
     10: "Databases and Cloud",
   },
+  contactSuccess:
+    "Thanks for your message {user}! I'll get back to you very soon.",
+  contactError: "Sorry {user}, something went wrong. Please try again later.",
 } as const;
