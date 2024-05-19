@@ -3,9 +3,9 @@ import { usePathname } from "next/navigation";
 import Text from "../Text/Text";
 import Link from "next/link";
 import Logo from "../Logo/Logo";
-import * as Tooltip from "@radix-ui/react-tooltip";
 import useWindowSize from "@/hooks/useWindowSize";
 import Icon from "../Icon/Icon";
+import * as Tooltip from "@radix-ui/react-tooltip";
 
 const statuses = [
   { name: "available", color: "bg-green-500" },
@@ -50,7 +50,7 @@ export default function Status() {
               >
                 <Link
                   href="/contact"
-                  className="center gap-2 text-light bg-stone-700 px-2 py-1 rounded-2xl relative transition hover:opacity-50 group"
+                  className="center gap-2 text-light px-2 py-1 rounded-2xl relative transition group"
                 >
                   <div className="relative mr-2">
                     <div
