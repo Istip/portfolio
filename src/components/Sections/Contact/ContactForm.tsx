@@ -1,24 +1,30 @@
 "use client";
 
-import DoubleButton from "@/components/Button/DoubleButton";
-import Text from "@/components/Text/Text";
-import { useScopedI18n } from "@/locales/client";
+import { useState } from "react";
+import { useI18n, useScopedI18n } from "@/locales/client";
 import { db } from "@/utils/firebase";
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react";
+import { toast } from "react-toastify";
+import Text from "@/components/Text/Text";
+import DoubleButton from "@/components/Button/DoubleButton";
 
 export default function ContactForm() {
-  // const initialFormData = { name: "", email: "", subject: "", message: "" };
-  const initialFormData = {
-    name: "Pasztor Istvan",
-    email: "isticsek@gmail.com",
-    subject: "Szia",
-    message: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
-  };
+  const initialFormData = { name: "", email: "", subject: "", message: "" };
+
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
 
   const t = useScopedI18n("contactPage");
+  const toastT = useI18n();
+
+  const formConditions =
+    !formData.name ||
+    !formData.email ||
+    !formData.subject ||
+    !formData.message ||
+    formData.message.length < 10 ||
+    formData.email.indexOf("@") === -1 ||
+    formData.email.indexOf(".") === -1;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,14 +36,30 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const promise = await addDoc(collection(db, "messages"), formData);
+    if (formConditions) {
+      toast.error(<Text>{toastT("contactFormError")}</Text>);
+      setLoading(false);
+    } else {
+      try {
+        const promise = await addDoc(collection(db, "messages"), formData);
 
-      if (promise) {
-        setFormData(initialFormData);
+        if (promise) {
+          toast.success(
+            <Text>{toastT("contactSuccess", { user: formData.name })}</Text>
+          );
+          setFormData(initialFormData);
+          setLoading(false);
+        }
+      } catch (error) {
+        toast.error(
+          <Text>{toastT("contactError", { user: formData.name })}</Text>
+        );
         setLoading(false);
+
+        // eslint-disable-next-line no-console
+        console.error(error);
       }
-    } catch (error) {}
+    }
   };
 
   const labelStyles = "text-dark font-bold cursor-pointer uppercase";
@@ -54,7 +76,6 @@ export default function ContactForm() {
             </label>
           </Text>
           <input
-            required
             type="text"
             id="name"
             name="name"
@@ -73,7 +94,6 @@ export default function ContactForm() {
             </label>
           </Text>
           <input
-            required
             type="email"
             id="email"
             name="email"
@@ -92,7 +112,6 @@ export default function ContactForm() {
             </label>
           </Text>
           <input
-            required
             type="text"
             id="subject"
             name="subject"
@@ -111,7 +130,6 @@ export default function ContactForm() {
             </label>
           </Text>
           <textarea
-            required
             id="message"
             name="message"
             placeholder={t("messagePlaceholder")}
