@@ -41,7 +41,13 @@ export default function ContactForm() {
       setLoading(false);
     } else {
       try {
-        const promise = await addDoc(collection(db, "messages"), formData);
+        const data = {
+          created: new Date(),
+          seen: false,
+          ...formData,
+        };
+
+        const promise = await addDoc(collection(db, "messages"), data);
 
         if (promise) {
           toast.success(
