@@ -163,4 +163,6 @@ export default {
   contactSuccess:
     "Thanks for your message {user}! I'll get back to you very soon.",
   contactError: "Sorry {user}, something went wrong. Please try again later.",
+  contactFormError:
+    "Please fill out all fields correctly, before submitting your message.",
 } as const;

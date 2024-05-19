@@ -164,4 +164,6 @@ export default {
     "Köszönöm az üzeneted {user}! Hamarosan kapcsolatba lépek Veled.",
   contactError:
     "Sajnálom {user}, valami hiba történt. Kérlek próbáld újra később.",
+  contactFormError:
+    "Kérlek töltsd ki az összes mezőt megfelelően, hogy kapcsolatba léphessünk!",
 } as const;
