@@ -23,7 +23,7 @@ export default function AboutScrollerItem({ title, descripton }: Props) {
       className={`${
         isInView
           ? "opacity-100 scale-100 bg-primaryLight/70"
-          : "opacity-10 scale-50 bg-light/10"
+          : "opacity-0 scale-0"
       } transition-all duration-500 rounded-2xl w-[200px] md:w-[350px] lg:w-[400px] xl:w-[500px] h-full flex items-center flex-col gap-4 p-10`}
     >
       <Text
