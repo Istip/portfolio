@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --toastify-color-success: #1f9b23;
+  --toastify-color-error: #ca5143;
+  --toastify-toast-width: 100%;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -52,4 +58,36 @@
 ::selection {
   color: #111;
   background: #b8b8ff;
+}
+
+.Toastify__toast-container {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.Toastify__toast-container--bottom-center {
+  bottom: 0;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  margin-bottom: 0;
+}
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  margin-bottom: 0;
+}
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  margin-bottom: 0;
+}
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  margin-bottom: 0;
+}
+
+.Toastify__toast-body {
+  padding: 0 !important;
+  margin: 0;
+}
+
+.Toastify__toast {
+  border-radius: 0;
 }
