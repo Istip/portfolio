@@ -5,6 +5,8 @@ export const huKeywords = [
   "istvan",
   "pásztor",
   "istván",
+  "románia",
+  "erdély",
   "isti",
   "kreatív",
   "fejlesztő",
@@ -20,6 +22,10 @@ export const huKeywords = [
 ];
 
 export const enKeywords = [
+  "udvarhely",
+  "szekelyudvarhely",
+  "romania",
+  "transylvania",
   "creative",
   "developer",
   "designer",
