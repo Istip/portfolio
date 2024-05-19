@@ -3,10 +3,18 @@
 import DoubleButton from "@/components/Button/DoubleButton";
 import Text from "@/components/Text/Text";
 import { useScopedI18n } from "@/locales/client";
+import { db } from "@/utils/firebase";
+import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
 
 export default function ContactForm() {
-  const initialFormData = { name: "", email: "", subject: "", message: "" };
+  // const initialFormData = { name: "", email: "", subject: "", message: "" };
+  const initialFormData = {
+    name: "Pasztor Istvan",
+    email: "isticsek@gmail.com",
+    subject: "Szia",
+    message: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+  };
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
 
@@ -18,17 +26,18 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
     try {
-      e.preventDefault();
-      setLoading(true);
-      console.log(formData);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-      setFormData(initialFormData);
-    }
+      const promise = await addDoc(collection(db, "messages"), formData);
+
+      if (promise) {
+        setFormData(initialFormData);
+        setLoading(false);
+      }
+    } catch (error) {}
   };
 
   const labelStyles = "text-dark font-bold cursor-pointer uppercase";
