@@ -68,7 +68,7 @@ const MessageCard = ({ message }: { message: Message }) => {
           type="expandedLight"
           className="center gap-2 flex-nowrap"
         >
-          <Icon name="calendar" />
+          <Icon size={20} name="calendar" />
           <span title={created}>{created}</span>
         </Text>
       </div>
