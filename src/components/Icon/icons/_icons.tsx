@@ -25,6 +25,7 @@ import WebsiteIcon from "./WebsiteIcon";
 import WebappIcon from "./WebappIcon";
 import UIIcon from "./UIIcon";
 import UXIcon from "./UXIcon";
+import CalendarIcon from "./CalendarIcon";
 
 const icons = {
   user: <UserIcon />,
@@ -54,6 +55,7 @@ const icons = {
   webapp: <WebappIcon />,
   ui: <UIIcon />,
   ux: <UXIcon />,
+  calendar: <CalendarIcon />,
 };
 
 export default icons;
