@@ -8,6 +8,7 @@ import {
 } from "@/utils/fonts";
 
 interface Props {
+  title?: string;
   as?: keyof JSX.IntrinsicElements;
   className?: string;
   children: React.ReactNode | string;
@@ -59,6 +60,7 @@ const Text: React.FC<Props> = ({ as, children, className, type, ...props }) => {
   return (
     <Wrapper
       className={`${className ? className : ""} ${selectedFont.className}`}
+      title={props.title}
       {...props}
     >
       {children}
