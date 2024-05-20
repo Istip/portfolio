@@ -5,6 +5,10 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/utils/firebase";
 
 const MessageCard = ({ message }: { message: Message }) => {
+  const created = new Date(message.created.seconds * 1000).toLocaleDateString(
+    "hu-HU"
+  );
+
   const handleSeen = (id: string) => {
     setDoc(doc(db, "messages", id), { ...message, seen: !message.seen });
   };
@@ -43,6 +47,7 @@ const MessageCard = ({ message }: { message: Message }) => {
       </Text>
     );
   };
+
   return (
     <div
       key={message.id}
@@ -51,7 +56,11 @@ const MessageCard = ({ message }: { message: Message }) => {
       } p-4 border border-dark/20 transition-all hover:border-dark flex flex-col justify-between`}
     >
       <div className="flex justify-between items-center text-primaryDark">
-        <Text type="expandedLight" className="truncate max-w-xs">
+        <Text
+          title={message.name}
+          type="expandedLight"
+          className="truncate max-w-xs"
+        >
           {message.name}
         </Text>
         <Text
@@ -60,11 +69,7 @@ const MessageCard = ({ message }: { message: Message }) => {
           className="center gap-2 flex-nowrap"
         >
           <Icon name="calendar" />
-          <span>
-            {new Date(message.created.seconds * 1000).toLocaleDateString(
-              "hu-HU"
-            )}
-          </span>
+          <span title={created}>{created}</span>
         </Text>
       </div>
       <div className="my-4">
@@ -77,6 +82,7 @@ const MessageCard = ({ message }: { message: Message }) => {
       <div className="flex justify-between items-center">
         <Text as="div" type="expandedLight" className="truncate max-w-xs">
           <p
+            title={message.email}
             className="truncate max-w-xs underline underline-offset-4 transition-all hover:cursor-pointer hover:underline-offset-[6px]"
             onClick={() => handleClipboard(message.email)}
           >
@@ -84,12 +90,14 @@ const MessageCard = ({ message }: { message: Message }) => {
           </p>
         </Text>
         <div className="center flex-nowrap gap-2 text-white">
-          <button
-            className="bg-red-600 px-2 py-1 rounded-full aspect-square"
-            onClick={() => handleMarkRemove(message.id!)}
-          >
-            <Icon size={20} name="circleClose" />
-          </button>
+          {message.seen && (
+            <button
+              className="bg-red-600 px-2 py-1 rounded-full aspect-square"
+              onClick={() => handleMarkRemove(message.id!)}
+            >
+              <Icon size={20} name="circleClose" />
+            </button>
+          )}
           <button
             className="bg-green-600 px-2 py-1 rounded-full aspect-square"
             onClick={() => handleSeen(message.id!)}
