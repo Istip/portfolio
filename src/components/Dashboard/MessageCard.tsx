@@ -92,14 +92,14 @@ const MessageCard = ({ message }: { message: Message }) => {
         <div className="center flex-nowrap gap-2 text-white">
           {message.seen && (
             <button
-              className="bg-red-600 px-2 py-1 rounded-full aspect-square"
+              className="bg-red-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
               onClick={() => handleMarkRemove(message.id!)}
             >
               <Icon size={20} name="circleClose" />
             </button>
           )}
           <button
-            className="bg-green-600 px-2 py-1 rounded-full aspect-square"
+            className="bg-green-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
             onClick={() => handleSeen(message.id!)}
           >
             <Icon size={20} name="circleCheck" />
