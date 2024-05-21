@@ -3,6 +3,7 @@ import Icon from "../Icon/Icon";
 import { toast } from "react-toastify";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "@/utils/firebase";
+import { motion } from "framer-motion";
 
 const MessageCard = ({ message }: { message: Message }) => {
   const created = new Date(message.created.seconds * 1000).toLocaleDateString(
@@ -49,64 +50,76 @@ const MessageCard = ({ message }: { message: Message }) => {
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ height: 0 }}
+      animate={{ height: "auto" }}
+      exit={{ height: 0 }}
+      transition={{ duration: 0.5 }}
       key={message.id}
       className={`${
         message.seen ? "bg-white" : "bg-primaryLight animate-shake"
-      } p-4 border border-dark/20 transition-all hover:border-dark flex flex-col justify-between`}
+      } border border-dark/20 transition-all hover:border-dark overflow-hidden flex flex-col justify-between`}
     >
-      <div className="flex justify-between items-center text-primaryDark">
-        <Text
-          title={message.name}
-          type="expandedLight"
-          className="truncate max-w-xs"
-        >
-          {message.name}
-        </Text>
-        <Text
-          as="span"
-          type="expandedLight"
-          className="center gap-2 flex-nowrap"
-        >
-          <Icon size={20} name="calendar" />
-          <span title={created}>{created}</span>
-        </Text>
-      </div>
-      <div className="my-4">
-        <Text type="expandedBold">{message.subject}</Text>
-
-        <Text type="expandedLight" className="text-sm">
-          {message.message}
-        </Text>
-      </div>
-      <div className="flex justify-between items-center">
-        <Text as="div" type="expandedLight" className="truncate max-w-xs">
-          <p
-            title={message.email}
-            className="truncate max-w-xs underline underline-offset-4 transition-all hover:cursor-pointer hover:underline-offset-[6px]"
-            onClick={() => handleClipboard(message.email)}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.5 }}
+        className="p-4"
+      >
+        <div className="flex justify-between items-center text-primaryDark">
+          <Text
+            title={message.name}
+            type="expandedLight"
+            className="truncate max-w-xs"
           >
-            {message.email}
-          </p>
-        </Text>
-        <div className="center flex-nowrap gap-2 text-white">
-          {message.seen && (
-            <button
-              className="bg-red-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
-              onClick={() => handleMarkRemove(message.id!)}
-            >
-              <Icon size={20} name="circleClose" />
-            </button>
-          )}
-          <button
-            className="bg-green-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
-            onClick={() => handleSeen(message.id!)}
+            {message.name}
+          </Text>
+          <Text
+            as="span"
+            type="expandedLight"
+            className="center gap-2 flex-nowrap"
           >
-            <Icon size={20} name="circleCheck" />
-          </button>
+            <Icon size={20} name="calendar" />
+            <span title={created}>{created}</span>
+          </Text>
         </div>
-      </div>
-    </div>
+        <div className="my-4">
+          <Text type="expandedBold">{message.subject}</Text>
+
+          <Text type="expandedLight" className="text-sm">
+            {message.message}
+          </Text>
+        </div>
+        <div className="flex justify-between items-center">
+          <Text as="div" type="expandedLight" className="truncate max-w-xs">
+            <p
+              title={message.email}
+              className="truncate max-w-xs underline underline-offset-4 transition-all hover:cursor-pointer hover:underline-offset-[6px]"
+              onClick={() => handleClipboard(message.email)}
+            >
+              {message.email}
+            </p>
+          </Text>
+          <div className="center flex-nowrap gap-2 text-white">
+            {message.seen && (
+              <button
+                className="bg-red-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
+                onClick={() => handleMarkRemove(message.id!)}
+              >
+                <Icon size={20} name="circleClose" />
+              </button>
+            )}
+            <button
+              className="bg-green-600 px-2 py-1 rounded-full aspect-square transition-opacity hover:opacity-80"
+              onClick={() => handleSeen(message.id!)}
+            >
+              <Icon size={20} name="circleCheck" />
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
