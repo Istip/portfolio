@@ -58,14 +58,14 @@ const MessageCard = ({ message }: { message: Message }) => {
       key={message.id}
       className={`${
         message.seen ? "bg-white" : "bg-primaryLight animate-shake"
-      } border border-dark/20 transition-all hover:border-dark overflow-hidden flex flex-col justify-between`}
+      } border border-dark/20 transition-all hover:border-dark overflow-hidden fh-full`}
     >
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.5 }}
-        className="p-4"
+        className="p-4 h-full flex flex-col justify-between "
       >
         <div className="flex justify-between items-center text-primaryDark">
           <Text

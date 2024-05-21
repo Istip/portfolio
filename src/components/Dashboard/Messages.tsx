@@ -10,7 +10,6 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "@/utils/firebase";
-import PageContainer from "@/components/Container/Container";
 import Text from "@/components/Text/Text";
 import MessageCard from "./MessageCard";
 
@@ -45,7 +44,7 @@ const Messages = () => {
   const inbox = messages && messages.length !== 0;
 
   return (
-    <PageContainer>
+    <>
       <AnimatePresence mode="wait">
         {loading && (
           <motion.div
@@ -77,7 +76,7 @@ const Messages = () => {
           </div>
         )}
       </div>
-    </PageContainer>
+    </>
   );
 };
 
