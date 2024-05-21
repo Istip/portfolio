@@ -6,13 +6,13 @@ export const imageList = [
     height: 426,
   },
   {
-    title: "NovaNoir 3D",
+    title: "Postboard",
     src: "/images/showcase/02.webp",
     width: 700,
     height: 426,
   },
   {
-    title: "Postboard",
+    title: "Workwear",
     src: "/images/showcase/03.webp",
     width: 700,
     height: 426,
@@ -24,7 +24,7 @@ export const imageList = [
     height: 426,
   },
   {
-    title: "Salon Manager",
+    title: "NovaNoir 3D",
     src: "/images/showcase/05.webp",
     width: 700,
     height: 426,
