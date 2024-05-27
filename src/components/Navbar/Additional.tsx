@@ -30,7 +30,7 @@ export default function Additional() {
           {scoped("currentTime")}:{" "}
           <Text as="span" type="expandedBold">
             {currentHour}
-            <span className="animate-ping">:</span>
+            <span className="animate-ping duration-1000">:</span>
             {currentMinute}
           </Text>
         </Text>
@@ -41,7 +41,7 @@ export default function Additional() {
           <Link
             key={icon.link}
             href={icon.link}
-            className="text-light hover:text-primaryDark transition-colors"
+            className="text-light hover:text-dark transition-colors"
             title={icon.title}
             target="_blank"
             rel="noopener noreferrer"
