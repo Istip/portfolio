@@ -18,7 +18,7 @@ export const imageList = [
     height: 426,
   },
   {
-    title: "Meddison Workwear",
+    title: "Salon Manager",
     src: "/images/showcase/04.webp",
     width: 700,
     height: 426,
