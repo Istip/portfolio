@@ -9,22 +9,6 @@ import NextTopLoader from "nextjs-toploader";
 import "react-toastify/dist/ReactToastify.css";
 import "../globals.css";
 
-export const sziasztok: Metadata = {
-  title: "Nimród Keresztelője",
-  description: "Szeretettel meghívunk Nimród kisfiunk keresztelőjére.",
-  referrer: "origin-when-cross-origin",
-  keywords: ["keresztelő", "meghívó", "Nimród"],
-  metadataBase: new URL("https://nimrod-kereszteloje.vercel.app"),
-  openGraph: {
-    type: "website",
-    url: "https://nimrod-kereszteloje.vercel.app/",
-    title: "Nimród Keresztelője",
-    description: "Szeretettel meghívunk Nimród kisfiunk keresztelőjére.",
-    siteName: "Nimród Keresztelője",
-    images: [{ url: "/nimiarc.jpg" }],
-  },
-};
-
 export async function generateMetadata({
   params: { locale },
 }: {
