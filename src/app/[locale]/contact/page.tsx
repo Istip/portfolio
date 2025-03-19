@@ -26,7 +26,7 @@ export default async function ContactPage() {
               {t("outro")}
             </Text>
           </div>
-          <div className="place-items-center w-full">
+          <div className="w-full">
             <ContactForm />
           </div>
           <Text className="text-lg sm:text-xl md:hidden flex lg:text-2xl lg:mt-12 my-5">
